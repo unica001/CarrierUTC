@@ -1,5 +1,5 @@
 //
-//  EventListViewC.swift
+//  SearchEventViewC.swift
 //  Carrier UTC
 //
 //  Created by Shilpa Sharma on 21/11/18.
@@ -8,11 +8,10 @@
 
 import UIKit
 
-class EventListViewC: UIViewController {
-
+class SearchEventViewC: UIViewController {
     //MARK: - IBOutlet
-    @IBOutlet weak var collectionViewUpcoming: UICollectionView!
-    @IBOutlet weak var collectionViewPast: UICollectionView!
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var collectionSearchEvent: UICollectionView!
     
     //MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -38,22 +37,19 @@ class EventListViewC: UIViewController {
     }
     
     private func registerNib() {
-        collectionViewUpcoming.register(UINib(nibName: "CellEvent", bundle: nil), forCellWithReuseIdentifier: "CellEvent")
-        collectionViewPast.register(UINib(nibName: "CellEvent", bundle: nil), forCellWithReuseIdentifier: "CellEvent")
+        collectionSearchEvent.register(UINib(nibName: "CellEvent", bundle: nil), forCellWithReuseIdentifier: "CellEvent")
     }
     
     //MARK: - IBAction Methods
-    @IBAction func tapSearch(_ sender: UIButton) {
-        if let searchEventViewC = Constant.kStoryboardEvent.instantiateViewController(withIdentifier: "SearchEventViewC") as? SearchEventViewC {
-            self.navigationController?.pushViewController(searchEventViewC, animated: true)
-        }
+    @IBAction func tapBack(_ sender: UIButton) {
+        _ = self.navigationController?.popViewController(animated: true)
     }
 }
 
-extension EventListViewC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension SearchEventViewC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (collectionView == collectionViewUpcoming) ? 10 : 2
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -64,18 +60,12 @@ extension EventListViewC: UICollectionViewDelegate, UICollectionViewDataSource, 
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let searchEventViewC = Constant.kStoryboardEvent.instantiateViewController(withIdentifier: "EventDetailViewC") as? EventDetailViewC {
-            self.navigationController?.pushViewController(searchEventViewC, animated: true)
-        }
-    }
-    
     // MARK: UICollectionViewDelegateFlowLayout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 300, height: collectionView.frame.size.height) // The size of one cell
+        return CGSize(width: Constant.kScreenWidth - 30, height: 160) // The size of one cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0) // margin between cells
+        return UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15) // margin between cells
     }
 }
