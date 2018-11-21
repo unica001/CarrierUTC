@@ -7,38 +7,177 @@
 //
 
 import UIKit
+import CoreLocation
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate {
 
     var window: UIWindow?
+    
+    var lat : Double = Double()
+    var long : Double = Double()
+    var locationManager : CLLocationManager!
+    var currentLocation :CLLocation!
+    var currentAddress : String!
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        //UINavigationBar.appearance().isHidden = true
+        UINavigationBar.appearance().shadowImage = UIImage()
+       // UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+        
+        getCurrentLocation()
+        
         return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
-        // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-        // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+    
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
-        // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-        // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+       
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
-        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+       
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        
+    }
+    
+    //MARK: - Location
+    func getCurrentLocation(){
+        if CLLocationManager.locationServicesEnabled() {            switch(CLLocationManager.authorizationStatus()) {
+        case  .denied:
+            
+            Alert.showAlertWithAction(title: "", message: "nable location from your device Settings", style: .alert, actionTitles: ["SETTING", "CANCEL"], action: {(action) in
+                
+                if action.title == "SETTING" {
+                    let settingsUrl = NSURL(string: UIApplication.openSettingsURLString)
+                    UIApplication.shared.open(settingsUrl! as URL, options: [:], completionHandler: nil)
+                }
+            })
+            
+        case .authorizedAlways, .authorizedWhenInUse:
+            print("Access")
+            
+        case .notDetermined:
+            print("notDetermined")
+            
+            
+        case .restricted:
+            print("restricted")
+            
+            }
+        }
+        
+        self.getLocation()
+    }
+    
+    // MARK :- Location Manager
+    
+    func getLocation() -> Void {
+        
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        locationManager.requestAlwaysAuthorization()
+        locationManager.startUpdatingLocation()
+        locationManager!.allowsBackgroundLocationUpdates = true
+        locationManager!.pausesLocationUpdatesAutomatically = false
+        
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        currentLocation = locations.last! as CLLocation
+        lat = currentLocation.coordinate.latitude
+        long = currentLocation.coordinate.longitude
+        
+        getAddressFromLatLon()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        switch status {
+        case .notDetermined:
+            print("1")
+            manager.requestAlwaysAuthorization()
+            break
+        case .authorizedWhenInUse:
+            print("2")
+            manager.startUpdatingLocation()
+            break
+        case .authorizedAlways:
+            print("3")
+            manager.startUpdatingLocation()
+            break
+        case .restricted:
+            print("4")
+            break
+        case .denied:
+            print("5")
+            break
+        }
+    }
+    
+    func getAddressFromLatLon() {
+        var center : CLLocationCoordinate2D = CLLocationCoordinate2D()
+       
+        let ceo: CLGeocoder = CLGeocoder()
+        center.latitude = lat
+        center.longitude = long
+        
+        let loc: CLLocation = CLLocation(latitude:center.latitude, longitude: center.longitude)
+        
+        
+        ceo.reverseGeocodeLocation(loc, completionHandler:
+            {(placemarks, error) in
+                if (error != nil)
+                {
+                    print("reverse geodcode fail: \(error!.localizedDescription)")
+                }
+                let pm = placemarks! as [CLPlacemark]
+                
+                if pm.count > 0 {
+                    let pm = placemarks![0]
+//                    print(pm.country)
+//                    print(pm.locality)
+//                    print(pm.subLocality)
+//                    print(pm.thoroughfare)
+//                    print(pm.postalCode)
+//                    print(pm.subThoroughfare)
+                    
+                    var addressString : String = ""
+                    
+                    if pm.thoroughfare != nil {
+                        addressString = addressString + pm.thoroughfare! + ", "
+                    }
+                    if pm.subLocality != nil {
+                        addressString = addressString + pm.subLocality! + ", "
+                    }
+                    if pm.locality != nil {
+                        addressString = addressString + pm.locality! 
+                    }
+                  
+                   
+                  
+//                    if pm.country != nil {
+//                        addressString = addressString + pm.country! + ", "
+//                    }
+//                    if pm.postalCode != nil {
+//                        addressString = addressString + pm.postalCode! + " "
+//                    }
+                    self.currentAddress = addressString
+                    print(addressString)
+                }
+        })
+        
     }
 
 
