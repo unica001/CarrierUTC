@@ -14,7 +14,7 @@ extension UITextField {
         
         let paddingView : UIView = UIView (frame : frame)
         self.leftView = paddingView
-        self.leftViewMode = UITextFieldViewMode.always
+        self.leftViewMode = UITextField.ViewMode.always
         return self
     }
     
@@ -25,7 +25,7 @@ extension UITextField {
         
         let doneButton = UIBarButtonItem.init(title: title, style: .done, target:forTarget, action: selector)
         
-        doneButton.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.black], for: .normal)
+        doneButton.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black], for: .normal)
         
         let toolbar = UIToolbar.init(frame: CGRect(x: 0,y: 0,width: Constant.kAppDelegate.window!.frame.size.width,height: 40.0))
         
@@ -44,7 +44,7 @@ extension UITextField {
             
             let viewLeft = UIView.init(frame: CGRect(x: 0,y: 0,width: margin,height: txtField.frame.size.height))
             txtField.leftView = viewLeft
-            txtField.leftViewMode = UITextFieldViewMode.always
+            txtField.leftViewMode = UITextField.ViewMode.always
         }
     }
 }
@@ -57,7 +57,7 @@ extension UITextView {
         
         let doneButton = UIBarButtonItem.init(title: title, style: .done, target:forTarget, action: selector)
         
-        doneButton.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.black], for: .normal)
+        doneButton.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.black], for: .normal)
         
         
         let toolbar = UIToolbar.init(frame: CGRect(x: 0,y: 0,width: Constant.kAppDelegate.window!.frame.size.width,height: 40.0))

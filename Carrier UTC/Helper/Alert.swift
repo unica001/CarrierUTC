@@ -45,7 +45,7 @@ class Alert {
          */
     }
     
-    class func showAlert(title: String? = nil, message: String? = nil, style: UIAlertControllerStyle = .alert, actions: UIAlertAction...) {
+    class func showAlert(title: String? = nil, message: String? = nil, style: UIAlertController.Style = .alert, actions: UIAlertAction...) {
         
         let topViewController: UIViewController? = Helper.topMostViewController(rootViewController: Helper.rootViewController())
         var strTitle: String = ""
@@ -66,12 +66,12 @@ class Alert {
         topViewController?.present(alertController, animated: true, completion: nil)
     }
     
-    class func showAlertWithAction(title: String?, message: String?, style: UIAlertControllerStyle, actionTitles:[String?], action:((UIAlertAction) -> Void)?) {
+    class func showAlertWithAction(title: String?, message: String?, style: UIAlertController.Style, actionTitles:[String?], action:((UIAlertAction) -> Void)?) {
         
         showAlertWithActionWithCancel(title: title, message: message, style: style, actionTitles: actionTitles, showCancel: false, deleteTitle: nil, action: action)
     }
     
-    class func showAlertWithActionWithCancel(title: String?, message: String?, style: UIAlertControllerStyle, actionTitles:[String?], showCancel:Bool, deleteTitle: String? ,_ viewC: UIViewController? = nil, action:((UIAlertAction) -> Void)?) {
+    class func showAlertWithActionWithCancel(title: String?, message: String?, style: UIAlertController.Style, actionTitles:[String?], showCancel:Bool, deleteTitle: String? ,_ viewC: UIViewController? = nil, action:((UIAlertAction) -> Void)?) {
         
         
         let alertController = UIAlertController(title: title, message: message, preferredStyle: style)

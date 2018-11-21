@@ -33,7 +33,7 @@ class Helper {
     {
         let constraintRect = CGSize(width: _width, height: CGFloat.greatestFiniteMagnitude)
         
-        let boundingBox = inString.boundingRect(with: constraintRect, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [ NSAttributedStringKey.font: UIFont(name: FontFamily.Montserrat.rawValue, size: 14.2)! ], context: nil)
+        let boundingBox = inString.boundingRect(with: constraintRect, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: [ NSAttributedString.Key.font: UIFont(name: FontFamily.Montserrat.rawValue, size: 14.2)! ], context: nil)
         
         return boundingBox.height
     }
@@ -117,7 +117,7 @@ class Helper {
         return documentsDirectory
     }
     
-    func archive(filename :String, dict:NSDictionary){
+  /*  func archive(filename :String, dict:NSDictionary){
         
         let data = NSKeyedArchiver.archivedData(withRootObject: dict)
         let fullPath = getDocumentsDirectory().appendingPathComponent(filename)
@@ -133,5 +133,5 @@ class Helper {
         let fullPath = getDocumentsDirectory().appendingPathComponent(fileName)
         let loadedStrings = NSKeyedUnarchiver.unarchiveObject(withFile: fullPath.absoluteString) as? [String]
         return loadedStrings as Any as! NSDictionary
-    }
+    }*/
 }
