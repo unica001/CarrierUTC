@@ -1,0 +1,6 @@
+framework module Pods_Carrier_UTC {
+  umbrella header "Pods-Carrier UTC-umbrella.h"
+
+  export *
+  module * { export * }
+}
