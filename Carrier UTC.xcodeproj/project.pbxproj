@@ -38,6 +38,12 @@
 		36CD617E268B64F0D5D7565B /* Pods_Carrier_UTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 604636679BE54A1769E1EB88 /* Pods_Carrier_UTC.framework */; };
 		9A58C1A821A55DB700A07CB7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A58C1A721A55DB700A07CB7 /* HomeViewController.swift */; };
 		9A58C1AA21A5701800A07CB7 /* gurugram.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 9A58C1A921A5701800A07CB7 /* gurugram.gpx */; };
+		9A58C1AC21A580E800A07CB7 /* AirQualityDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A58C1AB21A580E800A07CB7 /* AirQualityDetailController.swift */; };
+		9A58C1B021A581AC00A07CB7 /* AirQualityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A58C1AE21A581AC00A07CB7 /* AirQualityCell.swift */; };
+		9A58C1B121A581AC00A07CB7 /* AirQualityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A58C1AF21A581AC00A07CB7 /* AirQualityCell.xib */; };
+		9A58C1B521A589C900A07CB7 /* ReachabilityHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A58C1B321A589C900A07CB7 /* ReachabilityHelper.swift */; };
+		9A58C1B621A589C900A07CB7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A58C1B421A589C900A07CB7 /* NetworkManager.swift */; };
+		9A58C1B821A58B0500A07CB7 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A58C1B721A58B0500A07CB7 /* SDWebImage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +103,14 @@
 		604636679BE54A1769E1EB88 /* Pods_Carrier_UTC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Carrier_UTC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A58C1A721A55DB700A07CB7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9A58C1A921A5701800A07CB7 /* gurugram.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = gurugram.gpx; sourceTree = "<group>"; };
+		9A58C1AB21A580E800A07CB7 /* AirQualityDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityDetailController.swift; sourceTree = "<group>"; };
+		9A58C1AE21A581AC00A07CB7 /* AirQualityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityCell.swift; sourceTree = "<group>"; };
+		9A58C1AF21A581AC00A07CB7 /* AirQualityCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AirQualityCell.xib; sourceTree = "<group>"; };
+		9A58C1B321A589C900A07CB7 /* ReachabilityHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReachabilityHelper.swift; path = "Carrier UTC/Connection Manager/ReachabilityHelper.swift"; sourceTree = SOURCE_ROOT; };
+		9A58C1B421A589C900A07CB7 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkManager.swift; path = "Carrier UTC/Connection Manager/NetworkManager.swift"; sourceTree = SOURCE_ROOT; };
+		9A58C1B721A58B0500A07CB7 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A58C1B921A58B0500A07CB7 /* SVProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SVProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A58C1BB21A58C4E00A07CB7 /* SKActivityIndicatorView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SKActivityIndicatorView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B179E16F23A5704EF94170D3 /* Pods_Carrier_UTCTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Carrier_UTCTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E17ACDA14855DCF8DFFE1DBA /* Pods-Carrier UTC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carrier UTC.release.xcconfig"; path = "Pods/Target Support Files/Pods-Carrier UTC/Pods-Carrier UTC.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A58C1B821A58B0500A07CB7 /* SDWebImage.framework in Frameworks */,
 				36CD617E268B64F0D5D7565B /* Pods_Carrier_UTC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -153,6 +168,7 @@
 		1786402A21A531D6006ED91B /* Carrier UTC */ = {
 			isa = PBXGroup;
 			children = (
+				9A58C1B221A589AE00A07CB7 /* Connection Manager */,
 				1786402B21A531D6006ED91B /* AppDelegate.swift */,
 				1786407F21A5402F006ED91B /* Module */,
 				1786405A21A531F7006ED91B /* View */,
@@ -243,6 +259,7 @@
 		1786408021A5402F006ED91B /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				9A58C1AD21A5818700A07CB7 /* Cell */,
 				9AE32C5721A5535E00407428 /* Controller */,
 			);
 			path = Home;
@@ -302,6 +319,9 @@
 		4C5771217ABA754222A9A7F7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9A58C1BB21A58C4E00A07CB7 /* SKActivityIndicatorView.framework */,
+				9A58C1B721A58B0500A07CB7 /* SDWebImage.framework */,
+				9A58C1B921A58B0500A07CB7 /* SVProgressHUD.framework */,
 				604636679BE54A1769E1EB88 /* Pods_Carrier_UTC.framework */,
 				B179E16F23A5704EF94170D3 /* Pods_Carrier_UTCTests.framework */,
 				2550596F560512BE1E82FE15 /* Pods_Carrier_UTCUITests.framework */,
@@ -318,10 +338,30 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		9A58C1AD21A5818700A07CB7 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9A58C1AE21A581AC00A07CB7 /* AirQualityCell.swift */,
+				9A58C1AF21A581AC00A07CB7 /* AirQualityCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		9A58C1B221A589AE00A07CB7 /* Connection Manager */ = {
+			isa = PBXGroup;
+			children = (
+				9A58C1B421A589C900A07CB7 /* NetworkManager.swift */,
+				9A58C1B321A589C900A07CB7 /* ReachabilityHelper.swift */,
+			);
+			name = "Connection Manager";
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		9AE32C5721A5535E00407428 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				9A58C1A721A55DB700A07CB7 /* HomeViewController.swift */,
+				9A58C1AB21A580E800A07CB7 /* AirQualityDetailController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -437,6 +477,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A58C1B121A581AC00A07CB7 /* AirQualityCell.xib in Resources */,
 				1786408F21A5569B006ED91B /* CellEvent.xib in Resources */,
 				17F80E6821A5770F003BBC80 /* CellEventDetail.xib in Resources */,
 				1786403621A531D6006ED91B /* LaunchScreen.storyboard in Resources */,
@@ -519,11 +560,13 @@
 				1786407221A53381006ED91B /* UITableViewAddition.swift in Sources */,
 				1786407421A53381006ED91B /* UIViewAddition.swift in Sources */,
 				9A58C1A821A55DB700A07CB7 /* HomeViewController.swift in Sources */,
+				9A58C1B521A589C900A07CB7 /* ReachabilityHelper.swift in Sources */,
 				1786407921A534AC006ED91B /* Enumeration.swift in Sources */,
 				1786407721A533EA006ED91B /* Alert.swift in Sources */,
 				17F80E6721A5770F003BBC80 /* CellEventDetail.swift in Sources */,
 				1786406221A5335B006ED91B /* ConstantTexts.swift in Sources */,
 				1786407121A53381006ED91B /* UIImage+Orientation.swift in Sources */,
+				9A58C1B021A581AC00A07CB7 /* AirQualityCell.swift in Sources */,
 				17FC9A0321A56A0F007DB7E1 /* SearchEventViewC.swift in Sources */,
 				1786406321A5335B006ED91B /* Helper.swift in Sources */,
 				1786407021A53381006ED91B /* UIColorAddition.swift in Sources */,
@@ -533,7 +576,9 @@
 				1786407521A53381006ED91B /* DateUtility.swift in Sources */,
 				17F80E6421A576E9003BBC80 /* EventDetailViewC.swift in Sources */,
 				1786406121A5335B006ED91B /* Constant.swift in Sources */,
+				9A58C1AC21A580E800A07CB7 /* AirQualityDetailController.swift in Sources */,
 				1786406D21A53381006ED91B /* UIButtonAddition.swift in Sources */,
+				9A58C1B621A589C900A07CB7 /* NetworkManager.swift in Sources */,
 				1786406F21A53381006ED91B /* UITextFieldAddition.swift in Sources */,
 				1786408E21A5569B006ED91B /* CellEvent.swift in Sources */,
 			);
@@ -713,6 +758,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Carrier UTC/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -731,6 +777,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Carrier UTC/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

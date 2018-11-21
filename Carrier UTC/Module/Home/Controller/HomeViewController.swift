@@ -22,9 +22,11 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         viewHeader.roundCorners(borderWidth: 1, borderColor: UIColor.clear.cgColor, cornerRadius: 5)
         appDelegate = UIApplication.shared.delegate as? AppDelegate
-        
     }
     
+    @IBAction func testrButtonAction(_ sender: Any) {
+        self.performSegue(withIdentifier: kairQualitySegueIdentifier, sender: nil)
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         addressLabel.text = appDelegate.currentAddress
