@@ -43,7 +43,7 @@ extension UIView {
         self.layer.borderColor = color.cgColor
     }
     
-    func roundCorners(borderWidth: CGFloat,borderColor: CGColor, cornerRadius: CGFloat = 15.0) {
+    func roundCorners(borderWidth: CGFloat,borderColor: CGColor, cornerRadius: CGFloat) {
         self.layer.borderColor = borderColor
         self.layer.borderWidth = borderWidth
         self.layer.cornerRadius = cornerRadius

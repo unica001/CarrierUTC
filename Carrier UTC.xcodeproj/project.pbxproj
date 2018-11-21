@@ -41,6 +41,8 @@
 		17F80E7821A58E5D003BBC80 /* BlogCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17F80E7621A58E5D003BBC80 /* BlogCategoryCell.xib */; };
 		17FC9A0321A56A0F007DB7E1 /* SearchEventViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC9A0221A56A0F007DB7E1 /* SearchEventViewC.swift */; };
 		36CD617E268B64F0D5D7565B /* Pods_Carrier_UTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 604636679BE54A1769E1EB88 /* Pods_Carrier_UTC.framework */; };
+		9A58C1A821A55DB700A07CB7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A58C1A721A55DB700A07CB7 /* HomeViewController.swift */; };
+		9A58C1AA21A5701800A07CB7 /* gurugram.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 9A58C1A921A5701800A07CB7 /* gurugram.gpx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +105,8 @@
 		17FC9A0221A56A0F007DB7E1 /* SearchEventViewC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEventViewC.swift; sourceTree = "<group>"; };
 		2550596F560512BE1E82FE15 /* Pods_Carrier_UTCUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Carrier_UTCUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		604636679BE54A1769E1EB88 /* Pods_Carrier_UTC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Carrier_UTC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A58C1A721A55DB700A07CB7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		9A58C1A921A5701800A07CB7 /* gurugram.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = gurugram.gpx; sourceTree = "<group>"; };
 		B179E16F23A5704EF94170D3 /* Pods_Carrier_UTCTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Carrier_UTCTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E17ACDA14855DCF8DFFE1DBA /* Pods-Carrier UTC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carrier UTC.release.xcconfig"; path = "Pods/Target Support Files/Pods-Carrier UTC/Pods-Carrier UTC.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,6 +140,7 @@
 		1786401F21A531D6006ED91B = {
 			isa = PBXGroup;
 			children = (
+				9A58C1A921A5701800A07CB7 /* gurugram.gpx */,
 				1786402A21A531D6006ED91B /* Carrier UTC */,
 				1786403F21A531D7006ED91B /* Carrier UTCTests */,
 				1786404A21A531D7006ED91B /* Carrier UTCUITests */,
@@ -248,6 +253,7 @@
 		1786408021A5402F006ED91B /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				9AE32C5721A5535E00407428 /* Controller */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -343,6 +349,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		9AE32C5721A5535E00407428 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9A58C1A721A55DB700A07CB7 /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -413,6 +427,11 @@
 				TargetAttributes = {
 					1786402721A531D6006ED91B = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					1786403B21A531D7006ED91B = {
 						CreatedOnToolsVersion = 10.1;
@@ -452,6 +471,7 @@
 				1786408F21A5569B006ED91B /* CellEvent.xib in Resources */,
 				17F80E6821A5770F003BBC80 /* CellEventDetail.xib in Resources */,
 				1786403621A531D6006ED91B /* LaunchScreen.storyboard in Resources */,
+				9A58C1AA21A5701800A07CB7 /* gurugram.gpx in Resources */,
 				1786408621A541A6006ED91B /* Event.storyboard in Resources */,
 				1786403321A531D6006ED91B /* Assets.xcassets in Resources */,
 				1786403121A531D6006ED91B /* Main.storyboard in Resources */,
@@ -532,6 +552,7 @@
 				1786407321A53381006ED91B /* UIFontAddition.swift in Sources */,
 				1786407221A53381006ED91B /* UITableViewAddition.swift in Sources */,
 				1786407421A53381006ED91B /* UIViewAddition.swift in Sources */,
+				9A58C1A821A55DB700A07CB7 /* HomeViewController.swift in Sources */,
 				1786407921A534AC006ED91B /* Enumeration.swift in Sources */,
 				17F80E7721A58E5D003BBC80 /* BlogCategoryCell.swift in Sources */,
 				1786407721A533EA006ED91B /* Alert.swift in Sources */,
