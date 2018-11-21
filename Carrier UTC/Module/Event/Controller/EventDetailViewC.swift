@@ -11,6 +11,7 @@ import UIKit
 class EventDetailViewC: UIViewController {
     //MARK: - IBOutlet
     @IBOutlet weak var tblEventDetail: UITableView!
+    @IBOutlet weak var btnInterested: UIButton!
     
     //MARK: - View Life cycle
     override func viewDidLoad() {
@@ -37,17 +38,39 @@ class EventDetailViewC: UIViewController {
     
     private func registerNib() {
         self.tblEventDetail.register(UINib(nibName: "CellEventDetail", bundle: nil), forCellReuseIdentifier: "CellEventDetail")
+        let nibName = UINib(nibName: "EventImageView", bundle: nil)
+        self.tblEventDetail.register(nibName, forHeaderFooterViewReuseIdentifier: "EventImageView")
     }
 
     //MARK: - IBAction Methods
     @IBAction func tapBack(_ sender: Any) {
         _ = self.navigationController?.popViewController(animated: true)
     }
+    
+    @IBAction func tapInterested(_ sender: UIButton) {
+    }
+    
+    @IBAction func tapTwitter(_ sender: UIButton) {
+    }
+    
+    @IBAction func tapFacebook(_ sender: UIButton) {
+    }
 }
 
 extension EventDetailViewC: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 180
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "EventImageView" ) as! EventImageView
+        return headerView
+    }
+    
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 1
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -62,8 +85,4 @@ extension EventDetailViewC: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CellEventDetail", for: indexPath) as! CellEventDetail
         return cell
     }
-    
-    
-    
-    
 }
