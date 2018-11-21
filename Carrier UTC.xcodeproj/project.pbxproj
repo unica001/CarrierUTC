@@ -27,6 +27,8 @@
 		1786407521A53381006ED91B /* DateUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1786406C21A53381006ED91B /* DateUtility.swift */; };
 		1786407721A533EA006ED91B /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1786407621A533EA006ED91B /* Alert.swift */; };
 		1786407921A534AC006ED91B /* Enumeration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1786407821A534AC006ED91B /* Enumeration.swift */; };
+		1786408621A541A6006ED91B /* Event.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1786408521A541A6006ED91B /* Event.storyboard */; };
+		1786408A21A542DC006ED91B /* EventListViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1786408921A542DC006ED91B /* EventListViewC.swift */; };
 		36CD617E268B64F0D5D7565B /* Pods_Carrier_UTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 604636679BE54A1769E1EB88 /* Pods_Carrier_UTC.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +77,8 @@
 		1786406C21A53381006ED91B /* DateUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateUtility.swift; sourceTree = "<group>"; };
 		1786407621A533EA006ED91B /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		1786407821A534AC006ED91B /* Enumeration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enumeration.swift; sourceTree = "<group>"; };
+		1786408521A541A6006ED91B /* Event.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Event.storyboard; sourceTree = "<group>"; };
+		1786408921A542DC006ED91B /* EventListViewC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewC.swift; sourceTree = "<group>"; };
 		2550596F560512BE1E82FE15 /* Pods_Carrier_UTCUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Carrier_UTCUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		604636679BE54A1769E1EB88 /* Pods_Carrier_UTC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Carrier_UTC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B179E16F23A5704EF94170D3 /* Pods_Carrier_UTCTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Carrier_UTCTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -133,8 +137,8 @@
 			isa = PBXGroup;
 			children = (
 				1786402B21A531D6006ED91B /* AppDelegate.swift */,
+				1786407F21A5402F006ED91B /* Module */,
 				1786405A21A531F7006ED91B /* View */,
-				1786405921A531EF006ED91B /* Module */,
 				1786405B21A53212006ED91B /* Extension */,
 				1786405C21A53220006ED91B /* Helper */,
 				1786403221A531D6006ED91B /* Assets.xcassets */,
@@ -159,18 +163,6 @@
 				1786404D21A531D7006ED91B /* Info.plist */,
 			);
 			path = "Carrier UTCUITests";
-			sourceTree = "<group>";
-		};
-		1786405921A531EF006ED91B /* Module */ = {
-			isa = PBXGroup;
-			children = (
-				1786407E21A535A6006ED91B /* Xhale */,
-				1786407D21A5356A006ED91B /* Blog */,
-				1786407C21A53563006ED91B /* Event */,
-				1786407B21A53535006ED91B /* Home */,
-				1786407A21A5352B006ED91B /* Tabbar */,
-			);
-			path = Module;
 			sourceTree = "<group>";
 		};
 		1786405A21A531F7006ED91B /* View */ = {
@@ -214,43 +206,65 @@
 			children = (
 				1786402F21A531D6006ED91B /* Main.storyboard */,
 				1786403421A531D6006ED91B /* LaunchScreen.storyboard */,
+				1786408521A541A6006ED91B /* Event.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
-		1786407A21A5352B006ED91B /* Tabbar */ = {
+		1786407F21A5402F006ED91B /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				1786408021A5402F006ED91B /* Home */,
+				1786408121A5402F006ED91B /* Tabbar */,
+				1786408221A5402F006ED91B /* Blog */,
+				1786408321A5402F006ED91B /* Xhale */,
+				1786408421A5402F006ED91B /* Event */,
 			);
-			path = Tabbar;
+			path = Module;
 			sourceTree = "<group>";
 		};
-		1786407B21A53535006ED91B /* Home */ = {
+		1786408021A5402F006ED91B /* Home */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Home;
 			sourceTree = "<group>";
 		};
-		1786407C21A53563006ED91B /* Event */ = {
+		1786408121A5402F006ED91B /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Event;
+			path = Tabbar;
 			sourceTree = "<group>";
 		};
-		1786407D21A5356A006ED91B /* Blog */ = {
+		1786408221A5402F006ED91B /* Blog */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Blog;
 			sourceTree = "<group>";
 		};
-		1786407E21A535A6006ED91B /* Xhale */ = {
+		1786408321A5402F006ED91B /* Xhale */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Xhale;
+			sourceTree = "<group>";
+		};
+		1786408421A5402F006ED91B /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				1786408821A542C3006ED91B /* Controller */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
+		1786408821A542C3006ED91B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1786408921A542DC006ED91B /* EventListViewC.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		4C5771217ABA754222A9A7F7 /* Frameworks */ = {
@@ -379,6 +393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1786403621A531D6006ED91B /* LaunchScreen.storyboard in Resources */,
+				1786408621A541A6006ED91B /* Event.storyboard in Resources */,
 				1786403321A531D6006ED91B /* Assets.xcassets in Resources */,
 				1786403121A531D6006ED91B /* Main.storyboard in Resources */,
 			);
@@ -463,6 +478,7 @@
 				1786407021A53381006ED91B /* UIColorAddition.swift in Sources */,
 				1786402C21A531D6006ED91B /* AppDelegate.swift in Sources */,
 				1786406E21A53381006ED91B /* UIImageViewUtility.swift in Sources */,
+				1786408A21A542DC006ED91B /* EventListViewC.swift in Sources */,
 				1786407521A53381006ED91B /* DateUtility.swift in Sources */,
 				1786406121A5335B006ED91B /* Constant.swift in Sources */,
 				1786406D21A53381006ED91B /* UIButtonAddition.swift in Sources */,
