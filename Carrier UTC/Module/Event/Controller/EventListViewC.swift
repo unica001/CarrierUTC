@@ -15,11 +15,21 @@ class EventListViewC: UIViewController {
     @IBOutlet weak var collectionViewPast: UICollectionView!
     @IBOutlet weak var viewAllUpcoming: UIView!
     @IBOutlet weak var viewAllPast: UIView!
+
+    var upcomingEventCount = 0
+    var pastEventCount = 0
+    internal var viewModel: EventListViewModelling?
     
-    var arrUpcomingEvent = [[String:AnyObject]]()
-    var arrPastEvent = [[String:AnyObject]]()
-    let upcomingEventCount = 0
-    let pastEventCount = 0
+    var arrUpcomingEvent = [EventModel]() {
+        didSet {
+            self.collectionViewUpcoming.reloadData()
+        }
+    }
+    var arrPastEvent = [EventModel]() {
+        didSet {
+            self.collectionViewPast.reloadData()
+        }
+    }
     
     //MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -41,7 +51,15 @@ class EventListViewC: UIViewController {
 
     //MARK: - Private Methods
     private func setUp() {
+        recheckVM()
         registerNib()
+        apiCallEvent()
+    }
+    
+    private func recheckVM() {
+        if self.viewModel == nil {
+            self.viewModel = EventListVM()
+        }
     }
     
     private func registerNib() {
@@ -52,6 +70,21 @@ class EventListViewC: UIViewController {
     private func setUpViewAll() {
         viewAllUpcoming.isHidden = (upcomingEventCount > 5) ? false : true
         viewAllPast.isHidden = (pastEventCount > 5) ? false : true
+    }
+    
+    private func apiCallEvent() {
+        self.viewModel?.getAllEvents(allEventListHandler: { [weak self] (upcomingEvents, upcomingCount, pastEvents, pastCount, success, msg) in
+            guard self != nil else { return }
+            if success {
+                self?.arrUpcomingEvent = upcomingEvents
+                self?.arrPastEvent = pastEvents
+                self?.upcomingEventCount = upcomingCount
+                self?.pastEventCount = pastCount
+                self?.setUpViewAll()
+            } else {
+                Alert.Alert(msg, okButtonTitle: "Ok", target: self)
+            }
+        })
     }
     
     //MARK: - IBAction Methods
@@ -73,15 +106,13 @@ class EventListViewC: UIViewController {
 extension EventListViewC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10//(collectionView.tag == 200) ? self.arrUpcomingEvent.count : self.arrPastEvent.count
+        return (collectionView.tag == 200) ? self.arrUpcomingEvent.count : self.arrPastEvent.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CellEvent", for: indexPath) as! CellEvent
-        cell.setUpEventGradient()
-        cell.layer.cornerRadius = 6
-        cell.layer.masksToBounds = true
+        cell.setUpEventList(event: (collectionView.tag == 200) ? arrUpcomingEvent[indexPath.row] : arrPastEvent[indexPath.row])
         return cell
     }
     

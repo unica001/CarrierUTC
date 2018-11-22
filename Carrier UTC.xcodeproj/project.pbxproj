@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		175EA05521A6BD7600E17849 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175EA05421A6BD7600E17849 /* EventModel.swift */; };
+		175EA05721A6BFB900E17849 /* EventListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175EA05621A6BFB900E17849 /* EventListVM.swift */; };
+		175EA05B21A6CF2700E17849 /* SearchEventVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175EA05A21A6CF2700E17849 /* SearchEventVM.swift */; };
 		1786402C21A531D6006ED91B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1786402B21A531D6006ED91B /* AppDelegate.swift */; };
 		1786403121A531D6006ED91B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1786402F21A531D6006ED91B /* Main.storyboard */; };
 		1786403321A531D6006ED91B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1786403221A531D6006ED91B /* Assets.xcassets */; };
@@ -72,6 +75,9 @@
 
 /* Begin PBXFileReference section */
 		088C9EC04B5131CEF9DBDBC1 /* Pods-Carrier UTC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carrier UTC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Carrier UTC/Pods-Carrier UTC.debug.xcconfig"; sourceTree = "<group>"; };
+		175EA05421A6BD7600E17849 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventModel.swift; path = "Carrier UTC/Module/Event/Model/EventModel.swift"; sourceTree = SOURCE_ROOT; };
+		175EA05621A6BFB900E17849 /* EventListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListVM.swift; sourceTree = "<group>"; };
+		175EA05A21A6CF2700E17849 /* SearchEventVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEventVM.swift; sourceTree = "<group>"; };
 		1786402821A531D6006ED91B /* Carrier UTC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Carrier UTC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1786402B21A531D6006ED91B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1786403021A531D6006ED91B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -156,6 +162,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		175EA05321A6BD4100E17849 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				175EA05421A6BD7600E17849 /* EventModel.swift */,
+			);
+			name = Model;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		175EA05821A6BFBF00E17849 /* EventList */ = {
+			isa = PBXGroup;
+			children = (
+				1786408921A542DC006ED91B /* EventListViewC.swift */,
+				175EA05621A6BFB900E17849 /* EventListVM.swift */,
+			);
+			name = EventList;
+			sourceTree = "<group>";
+		};
+		175EA05921A6CEE400E17849 /* SearchEvent */ = {
+			isa = PBXGroup;
+			children = (
+				17FC9A0221A56A0F007DB7E1 /* SearchEventViewC.swift */,
+				175EA05A21A6CF2700E17849 /* SearchEventVM.swift */,
+			);
+			name = SearchEvent;
+			sourceTree = "<group>";
+		};
 		1786401F21A531D6006ED91B = {
 			isa = PBXGroup;
 			children = (
@@ -306,6 +339,7 @@
 			isa = PBXGroup;
 			children = (
 				1786408B21A55670006ED91B /* View */,
+				175EA05321A6BD4100E17849 /* Model */,
 				1786408821A542C3006ED91B /* Controller */,
 			);
 			path = Event;
@@ -314,8 +348,8 @@
 		1786408821A542C3006ED91B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				1786408921A542DC006ED91B /* EventListViewC.swift */,
-				17FC9A0221A56A0F007DB7E1 /* SearchEventViewC.swift */,
+				175EA05921A6CEE400E17849 /* SearchEvent */,
+				175EA05821A6BFBF00E17849 /* EventList */,
 				17F80E6321A576E9003BBC80 /* EventDetailViewC.swift */,
 			);
 			path = Controller;
@@ -610,6 +644,7 @@
 				17F80E6721A5770F003BBC80 /* CellEventDetail.swift in Sources */,
 				17F80E6E21A58218003BBC80 /* EventImageView.swift in Sources */,
 				1786406221A5335B006ED91B /* ConstantTexts.swift in Sources */,
+				175EA05721A6BFB900E17849 /* EventListVM.swift in Sources */,
 				1786407121A53381006ED91B /* UIImage+Orientation.swift in Sources */,
 				9A58C1B021A581AC00A07CB7 /* AirQualityCell.swift in Sources */,
 				17FC9A0321A56A0F007DB7E1 /* SearchEventViewC.swift in Sources */,
@@ -618,6 +653,7 @@
 				1786402C21A531D6006ED91B /* AppDelegate.swift in Sources */,
 				1786406E21A53381006ED91B /* UIImageViewUtility.swift in Sources */,
 				1786408A21A542DC006ED91B /* EventListViewC.swift in Sources */,
+				175EA05B21A6CF2700E17849 /* SearchEventVM.swift in Sources */,
 				1786407521A53381006ED91B /* DateUtility.swift in Sources */,
 				17F80E6421A576E9003BBC80 /* EventDetailViewC.swift in Sources */,
 				1786406121A5335B006ED91B /* Constant.swift in Sources */,
@@ -625,6 +661,7 @@
 				9A58C1AC21A580E800A07CB7 /* AirQualityDetailController.swift in Sources */,
 				1786406D21A53381006ED91B /* UIButtonAddition.swift in Sources */,
 				9A58C1B621A589C900A07CB7 /* NetworkManager.swift in Sources */,
+				175EA05521A6BD7600E17849 /* EventModel.swift in Sources */,
 				1786406F21A53381006ED91B /* UITextFieldAddition.swift in Sources */,
 				1786408E21A5569B006ED91B /* CellEvent.swift in Sources */,
 			);

@@ -20,6 +20,8 @@ class CellEvent: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.layer.cornerRadius = 6
+        self.layer.masksToBounds = true
     }
 
     func setUpEventGradient() {
@@ -29,6 +31,15 @@ class CellEvent: UICollectionViewCell {
         gradientLayer.locations = [0, 0.1, 0.9, 1]
         gradientLayer.frame = self.bounds
         viewEvent.layer.mask = gradientLayer
+    }
+    
+    func setUpEventList(event: EventModel) {
+        setUpEventGradient()
+        lblEventName.text = event.heading
+        lblEventAddress.text = event.event_address
+        imgEvent.setImageWith(strImage: event.event_image)
+        //2018-11-18
+        
     }
     
 }
