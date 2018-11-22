@@ -68,5 +68,28 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.233657812355-ohftsihji48et0oqod4mh34tdurfik84</string>
+				<string>apps.googleusercontent.com.233657812355-t8v0m32oo7kk6hbiubmdsd9p925oertn</string>
+				<string>fb140890996773403</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.indigo.Carrier-UTC</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.indigo.Carrier-UTC</string>
+			</array>
+		</dict>
+	</array>
 </dict>
 </plist>

@@ -12,14 +12,30 @@ class AirQualityDetailController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    internal var viewModel: AirQualityModelling?
+    
+    var  airQualityList = [AirQualityModele]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
     //MARK: - View Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setUp()
     }
 
     //MARK: - Private Methods
     private func setUp() {
+        
+        if self.viewModel == nil {
+            self.viewModel = AirQualityModeleView()
+        }
+        getAirQualityList()
         registerNib()
     }
     
@@ -31,14 +47,22 @@ class AirQualityDetailController: UIViewController {
     @IBAction func tapBack(_ sender: Any) {
         _ = self.navigationController?.popViewController(animated: true)
     }
+    
+    func getAirQualityList(){
+        
+        self.viewModel?.getAirQualityDetails(userListHandler: { [weak self] (response, isSuccess, msg) in
+            
+            self?.airQualityList = response
+            print(response)
+        })
 }
-
+}
 
 // MARK: Table view Delegates
 
 extension AirQualityDetailController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return airQualityList.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -51,6 +75,11 @@ extension AirQualityDetailController: UITableViewDataSource, UITableViewDelegate
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AirQualityCell", for: indexPath) as! AirQualityCell
+        
+        cell.qualityTypeLabel.text = airQualityList[indexPath.row].name
+        cell.descriptionLabel.text = airQualityList[indexPath.row].display_text
+
+        
         return cell
     }
 }

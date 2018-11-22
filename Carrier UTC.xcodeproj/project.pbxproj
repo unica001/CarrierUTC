@@ -43,12 +43,14 @@
 		17F80E7821A58E5D003BBC80 /* BlogCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17F80E7621A58E5D003BBC80 /* BlogCategoryCell.xib */; };
 		17FC9A0321A56A0F007DB7E1 /* SearchEventViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC9A0221A56A0F007DB7E1 /* SearchEventViewC.swift */; };
 		36CD617E268B64F0D5D7565B /* Pods_Carrier_UTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 604636679BE54A1769E1EB88 /* Pods_Carrier_UTC.framework */; };
+		9A35315821A687A20065CD49 /* AirQualityModele.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35315721A687A20065CD49 /* AirQualityModele.swift */; };
 		9A58C1A821A55DB700A07CB7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A58C1A721A55DB700A07CB7 /* HomeViewController.swift */; };
 		9A58C1AA21A5701800A07CB7 /* gurugram.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 9A58C1A921A5701800A07CB7 /* gurugram.gpx */; };
 		9A58C1AC21A580E800A07CB7 /* AirQualityDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A58C1AB21A580E800A07CB7 /* AirQualityDetailController.swift */; };
 		9A58C1B021A581AC00A07CB7 /* AirQualityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A58C1AE21A581AC00A07CB7 /* AirQualityCell.swift */; };
 		9A58C1B121A581AC00A07CB7 /* AirQualityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A58C1AF21A581AC00A07CB7 /* AirQualityCell.xib */; };
 		9A58C1B821A58B0500A07CB7 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A58C1B721A58B0500A07CB7 /* SDWebImage.framework */; };
+		9AC49F5521A68E3500047D7F /* AirQualityModeleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC49F5421A68E3500047D7F /* AirQualityModeleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +115,7 @@
 		17FC9A0221A56A0F007DB7E1 /* SearchEventViewC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEventViewC.swift; sourceTree = "<group>"; };
 		2550596F560512BE1E82FE15 /* Pods_Carrier_UTCUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Carrier_UTCUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		604636679BE54A1769E1EB88 /* Pods_Carrier_UTC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Carrier_UTC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A35315721A687A20065CD49 /* AirQualityModele.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityModele.swift; sourceTree = "<group>"; };
 		9A58C1A721A55DB700A07CB7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9A58C1A921A5701800A07CB7 /* gurugram.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = gurugram.gpx; sourceTree = "<group>"; };
 		9A58C1AB21A580E800A07CB7 /* AirQualityDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityDetailController.swift; sourceTree = "<group>"; };
@@ -121,6 +124,7 @@
 		9A58C1B721A58B0500A07CB7 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A58C1B921A58B0500A07CB7 /* SVProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SVProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A58C1BB21A58C4E00A07CB7 /* SKActivityIndicatorView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SKActivityIndicatorView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AC49F5421A68E3500047D7F /* AirQualityModeleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityModeleView.swift; sourceTree = "<group>"; };
 		B179E16F23A5704EF94170D3 /* Pods_Carrier_UTCTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Carrier_UTCTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E17ACDA14855DCF8DFFE1DBA /* Pods-Carrier UTC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carrier UTC.release.xcconfig"; path = "Pods/Target Support Files/Pods-Carrier UTC/Pods-Carrier UTC.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -400,6 +404,8 @@
 			children = (
 				9A58C1A721A55DB700A07CB7 /* HomeViewController.swift */,
 				9A58C1AB21A580E800A07CB7 /* AirQualityDetailController.swift */,
+				9A35315721A687A20065CD49 /* AirQualityModele.swift */,
+				9AC49F5421A68E3500047D7F /* AirQualityModeleView.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -554,6 +560,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Carrier UTC/Pods-Carrier UTC-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/TPKeyboardAvoiding/TPKeyboardAvoiding.framework",
 			);
@@ -561,6 +568,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TPKeyboardAvoiding.framework",
 			);
@@ -604,6 +612,11 @@
 				1786407421A53381006ED91B /* UIViewAddition.swift in Sources */,
 				175EA05121A6AF4C00E17849 /* ReachabilityHelper.swift in Sources */,
 				9A58C1A821A55DB700A07CB7 /* HomeViewController.swift in Sources */,
+<<<<<<< HEAD
+=======
+				9AC49F5521A68E3500047D7F /* AirQualityModeleView.swift in Sources */,
+				9A58C1B521A589C900A07CB7 /* ReachabilityHelper.swift in Sources */,
+>>>>>>> d49c85337c090d1e699ef518fdf01ddc8a2f8368
 				1786407921A534AC006ED91B /* Enumeration.swift in Sources */,
 				17F80E7721A58E5D003BBC80 /* BlogCategoryCell.swift in Sources */,
 				1786407721A533EA006ED91B /* Alert.swift in Sources */,
@@ -621,6 +634,7 @@
 				1786407521A53381006ED91B /* DateUtility.swift in Sources */,
 				17F80E6421A576E9003BBC80 /* EventDetailViewC.swift in Sources */,
 				1786406121A5335B006ED91B /* Constant.swift in Sources */,
+				9A35315821A687A20065CD49 /* AirQualityModele.swift in Sources */,
 				9A58C1AC21A580E800A07CB7 /* AirQualityDetailController.swift in Sources */,
 				175EA05221A6AF4C00E17849 /* NetworkManager.swift in Sources */,
 				1786406D21A53381006ED91B /* UIButtonAddition.swift in Sources */,

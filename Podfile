@@ -8,6 +8,7 @@ target 'Carrier UTC' do
   # Pods for Carrier UTC
 
   pod 'SDWebImage'
+  pod 'ObjectMapper'
 #  pod 'SVProgressHUD', '~> 1.1.3'
 
 
