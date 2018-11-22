@@ -13,6 +13,13 @@ class EventListViewC: UIViewController {
     //MARK: - IBOutlet
     @IBOutlet weak var collectionViewUpcoming: UICollectionView!
     @IBOutlet weak var collectionViewPast: UICollectionView!
+    @IBOutlet weak var viewAllUpcoming: UIView!
+    @IBOutlet weak var viewAllPast: UIView!
+    
+    var arrUpcomingEvent = [[String:AnyObject]]()
+    var arrPastEvent = [[String:AnyObject]]()
+    let upcomingEventCount = 0
+    let pastEventCount = 0
     
     //MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -42,9 +49,22 @@ class EventListViewC: UIViewController {
         collectionViewPast.register(UINib(nibName: "CellEvent", bundle: nil), forCellWithReuseIdentifier: "CellEvent")
     }
     
+    private func setUpViewAll() {
+        viewAllUpcoming.isHidden = (upcomingEventCount > 5) ? false : true
+        viewAllPast.isHidden = (pastEventCount > 5) ? false : true
+    }
+    
     //MARK: - IBAction Methods
     @IBAction func tapSearch(_ sender: UIButton) {
         if let searchEventViewC = Constant.kStoryboardEvent.instantiateViewController(withIdentifier: "SearchEventViewC") as? SearchEventViewC {
+            searchEventViewC.strHeaderTitle = EventType.Search.rawValue
+            self.navigationController?.pushViewController(searchEventViewC, animated: true)
+        }
+    }
+    
+    @IBAction func tapViewAll(_ sender: UIButton) {
+        if let searchEventViewC = Constant.kStoryboardEvent.instantiateViewController(withIdentifier: "SearchEventViewC") as? SearchEventViewC {
+            searchEventViewC.strHeaderTitle = (sender.tag == 100) ? EventType.Upcoming.rawValue : EventType.Past.rawValue
             self.navigationController?.pushViewController(searchEventViewC, animated: true)
         }
     }
@@ -53,12 +73,13 @@ class EventListViewC: UIViewController {
 extension EventListViewC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (collectionView == collectionViewUpcoming) ? 10 : 2
+        return 10//(collectionView.tag == 200) ? self.arrUpcomingEvent.count : self.arrPastEvent.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CellEvent", for: indexPath) as! CellEvent
+        cell.setUpEventGradient()
         cell.layer.cornerRadius = 6
         cell.layer.masksToBounds = true
         return cell
@@ -72,7 +93,7 @@ extension EventListViewC: UICollectionViewDelegate, UICollectionViewDataSource, 
     
     // MARK: UICollectionViewDelegateFlowLayout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 300, height: collectionView.frame.size.height) // The size of one cell
+        return CGSize(width: 280, height: collectionView.frame.size.height) // The size of one cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

@@ -2,17 +2,21 @@ PODS:
   - SDWebImage (4.4.2):
     - SDWebImage/Core (= 4.4.2)
   - SDWebImage/Core (4.4.2)
+  - TPKeyboardAvoiding (1.3.2)
 
 DEPENDENCIES:
   - SDWebImage
+  - TPKeyboardAvoiding
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - SDWebImage
+    - TPKeyboardAvoiding
 
 SPEC CHECKSUMS:
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
+  TPKeyboardAvoiding: cb69d5ddbe90ce0170e4bc2db1e5e41d4a3ad9a4
 
-PODFILE CHECKSUM: bcdfaec73383fd5a3ec219e23b84fb8f7efeaa71
+PODFILE CHECKSUM: 7ddfdd2b4f492fdfc97c23efea2ca21019d03607
 
 COCOAPODS: 1.5.3

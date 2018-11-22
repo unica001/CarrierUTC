@@ -15,7 +15,7 @@ class BlogCategoryViewC: UIViewController {
     //MARK: - View Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setUp()
         // Do any additional setup after loading the view.
     }
     
@@ -30,6 +30,15 @@ class BlogCategoryViewC: UIViewController {
     }
     */
 
+    //MARK: - Private Methods
+    private func setUp() {
+        registerNib()
+    }
+    
+    private func registerNib() {
+        self.tblBlogCategory.register(UINib(nibName: "BlogCategoryCell", bundle: nil), forCellReuseIdentifier: "BlogCategoryCell")
+    }
+    
     //MARK: - IBAction Methods
     @IBAction func tapSearch(_ sender: UIButton) {
     }
@@ -46,7 +55,7 @@ extension BlogCategoryViewC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CellEventDetail", for: indexPath) as! CellEventDetail
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BlogCategoryCell", for: indexPath) as! BlogCategoryCell
         return cell
     }
 }
