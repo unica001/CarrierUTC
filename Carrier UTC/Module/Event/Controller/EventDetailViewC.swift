@@ -13,8 +13,6 @@ class EventDetailViewC: UIViewController {
     @IBOutlet weak var tblEventDetail: UITableView!
     @IBOutlet weak var btnInterested: UIButton!
     
-//    var eventId = 
-    
     //MARK: - View Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,8 +34,6 @@ class EventDetailViewC: UIViewController {
     //MARK: - Private Methods
     private func setUp() {
         registerNib()
-        self.navigationItem.hidesBackButton = true
-        btnInterested.roundCorners(borderWidth: 0.0, borderColor: UIColor.clear.cgColor, cornerRadius: btnInterested.frame.size.height/2)
     }
     
     private func registerNib() {

@@ -7,9 +7,3 @@
 //
 
 import Foundation
-
-enum EventType: String {
-    case Upcoming = "Upcoming Events"//"UPCOMING EVENTS"
-    case Past = "Past Events"//"PAST EVENTS"
-    case Search = "Search Events"//"SEARCH EVENTS"
-}

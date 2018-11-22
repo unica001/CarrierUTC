@@ -21,69 +21,66 @@
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fA1-0Z-Icr">
                         <rect key="frame" x="0.0" y="0.0" width="286" height="140"/>
-                        <color key="backgroundColor" red="0.65538801339999997" green="0.40925944409999998" blue="0.37561382580000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </imageView>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AZo-R6-0kD">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ctT-cg-WVv">
                         <rect key="frame" x="0.0" y="0.0" width="286" height="140"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 Jan" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Mu-YW-P4A">
+                                <rect key="frame" x="5" y="96" width="42" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="LEc-zE-1n4"/>
+                                    <constraint firstAttribute="width" constant="42" id="bzf-NE-fhH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TREE PLANTATION" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swO-7H-kQg">
+                                <rect key="frame" x="51" y="96" width="227" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="9SK-AJ-kp2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Golf Course Road, Gurgaon" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNg-QB-EBs">
+                                <rect key="frame" x="51" y="114" width="227" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="4eH-8k-4oG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="gNg-QB-EBs" secondAttribute="bottom" constant="8" id="1RZ-Ui-CEo"/>
+                            <constraint firstAttribute="bottom" secondItem="0Mu-YW-P4A" secondAttribute="bottom" constant="8" id="8Kn-T4-6ji"/>
+                            <constraint firstItem="gNg-QB-EBs" firstAttribute="top" secondItem="swO-7H-kQg" secondAttribute="bottom" id="RLp-MH-YTT"/>
+                            <constraint firstItem="0Mu-YW-P4A" firstAttribute="leading" secondItem="ctT-cg-WVv" secondAttribute="leading" constant="5" id="S4N-Ib-cBn"/>
+                            <constraint firstItem="gNg-QB-EBs" firstAttribute="leading" secondItem="0Mu-YW-P4A" secondAttribute="trailing" constant="4" id="WZQ-YP-T51"/>
+                            <constraint firstAttribute="trailing" secondItem="swO-7H-kQg" secondAttribute="trailing" constant="8" id="d9H-HO-HsJ"/>
+                            <constraint firstAttribute="trailing" secondItem="gNg-QB-EBs" secondAttribute="trailing" constant="8" id="jJ6-8a-nQj"/>
+                            <constraint firstItem="swO-7H-kQg" firstAttribute="leading" secondItem="0Mu-YW-P4A" secondAttribute="trailing" constant="4" id="ueJ-ko-ZU0"/>
+                        </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 Jan" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Mu-YW-P4A">
-                        <rect key="frame" x="8" y="99" width="42" height="36"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="36" id="LEc-zE-1n4"/>
-                            <constraint firstAttribute="width" constant="42" id="bzf-NE-fhH"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TREE PLANTATION" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swO-7H-kQg">
-                        <rect key="frame" x="55" y="101" width="227" height="18"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="18" id="9SK-AJ-kp2"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Golf Course Road, Gurgaon" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNg-QB-EBs">
-                        <rect key="frame" x="55" y="116" width="227" height="18"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="18" id="4eH-8k-4oG"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="gNg-QB-EBs" secondAttribute="trailing" constant="4" id="6Eo-eL-xoB"/>
-                <constraint firstAttribute="bottom" secondItem="AZo-R6-0kD" secondAttribute="bottom" id="6V6-vd-9H6"/>
-                <constraint firstItem="AZo-R6-0kD" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="7oe-lU-D6q"/>
-                <constraint firstAttribute="bottom" secondItem="gNg-QB-EBs" secondAttribute="bottom" constant="6" id="C12-qt-Rpe"/>
-                <constraint firstAttribute="trailing" secondItem="swO-7H-kQg" secondAttribute="trailing" constant="4" id="E2q-YO-mhV"/>
-                <constraint firstAttribute="trailing" secondItem="AZo-R6-0kD" secondAttribute="trailing" id="KJC-I9-fpf"/>
                 <constraint firstAttribute="trailing" secondItem="fA1-0Z-Icr" secondAttribute="trailing" id="QDO-cl-iTd"/>
-                <constraint firstItem="0Mu-YW-P4A" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="RjX-mm-Tw6"/>
                 <constraint firstItem="fA1-0Z-Icr" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Uzn-TS-d4s"/>
-                <constraint firstItem="AZo-R6-0kD" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Vsv-VQ-PWm"/>
-                <constraint firstItem="swO-7H-kQg" firstAttribute="leading" secondItem="0Mu-YW-P4A" secondAttribute="trailing" constant="5" id="WjH-2D-E3Q"/>
+                <constraint firstItem="ctT-cg-WVv" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="bVS-La-DWX"/>
+                <constraint firstAttribute="trailing" secondItem="ctT-cg-WVv" secondAttribute="trailing" id="cBU-7b-9Zv"/>
                 <constraint firstAttribute="bottom" secondItem="fA1-0Z-Icr" secondAttribute="bottom" id="eLY-lv-0fq"/>
-                <constraint firstAttribute="bottom" secondItem="0Mu-YW-P4A" secondAttribute="bottom" constant="5" id="fUu-v9-m1x"/>
+                <constraint firstItem="ctT-cg-WVv" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ePA-0R-2Qw"/>
                 <constraint firstItem="fA1-0Z-Icr" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="g9I-fq-iEc"/>
-                <constraint firstItem="gNg-QB-EBs" firstAttribute="leading" secondItem="0Mu-YW-P4A" secondAttribute="trailing" constant="5" id="ixz-uM-rVj"/>
-                <constraint firstItem="gNg-QB-EBs" firstAttribute="top" secondItem="swO-7H-kQg" secondAttribute="bottom" constant="-3" id="yPX-ie-he4"/>
+                <constraint firstAttribute="bottom" secondItem="ctT-cg-WVv" secondAttribute="bottom" id="q2b-Kw-LPt"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="286" height="149"/>
-            <connections>
-                <outlet property="imgEvent" destination="fA1-0Z-Icr" id="GZy-Zz-WI4"/>
-                <outlet property="lblEventAddress" destination="gNg-QB-EBs" id="tLc-ix-Uej"/>
-                <outlet property="lblEventDate" destination="0Mu-YW-P4A" id="nUm-6E-ikn"/>
-                <outlet property="lblEventName" destination="swO-7H-kQg" id="J5G-gr-3wp"/>
-                <outlet property="viewEvent" destination="AZo-R6-0kD" id="gbx-mP-rpQ"/>
-            </connections>
             <point key="canvasLocation" x="276.80000000000001" y="176.31184407796104"/>
         </collectionViewCell>
     </objects>

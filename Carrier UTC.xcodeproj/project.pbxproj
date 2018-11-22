@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		175EA05121A6AF4C00E17849 /* ReachabilityHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175EA04F21A6AF4B00E17849 /* ReachabilityHelper.swift */; };
-		175EA05221A6AF4C00E17849 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175EA05021A6AF4B00E17849 /* NetworkManager.swift */; };
 		1786402C21A531D6006ED91B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1786402B21A531D6006ED91B /* AppDelegate.swift */; };
 		1786403121A531D6006ED91B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1786402F21A531D6006ED91B /* Main.storyboard */; };
 		1786403321A531D6006ED91B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1786403221A531D6006ED91B /* Assets.xcassets */; };
@@ -49,6 +47,8 @@
 		9A58C1AC21A580E800A07CB7 /* AirQualityDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A58C1AB21A580E800A07CB7 /* AirQualityDetailController.swift */; };
 		9A58C1B021A581AC00A07CB7 /* AirQualityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A58C1AE21A581AC00A07CB7 /* AirQualityCell.swift */; };
 		9A58C1B121A581AC00A07CB7 /* AirQualityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A58C1AF21A581AC00A07CB7 /* AirQualityCell.xib */; };
+		9A58C1B521A589C900A07CB7 /* ReachabilityHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A58C1B321A589C900A07CB7 /* ReachabilityHelper.swift */; };
+		9A58C1B621A589C900A07CB7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A58C1B421A589C900A07CB7 /* NetworkManager.swift */; };
 		9A58C1B821A58B0500A07CB7 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A58C1B721A58B0500A07CB7 /* SDWebImage.framework */; };
 		9AC49F5521A68E3500047D7F /* AirQualityModeleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC49F5421A68E3500047D7F /* AirQualityModeleView.swift */; };
 /* End PBXBuildFile section */
@@ -72,8 +72,6 @@
 
 /* Begin PBXFileReference section */
 		088C9EC04B5131CEF9DBDBC1 /* Pods-Carrier UTC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carrier UTC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Carrier UTC/Pods-Carrier UTC.debug.xcconfig"; sourceTree = "<group>"; };
-		175EA04F21A6AF4B00E17849 /* ReachabilityHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReachabilityHelper.swift; sourceTree = "<group>"; };
-		175EA05021A6AF4B00E17849 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		1786402821A531D6006ED91B /* Carrier UTC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Carrier UTC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1786402B21A531D6006ED91B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1786403021A531D6006ED91B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -121,6 +119,8 @@
 		9A58C1AB21A580E800A07CB7 /* AirQualityDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityDetailController.swift; sourceTree = "<group>"; };
 		9A58C1AE21A581AC00A07CB7 /* AirQualityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityCell.swift; sourceTree = "<group>"; };
 		9A58C1AF21A581AC00A07CB7 /* AirQualityCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AirQualityCell.xib; sourceTree = "<group>"; };
+		9A58C1B321A589C900A07CB7 /* ReachabilityHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReachabilityHelper.swift; path = "Carrier UTC/Connection Manager/ReachabilityHelper.swift"; sourceTree = SOURCE_ROOT; };
+		9A58C1B421A589C900A07CB7 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkManager.swift; path = "Carrier UTC/Connection Manager/NetworkManager.swift"; sourceTree = SOURCE_ROOT; };
 		9A58C1B721A58B0500A07CB7 /* SDWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A58C1B921A58B0500A07CB7 /* SVProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SVProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A58C1BB21A58C4E00A07CB7 /* SKActivityIndicatorView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SKActivityIndicatorView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -156,22 +156,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		175EA04B21A6A73700E17849 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		175EA04E21A6AF4B00E17849 /* Connection Manager */ = {
-			isa = PBXGroup;
-			children = (
-				175EA04F21A6AF4B00E17849 /* ReachabilityHelper.swift */,
-				175EA05021A6AF4B00E17849 /* NetworkManager.swift */,
-			);
-			path = "Connection Manager";
-			sourceTree = "<group>";
-		};
 		1786401F21A531D6006ED91B = {
 			isa = PBXGroup;
 			children = (
@@ -198,10 +182,10 @@
 		1786402A21A531D6006ED91B /* Carrier UTC */ = {
 			isa = PBXGroup;
 			children = (
+				9A58C1B221A589AE00A07CB7 /* Connection Manager */,
 				1786402B21A531D6006ED91B /* AppDelegate.swift */,
 				1786407F21A5402F006ED91B /* Module */,
 				1786405A21A531F7006ED91B /* View */,
-				175EA04E21A6AF4B00E17849 /* Connection Manager */,
 				1786405B21A53212006ED91B /* Extension */,
 				1786405C21A53220006ED91B /* Helper */,
 				1786403221A531D6006ED91B /* Assets.xcassets */,
@@ -321,7 +305,6 @@
 		1786408421A5402F006ED91B /* Event */ = {
 			isa = PBXGroup;
 			children = (
-				175EA04B21A6A73700E17849 /* Model */,
 				1786408B21A55670006ED91B /* View */,
 				1786408821A542C3006ED91B /* Controller */,
 			);
@@ -397,6 +380,16 @@
 				9A58C1AF21A581AC00A07CB7 /* AirQualityCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		9A58C1B221A589AE00A07CB7 /* Connection Manager */ = {
+			isa = PBXGroup;
+			children = (
+				9A58C1B421A589C900A07CB7 /* NetworkManager.swift */,
+				9A58C1B321A589C900A07CB7 /* ReachabilityHelper.swift */,
+			);
+			name = "Connection Manager";
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 		9AE32C5721A5535E00407428 /* Controller */ = {
@@ -562,7 +555,6 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-Carrier UTC/Pods-Carrier UTC-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
-				"${BUILT_PRODUCTS_DIR}/TPKeyboardAvoiding/TPKeyboardAvoiding.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -570,7 +562,6 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TPKeyboardAvoiding.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -610,13 +601,16 @@
 				1786407321A53381006ED91B /* UIFontAddition.swift in Sources */,
 				1786407221A53381006ED91B /* UITableViewAddition.swift in Sources */,
 				1786407421A53381006ED91B /* UIViewAddition.swift in Sources */,
-				175EA05121A6AF4C00E17849 /* ReachabilityHelper.swift in Sources */,
 				9A58C1A821A55DB700A07CB7 /* HomeViewController.swift in Sources */,
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 				9AC49F5521A68E3500047D7F /* AirQualityModeleView.swift in Sources */,
 				9A58C1B521A589C900A07CB7 /* ReachabilityHelper.swift in Sources */,
 >>>>>>> d49c85337c090d1e699ef518fdf01ddc8a2f8368
+=======
+				9A58C1B521A589C900A07CB7 /* ReachabilityHelper.swift in Sources */,
+>>>>>>> parent of 8abe550... Event module functionality and UI correction
 				1786407921A534AC006ED91B /* Enumeration.swift in Sources */,
 				17F80E7721A58E5D003BBC80 /* BlogCategoryCell.swift in Sources */,
 				1786407721A533EA006ED91B /* Alert.swift in Sources */,
@@ -636,8 +630,8 @@
 				1786406121A5335B006ED91B /* Constant.swift in Sources */,
 				9A35315821A687A20065CD49 /* AirQualityModele.swift in Sources */,
 				9A58C1AC21A580E800A07CB7 /* AirQualityDetailController.swift in Sources */,
-				175EA05221A6AF4C00E17849 /* NetworkManager.swift in Sources */,
 				1786406D21A53381006ED91B /* UIButtonAddition.swift in Sources */,
+				9A58C1B621A589C900A07CB7 /* NetworkManager.swift in Sources */,
 				1786406F21A53381006ED91B /* UITextFieldAddition.swift in Sources */,
 				1786408E21A5569B006ED91B /* CellEvent.swift in Sources */,
 			);
