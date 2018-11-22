@@ -17,14 +17,6 @@ SPEC CHECKSUMS:
   ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-PODFILE CHECKSUM: 7ddfdd2b4f492fdfc97c23efea2ca21019d03607
-=======
 PODFILE CHECKSUM: ac8829bd1e483325d650ff09c7b657b632ccbd85
->>>>>>> d49c85337c090d1e699ef518fdf01ddc8a2f8368
-=======
-PODFILE CHECKSUM: bcdfaec73383fd5a3ec219e23b84fb8f7efeaa71
->>>>>>> parent of 8abe550... Event module functionality and UI correction
 
 COCOAPODS: 1.5.3

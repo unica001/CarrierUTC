@@ -602,15 +602,8 @@
 				1786407221A53381006ED91B /* UITableViewAddition.swift in Sources */,
 				1786407421A53381006ED91B /* UIViewAddition.swift in Sources */,
 				9A58C1A821A55DB700A07CB7 /* HomeViewController.swift in Sources */,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 				9AC49F5521A68E3500047D7F /* AirQualityModeleView.swift in Sources */,
 				9A58C1B521A589C900A07CB7 /* ReachabilityHelper.swift in Sources */,
->>>>>>> d49c85337c090d1e699ef518fdf01ddc8a2f8368
-=======
-				9A58C1B521A589C900A07CB7 /* ReachabilityHelper.swift in Sources */,
->>>>>>> parent of 8abe550... Event module functionality and UI correction
 				1786407921A534AC006ED91B /* Enumeration.swift in Sources */,
 				17F80E7721A58E5D003BBC80 /* BlogCategoryCell.swift in Sources */,
 				1786407721A533EA006ED91B /* Alert.swift in Sources */,

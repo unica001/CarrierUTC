@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage" "${PODS_CONFIGURATION_BUILD_DIR}/TPKeyboardAvoiding"
-GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage/SDWebImage.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/TPKeyboardAvoiding/TPKeyboardAvoiding.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -framework "SDWebImage" -framework "TPKeyboardAvoiding"
-=======
 ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
 FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/ObjectMapper" "${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
@@ -13,14 +5,6 @@ LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_pa
 OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/ObjectMapper/ObjectMapper.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage/SDWebImage.framework/Headers"
 OTHER_LDFLAGS = $(inherited) -framework "ObjectMapper" -framework "SDWebImage"
 OTHER_SWIFT_FLAGS = $(inherited) "-D" "COCOAPODS"
->>>>>>> d49c85337c090d1e699ef518fdf01ddc8a2f8368
-=======
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage"
-GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage/SDWebImage.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -framework "SDWebImage"
->>>>>>> parent of 8abe550... Event module functionality and UI correction
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
 PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
