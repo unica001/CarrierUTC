@@ -9,9 +9,15 @@
 import Foundation
 
 let kUserDefault  =  UserDefaults.standard
+let kBaseUrl = "http://10.132.159.171:8000/api/"
+let kstatus = "status"
+let kpayload = "payload"
+let kmessage = "message"
 
+// APIs Name
+
+let kair_quality = "air_quality"
 // Segue Identifier
-
 let kairQualitySegueIdentifier = "airQualitySegueIdentifier"
 
 enum ConstantTexts: String {

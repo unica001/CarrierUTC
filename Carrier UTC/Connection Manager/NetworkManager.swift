@@ -3,7 +3,7 @@ import UIKit
 
 class NetworkManager: NSObject {
     
-    private let HeaderAccessToken = "##123"
+    private let HeaderAccessToken = "58063994-49e0-411b-8c5b-5319ab524ee1"
 
     class var sharedInstance: NetworkManager {
         
@@ -31,18 +31,9 @@ class NetworkManager: NSObject {
         
         urlRequest.httpBody = httpData
         print(urlRequest.httpBody!)
-        urlRequest.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-        urlRequest.setValue(HeaderAccessToken, forHTTPHeaderField: "accessToken")
-//        if !isAuthentication {
-//            if (kUserDefault.value(forKey: kloginInfo) != nil) {
-//                let loginInfoDictionary = NSKeyedUnarchiver.unarchiveObject(with: kUserDefault.value(forKey: kloginInfo) as! Data) as! NSMutableDictionary
-//                if let customerAccessToken = loginInfoDictionary["CustomerAccessToken"] as? String {
-//                    urlRequest.setValue(customerAccessToken, forHTTPHeaderField: "CustomerAccessToken")
-//                }
-//                
-//            }
-//           
-//        }
+//        urlRequest.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        urlRequest.setValue(HeaderAccessToken, forHTTPHeaderField: "x-api-key")
+        urlRequest.setValue("v1", forHTTPHeaderField: "x-api-version")
         
         let task = session.dataTask(with: urlRequest as URLRequest, completionHandler: {
             
@@ -52,7 +43,6 @@ class NetworkManager: NSObject {
             DispatchQueue.main.sync {
               //  SKActivityIndicator.dismiss()
             }
-            
             
             if error != nil {
                 print("Error occurred: "+(error?.localizedDescription)!)
