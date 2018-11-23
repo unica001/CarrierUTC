@@ -19,8 +19,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="92.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HHHUGYBGVYVGVYVYVYV" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmA-3a-aIq">
-                        <rect key="frame" x="10" y="10" width="300" height="20"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lmA-3a-aIq">
+                        <rect key="frame" x="15" y="10" width="290" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="AYB-Ro-HhW"/>
                         </constraints>
@@ -28,20 +28,30 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Labeldhgsadhasgdashdasgdh" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5c-6x-ziB">
-                        <rect key="frame" x="10" y="40" width="300" height="42.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5c-6x-ziB">
+                        <rect key="frame" x="15" y="40" width="290" height="42.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="81f-io-wr1">
+                        <rect key="frame" x="15" y="0.0" width="290" height="1"/>
+                        <color key="backgroundColor" red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="Xtq-I7-Icd"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="G5c-6x-ziB" firstAttribute="top" secondItem="lmA-3a-aIq" secondAttribute="bottom" constant="10" id="Gpp-XO-89r"/>
-                    <constraint firstAttribute="trailing" secondItem="lmA-3a-aIq" secondAttribute="trailing" constant="10" id="L8B-mP-Ewa"/>
-                    <constraint firstAttribute="trailing" secondItem="G5c-6x-ziB" secondAttribute="trailing" constant="10" id="NBr-ou-r74"/>
+                    <constraint firstAttribute="trailing" secondItem="lmA-3a-aIq" secondAttribute="trailing" constant="15" id="L8B-mP-Ewa"/>
+                    <constraint firstAttribute="trailing" secondItem="81f-io-wr1" secondAttribute="trailing" constant="15" id="Mm5-pt-Oeb"/>
+                    <constraint firstAttribute="trailing" secondItem="G5c-6x-ziB" secondAttribute="trailing" constant="15" id="NBr-ou-r74"/>
+                    <constraint firstItem="81f-io-wr1" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="PZM-bY-d3n"/>
                     <constraint firstItem="lmA-3a-aIq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Wbj-M9-YA6"/>
-                    <constraint firstItem="lmA-3a-aIq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="bF5-W6-hE1"/>
-                    <constraint firstItem="G5c-6x-ziB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="nxy-pp-B53"/>
+                    <constraint firstItem="lmA-3a-aIq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="bF5-W6-hE1"/>
+                    <constraint firstItem="81f-io-wr1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="diQ-A6-IEf"/>
+                    <constraint firstItem="G5c-6x-ziB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="nxy-pp-B53"/>
                     <constraint firstAttribute="bottom" secondItem="G5c-6x-ziB" secondAttribute="bottom" constant="10" id="vif-Pk-TA5"/>
                 </constraints>
             </tableViewCellContentView>

@@ -55,6 +55,7 @@
 		9A58C1B621A589C900A07CB7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A58C1B421A589C900A07CB7 /* NetworkManager.swift */; };
 		9A58C1B821A58B0500A07CB7 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A58C1B721A58B0500A07CB7 /* SDWebImage.framework */; };
 		9AC49F5521A68E3500047D7F /* AirQualityModeleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC49F5421A68E3500047D7F /* AirQualityModeleView.swift */; };
+		9AC49F5721A6CAC300047D7F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9AC49F5621A6CAC300047D7F /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +134,7 @@
 		9A58C1B921A58B0500A07CB7 /* SVProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SVProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A58C1BB21A58C4E00A07CB7 /* SKActivityIndicatorView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SKActivityIndicatorView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AC49F5421A68E3500047D7F /* AirQualityModeleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityModeleView.swift; sourceTree = "<group>"; };
+		9AC49F5621A6CAC300047D7F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B179E16F23A5704EF94170D3 /* Pods_Carrier_UTCTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Carrier_UTCTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E17ACDA14855DCF8DFFE1DBA /* Pods-Carrier UTC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carrier UTC.release.xcconfig"; path = "Pods/Target Support Files/Pods-Carrier UTC/Pods-Carrier UTC.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -225,6 +227,7 @@
 				1786405C21A53220006ED91B /* Helper */,
 				1786403221A531D6006ED91B /* Assets.xcassets */,
 				1786403721A531D6006ED91B /* Info.plist */,
+				9AC49F5621A6CAC300047D7F /* GoogleService-Info.plist */,
 			);
 			path = "Carrier UTC";
 			sourceTree = "<group>";
@@ -567,6 +570,7 @@
 				1786408621A541A6006ED91B /* Event.storyboard in Resources */,
 				1786403321A531D6006ED91B /* Assets.xcassets in Resources */,
 				1786403121A531D6006ED91B /* Main.storyboard in Resources */,
+				9AC49F5721A6CAC300047D7F /* GoogleService-Info.plist in Resources */,
 				17F80E7021A58225003BBC80 /* EventImageView.xib in Resources */,
 				17F80E7821A58E5D003BBC80 /* BlogCategoryCell.xib in Resources */,
 			);
@@ -598,15 +602,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Carrier UTC/Pods-Carrier UTC-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

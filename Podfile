@@ -9,6 +9,7 @@ target 'Carrier UTC' do
 
   pod 'SDWebImage'
   pod 'ObjectMapper'
+  pod 'Firebase/Core'
 #  pod 'SVProgressHUD', '~> 1.1.3'
 #  pod 'Firebase'
 

@@ -25,6 +25,7 @@ class AirQualityDetailController: UIViewController {
     //MARK: - View Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.hidesBackButton = true
         
         setUp()
     }
@@ -76,8 +77,9 @@ extension AirQualityDetailController: UITableViewDataSource, UITableViewDelegate
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AirQualityCell", for: indexPath) as! AirQualityCell
         
-        cell.qualityTypeLabel.text = airQualityList[indexPath.row].name
+        cell.qualityTypeLabel.text = airQualityList[indexPath.row].name! + " " + "\(airQualityList[indexPath.row].level!)"
         cell.descriptionLabel.text = airQualityList[indexPath.row].display_text
+        cell.qualityTypeLabel.textColor = UIColor.colorWith(hexString:airQualityList[indexPath.row].color! )
 
         
         return cell
