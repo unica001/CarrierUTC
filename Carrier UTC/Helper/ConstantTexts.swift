@@ -9,7 +9,7 @@
 import Foundation
 
 let kUserDefault  =  UserDefaults.standard
-let kBaseUrl = "http://10.132.159.171:8000/api/"
+let kBaseUrl = "http://103.91.90.242:8000/api/"
 let kstatus = "status"
 let kpayload = "payload"
 let kmessage = "message"

@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate {
@@ -26,6 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate 
         UINavigationBar.appearance().shadowImage = UIImage()
        // UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
         
+        FirebaseApp.configure()
         getCurrentLocation()
         
         return true
