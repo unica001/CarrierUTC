@@ -10,6 +10,7 @@ import UIKit
 
 class EventImageView: UITableViewHeaderFooterView {
 
+    @IBOutlet weak var imgevent: UIImageView!
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.

@@ -20,7 +20,8 @@ class EventModel: NSObject, Codable, Mappable {
     var longitude: Double?
     var heading: String?
     var event_time: String?
-    
+    var interested_users: Int?
+    var user_interest: Bool?
     
     required init?(map: Map) {
         
@@ -36,6 +37,8 @@ class EventModel: NSObject, Codable, Mappable {
         latitude <- map["latitude"]
         longitude <- map["longitude"]
         heading <- map["heading"]
+        user_interest <- map["user_interest"]
+        interested_users <- map["interested_users"]
     }
 
 }

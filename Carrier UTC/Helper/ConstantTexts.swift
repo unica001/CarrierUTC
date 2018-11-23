@@ -18,6 +18,8 @@ let kmessage = "message"
 let kair_quality = "air_quality"
 let kevents = "events"
 let ksearch_event = "search_event"
+let kevent_detail = "event_detail"
+let kinterested_event = "interested_event"
 
 //MARK: - Segue Identifier
 let kairQualitySegueIdentifier = "airQualitySegueIdentifier"

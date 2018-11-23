@@ -34,6 +34,7 @@
 		1786408A21A542DC006ED91B /* EventListViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1786408921A542DC006ED91B /* EventListViewC.swift */; };
 		1786408E21A5569B006ED91B /* CellEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1786408C21A5569B006ED91B /* CellEvent.swift */; };
 		1786408F21A5569B006ED91B /* CellEvent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1786408D21A5569B006ED91B /* CellEvent.xib */; };
+		17E1348621A7F999003AD715 /* EventDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E1348521A7F999003AD715 /* EventDetailVM.swift */; };
 		17F80E6421A576E9003BBC80 /* EventDetailViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F80E6321A576E9003BBC80 /* EventDetailViewC.swift */; };
 		17F80E6721A5770F003BBC80 /* CellEventDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F80E6521A5770F003BBC80 /* CellEventDetail.swift */; };
 		17F80E6821A5770F003BBC80 /* CellEventDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17F80E6621A5770F003BBC80 /* CellEventDetail.xib */; };
@@ -108,6 +109,7 @@
 		1786408921A542DC006ED91B /* EventListViewC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewC.swift; sourceTree = "<group>"; };
 		1786408C21A5569B006ED91B /* CellEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellEvent.swift; sourceTree = "<group>"; };
 		1786408D21A5569B006ED91B /* CellEvent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellEvent.xib; sourceTree = "<group>"; };
+		17E1348521A7F999003AD715 /* EventDetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailVM.swift; sourceTree = "<group>"; };
 		17F80E6321A576E9003BBC80 /* EventDetailViewC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewC.swift; sourceTree = "<group>"; };
 		17F80E6521A5770F003BBC80 /* CellEventDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellEventDetail.swift; sourceTree = "<group>"; };
 		17F80E6621A5770F003BBC80 /* CellEventDetail.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellEventDetail.xib; sourceTree = "<group>"; };
@@ -348,9 +350,9 @@
 		1786408821A542C3006ED91B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				17E1348421A7F97F003AD715 /* EventDetail */,
 				175EA05921A6CEE400E17849 /* SearchEvent */,
 				175EA05821A6BFBF00E17849 /* EventList */,
-				17F80E6321A576E9003BBC80 /* EventDetailViewC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -366,6 +368,15 @@
 				17F80E6F21A58225003BBC80 /* EventImageView.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		17E1348421A7F97F003AD715 /* EventDetail */ = {
+			isa = PBXGroup;
+			children = (
+				17F80E6321A576E9003BBC80 /* EventDetailViewC.swift */,
+				17E1348521A7F999003AD715 /* EventDetailVM.swift */,
+			);
+			name = EventDetail;
 			sourceTree = "<group>";
 		};
 		17F80E7121A58D6D003BBC80 /* Controllers */ = {
@@ -655,6 +666,7 @@
 				1786408A21A542DC006ED91B /* EventListViewC.swift in Sources */,
 				175EA05B21A6CF2700E17849 /* SearchEventVM.swift in Sources */,
 				1786407521A53381006ED91B /* DateUtility.swift in Sources */,
+				17E1348621A7F999003AD715 /* EventDetailVM.swift in Sources */,
 				17F80E6421A576E9003BBC80 /* EventDetailViewC.swift in Sources */,
 				1786406121A5335B006ED91B /* Constant.swift in Sources */,
 				9A35315821A687A20065CD49 /* AirQualityModele.swift in Sources */,

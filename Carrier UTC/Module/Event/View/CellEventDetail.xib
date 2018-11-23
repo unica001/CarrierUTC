@@ -89,6 +89,14 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="lblDesc" destination="g7h-eO-Yer" id="tH0-5q-V0S"/>
+                <outlet property="lblEventAddress" destination="jBL-Bo-Nfc" id="SYC-lA-zKJ"/>
+                <outlet property="lblEventDate" destination="oEj-JY-Muy" id="A8V-X8-Yle"/>
+                <outlet property="lblEventName" destination="5Cz-dD-4Fm" id="XIo-Ll-dAn"/>
+                <outlet property="lblPeople" destination="8EP-Lk-eCI" id="MlL-Vw-d6F"/>
+                <outlet property="viewDate" destination="i50-f1-6Ao" id="5kn-x0-e79"/>
+            </connections>
             <point key="canvasLocation" x="137.59999999999999" y="181.70914542728636"/>
         </tableViewCell>
     </objects>

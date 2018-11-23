@@ -120,8 +120,10 @@ extension SearchEventViewC: UICollectionViewDelegate, UICollectionViewDataSource
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let searchEventViewC = Constant.kStoryboardEvent.instantiateViewController(withIdentifier: "EventDetailViewC") as? EventDetailViewC {
-            self.navigationController?.pushViewController(searchEventViewC, animated: true)
+        if let eventDetailViewC = Constant.kStoryboardEvent.instantiateViewController(withIdentifier: "EventDetailViewC") as? EventDetailViewC {
+            let event = arrEvents[indexPath.row]
+            eventDetailViewC.eventId = event.id!
+            self.navigationController?.pushViewController(eventDetailViewC, animated: true)
         }
     }
     

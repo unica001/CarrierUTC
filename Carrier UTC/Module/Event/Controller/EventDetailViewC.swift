@@ -13,7 +13,13 @@ class EventDetailViewC: UIViewController {
     @IBOutlet weak var tblEventDetail: UITableView!
     @IBOutlet weak var btnInterested: UIButton!
     
-//    var eventId = 
+    internal var viewModel: EventDetailViewModelling?
+    var eventId = 0
+    var eventDetail: EventModel? {
+        didSet {
+            self.tblEventDetail.reloadData()
+        }
+    }
     
     //MARK: - View Life cycle
     override func viewDidLoad() {
@@ -21,7 +27,6 @@ class EventDetailViewC: UIViewController {
         setUp()
         // Do any additional setup after loading the view.
     }
-    
 
     /*
     // MARK: - Navigation
@@ -36,14 +41,43 @@ class EventDetailViewC: UIViewController {
     //MARK: - Private Methods
     private func setUp() {
         registerNib()
+        recheckVM()
+        apiCallEventDetail()
         self.navigationItem.hidesBackButton = true
         btnInterested.roundCorners(borderWidth: 0.0, borderColor: UIColor.clear.cgColor, cornerRadius: btnInterested.frame.size.height/2)
+    }
+    
+    private func recheckVM() {
+        if self.viewModel == nil {
+            self.viewModel = EventDetailVM()
+        }
     }
     
     private func registerNib() {
         self.tblEventDetail.register(UINib(nibName: "CellEventDetail", bundle: nil), forCellReuseIdentifier: "CellEventDetail")
         let nibName = UINib(nibName: "EventImageView", bundle: nil)
         self.tblEventDetail.register(nibName, forHeaderFooterViewReuseIdentifier: "EventImageView")
+    }
+    
+    private func setUpFooter() {
+        if (eventDetail?.user_interest)! {
+            btnInterested.backgroundColor = UIColor.lightGray
+            btnInterested.isUserInteractionEnabled = false
+        } else {
+            btnInterested.isUserInteractionEnabled = true
+        }
+    }
+    
+    private func apiCallEventDetail() {
+        self.viewModel?.getEventDetail(eventId: eventId, eventDetailHandler: { [weak self] (eventDetail, success, msg) in
+            guard self != nil else { return }
+            if success {
+                self?.eventDetail = eventDetail
+                self?.setUpFooter()
+            } else {
+                
+            }
+        })
     }
 
     //MARK: - IBAction Methods
@@ -52,6 +86,13 @@ class EventDetailViewC: UIViewController {
     }
     
     @IBAction func tapInterested(_ sender: UIButton) {
+        self.viewModel?.setInterestedEvent(eventId: eventId, interestedEventHandler: { (success, msg) in
+            if success {
+                print("Success")
+            } else {
+                print("Not success")
+            }
+        })
     }
     
     @IBAction func tapTwitter(_ sender: UIButton) {
@@ -64,17 +105,18 @@ class EventDetailViewC: UIViewController {
 extension EventDetailViewC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 180
+        return (eventDetail == nil) ? 0 : 180
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "EventImageView" ) as! EventImageView
+        let headerView: EventImageView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "EventImageView" ) as! EventImageView
+        headerView.imgevent.setImageWith(strImage: eventDetail!.event_image)
         return headerView
     }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return (eventDetail == nil) ? 0: 1
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -87,6 +129,7 @@ extension EventDetailViewC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CellEventDetail", for: indexPath) as! CellEventDetail
+        cell.setEventDetail(event: eventDetail!)
         return cell
     }
 }
