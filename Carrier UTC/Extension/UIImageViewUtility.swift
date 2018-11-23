@@ -8,11 +8,16 @@
 
 import Foundation
 import UIKit
+import SDWebImage
 
 extension UIImageView {
     
     func roundImage() {
         self.layer.cornerRadius = self.frame.size.width / 2.0;
         self.layer.masksToBounds = true;
+    }
+    
+    func setImageWith(strImage: String?, placeHolderImage: UIImage? = nil) {
+        self.sd_setImage(with:URL(string: strImage ?? "") , placeholderImage: placeHolderImage, options:.cacheMemoryOnly, completed: nil)
     }
 }

@@ -15,9 +15,15 @@ class SearchEventViewC: UIViewController {
     @IBOutlet weak var lblHeader: UILabel!
     
     var strHeaderTitle = ""
-    var arrEvents = [[String : AnyObject]]()
     var totalRecords = 0
     var pageIndex = 1
+    internal var viewModel: SearchEventViewModelling?
+    
+    var arrEvents = [EventModel]() {
+        didSet {
+            self.collectionSearchEvent.reloadData()
+        }
+    }
     
     //MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -40,13 +46,49 @@ class SearchEventViewC: UIViewController {
     //MARK: - Private Methods
     private func setUp() {
         registerNib()
+        recheckVM()
+        apiCallEventList()
         self.navigationItem.hidesBackButton = true
         self.searchBar.placeholder = strHeaderTitle
         self.lblHeader.text = strHeaderTitle
     }
     
+    private func recheckVM() {
+        if self.viewModel == nil {
+            self.viewModel = SearchEventVM()
+        }
+    }
+    
     private func registerNib() {
         collectionSearchEvent.register(UINib(nibName: "CellEvent", bundle: nil), forCellWithReuseIdentifier: "CellEvent")
+    }
+    
+    private func apiCallEventList() {
+        var searchType = ""
+        switch strHeaderTitle {
+        case EventType.Upcoming.rawValue:
+            searchType = "upcoming"
+        case EventType.Past.rawValue:
+            searchType = "past"
+        default:
+            searchType = "all"
+        }
+        self.viewModel?.getSearchEvent(pageIndex: pageIndex, searchText: searchBar.text ?? "", searchType: searchType, searchEventListHandler: { [weak self] (eventList, total, success, msg) in
+            guard self != nil else { return }
+            if success {
+                if self?.pageIndex == 1 {
+                    self?.arrEvents = eventList
+                } else {
+                    for i in 0 ..< eventList.count {
+                        let dict = eventList[i]
+                        self?.arrEvents.append(dict)
+                    }
+                }
+                self?.totalRecords = total
+            } else {
+                Alert.Alert(msg, okButtonTitle: "Ok", target: self)
+            }
+        })
     }
     
     //MARK: - IBAction Methods
@@ -58,15 +100,13 @@ class SearchEventViewC: UIViewController {
 extension SearchEventViewC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return arrEvents.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CellEvent", for: indexPath) as! CellEvent
-        cell.setUpEventGradient()
-        cell.layer.cornerRadius = 6
-        cell.layer.masksToBounds = true
+        cell.setUpEventList(event: arrEvents[indexPath.row])
         return cell
     }
     
@@ -90,25 +130,29 @@ extension SearchEventViewC: UICollectionViewDelegate, UICollectionViewDataSource
         let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
         if maximumOffset - currentOffset <= -40 && totalRecords > arrEvents.count {
             pageIndex = pageIndex + 1
+            self.apiCallEventList()
         }
     }
 }
 
 extension SearchEventViewC: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        pageIndex = 1
         let str = (searchBar.text as NSString?)?.replacingCharacters(in: range, with: text)
         let newLength = (searchBar.text?.count)! + text.count - range.length
         if let text = str {
-            if newLength >= 2 || newLength == 0 {
-//                self.callApiUserList(strSearch: text)
-            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3), execute: {
+                self.apiCallEventList()
+            })
         }
         return true
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        pageIndex = 1
         print(searchBar.text ?? "")
         self.view.endEditing(true)
+        self.apiCallEventList()
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {

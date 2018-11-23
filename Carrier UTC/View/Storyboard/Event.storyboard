@@ -56,7 +56,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.99607843137254903" green="0.99607843137254903" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="ooH-Fx-cbg" firstAttribute="top" secondItem="zHX-J8-bmC" secondAttribute="top" constant="3" id="7w3-b5-EAY"/>
                                     <constraint firstItem="ZCi-XS-L63" firstAttribute="centerX" secondItem="zHX-J8-bmC" secondAttribute="centerX" id="aZ7-m2-zsv"/>
@@ -299,7 +299,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.99607843137254903" green="0.99607843137254903" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="5at-b4-UD0" firstAttribute="top" secondItem="ACF-QY-Wa8" secondAttribute="top" constant="3" id="DUk-kB-cQe"/>
                                     <constraint firstItem="5at-b4-UD0" firstAttribute="leading" secondItem="ACF-QY-Wa8" secondAttribute="leading" constant="5" id="NGt-uc-LYx"/>
@@ -358,12 +358,10 @@
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ubF-gY-Lxo">
                                     <rect key="frame" x="10" y="0.0" width="60" height="40"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </imageView>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Wt-cq-C42">
                                     <rect key="frame" x="293" y="0.0" width="60" height="40"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" red="0.65538801339999997" green="0.40925944409999998" blue="0.37561382580000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </imageView>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -515,12 +513,10 @@
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N0u-rO-dlS">
                                     <rect key="frame" x="10" y="0.0" width="60" height="40"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </imageView>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kmr-dA-Fti">
                                     <rect key="frame" x="293" y="0.0" width="60" height="40"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" red="0.65538801339999997" green="0.40925944409999998" blue="0.37561382580000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </imageView>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -56,8 +56,10 @@ class NetworkManager: NSObject {
             do {
                 
                 let responseObjc = try (JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary) as Dictionary
+                DispatchQueue.main.sync {
+                    completionHandler(responseObjc as NSDictionary)
+                }
                 
-                completionHandler(responseObjc as NSDictionary)
             }
             catch {
                 print("Error occurred parsing data: \(error.localizedDescription)")
