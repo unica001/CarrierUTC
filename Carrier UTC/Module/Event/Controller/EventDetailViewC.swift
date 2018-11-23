@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EventDetailViewC: UIViewController {
+class EventDetailViewC: BaseViewC {
     //MARK: - IBOutlet
     @IBOutlet weak var tblEventDetail: UITableView!
     @IBOutlet weak var btnInterested: UIButton!
@@ -63,8 +63,13 @@ class EventDetailViewC: UIViewController {
         if (eventDetail?.user_interest)! {
             btnInterested.backgroundColor = UIColor.lightGray
             btnInterested.isUserInteractionEnabled = false
+            btnInterested.setImage(UIImage(named: ""), for: .normal)
+            btnInterested.setTitle("INTERESTED", for: .normal)
         } else {
+            btnInterested.backgroundColor = UIColor.clear
             btnInterested.isUserInteractionEnabled = true
+            btnInterested.setImage(UIImage(named: "interested"), for: .normal)
+            btnInterested.setTitle("", for: .normal)
         }
     }
     

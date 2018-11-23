@@ -9,10 +9,9 @@
 import UIKit
 import CoreLocation
 import Firebase
-import UserNotifications
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate, UNUserNotificationCenterDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate {
 
     var window: UIWindow?
     
@@ -24,13 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate,
     var deviceToken  : String = String()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        //UINavigationBar.appearance().isHidden = true
-        UINavigationBar.appearance().shadowImage = UIImage()
-       // UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
-        
         FirebaseApp.configure()
         getCurrentLocation()
-        
         return true
     }
 
@@ -54,42 +48,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate,
         
     }
     
-    func registerRemoteNotification() {
-        let settings = UIUserNotificationSettings(types: [.badge, .alert, .sound], categories: nil)
-        UIApplication.shared.registerUserNotificationSettings(settings)
-    }
-    
-    func registerForPushNotifications(application: UIApplication) {
-        
-        if #available(iOS 10.0, *)
-        {
-            UNUserNotificationCenter.current().delegate = self
-            UNUserNotificationCenter.current().requestAuthorization(options: [.badge, .sound, .alert], completionHandler: { (granted, error) in
-                DispatchQueue.main.async {
-                    UIApplication.shared.registerForRemoteNotifications()
-                }
-            })
-        }
-            
-        else{
-            //If user is not on iOS 10 use the old methods we've been using
-            let notificationSettings = UIUserNotificationSettings(types: [.badge, .sound, .alert], categories: nil)
-            application.registerUserNotificationSettings(notificationSettings)
-        }
-    }
-    
-    // MARK: - Remote Notification delegate
-    
-    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        let token = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
-        print(token)
-        self.deviceToken = token
-    }
-    
-    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
-        self.deviceToken = "1234"
-        print("fail to get token")
-    }
     //MARK: - Location
     func getCurrentLocation(){
         if CLLocationManager.locationServicesEnabled() {            switch(CLLocationManager.authorizationStatus()) {
