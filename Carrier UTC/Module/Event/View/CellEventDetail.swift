@@ -25,7 +25,6 @@ class CellEventDetail: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         // Configure the view for the selected state
     }
     
@@ -34,6 +33,15 @@ class CellEventDetail: UITableViewCell {
         lblEventAddress.text = event.event_address
         lblDesc.text = event.event_description
         lblPeople.text = "\(String(describing: event.interested_users!)) people going"
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = Calendar.current.timeZone
+        dateFormatter.locale = Calendar.current.locale
+        dateFormatter.dateFormat = "yyyy-mm-dd"
+        let date = dateFormatter.date(from: event.event_date!)
+        let eventDate = date?.dateWithString(strFormat: "dd")
+        let eventMonth = date?.dateWithString(strFormat: "MMM")
+        lblEventDate.text = "\(eventDate!) \(eventMonth!)"
     }
     
 }

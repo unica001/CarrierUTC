@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FacebookShare
+import FacebookCore
 
 class EventDetailViewC: BaseViewC {
     //MARK: - IBOutlet
@@ -94,6 +96,7 @@ class EventDetailViewC: BaseViewC {
         self.viewModel?.setInterestedEvent(eventId: eventId, interestedEventHandler: { (success, msg) in
             if success {
                 print("Success")
+                self.eventDetail?.user_interest = true
             } else {
                 print("Not success")
             }
@@ -104,6 +107,21 @@ class EventDetailViewC: BaseViewC {
     }
     
     @IBAction func tapFacebook(_ sender: UIButton) {
+        guard let date = eventDetail?.event_date,
+            let name = eventDetail?.heading,
+            let desc = eventDetail?.event_description else {
+            return
+        }
+        let contentShare = "Event Date : \(date) \n Event Name: \(name) \n \(desc)"
+        let content = LinkShareContent(url: URL(string: (eventDetail?.event_image)!)!, quote: contentShare)
+        
+        let dialog = ShareDialog(content: content)
+        dialog.presentingViewController = self
+        dialog.mode = .automatic
+        dialog.completion = { result in
+
+        }
+        try? dialog.show()
     }
 }
 

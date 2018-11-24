@@ -40,6 +40,16 @@ class CellEvent: UICollectionViewCell {
         imgEvent.setImageWith(strImage: event.event_image)
         //2018-11-18
         
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = Calendar.current.timeZone
+        dateFormatter.locale = Calendar.current.locale
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let date = dateFormatter.date(from: event.event_date!)
+        let eventDate = date?.dateWithString(strFormat: "dd")
+        let eventMonth = date?.dateWithString(strFormat: "MMM")
+        print("\(eventDate) \(eventMonth)")
+        
+        lblEventDate.text = "\(eventDate!) \(eventMonth!)"
     }
     
 }

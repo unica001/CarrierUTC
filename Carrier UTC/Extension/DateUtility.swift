@@ -12,7 +12,7 @@ extension Date {
     
     public func dateWithString(strFormat: String) -> String {
         let dateFormatter = DateFormatter()
-        dateFormatter.timeZone = Calendar.current.timeZone
+        dateFormatter.timeZone = TimeZone(abbreviation: "UTC")
         dateFormatter.locale = Calendar.current.locale
         dateFormatter.dateFormat = strFormat
         return dateFormatter.string(from: self)

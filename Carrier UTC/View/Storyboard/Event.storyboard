@@ -88,7 +88,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="200" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="c8z-cg-Zse">
-                                        <rect key="frame" x="15" y="63" width="360" height="145"/>
+                                        <rect key="frame" x="15" y="63" width="345" height="145"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="15" minimumInteritemSpacing="15" id="ldf-5e-WdE">
                                             <size key="itemSize" width="50" height="50"/>
@@ -122,7 +122,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="201" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nzU-dV-ghU">
-                                        <rect key="frame" x="15" y="292" width="360" height="145"/>
+                                        <rect key="frame" x="15" y="292" width="345" height="145"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="15" minimumInteritemSpacing="15" id="byH-iz-3SQ">
                                             <size key="itemSize" width="50" height="50"/>
@@ -211,9 +211,9 @@
                                     <constraint firstItem="c8z-cg-Zse" firstAttribute="height" secondItem="5Ao-iT-hBY" secondAttribute="height" multiplier="140:562" constant="18.20284697508896" id="1SC-5Z-akD"/>
                                     <constraint firstItem="c8z-cg-Zse" firstAttribute="top" secondItem="aUg-eB-VAz" secondAttribute="bottom" constant="8" id="3Sw-6r-Trz"/>
                                     <constraint firstItem="aUg-eB-VAz" firstAttribute="leading" secondItem="5Ao-iT-hBY" secondAttribute="leading" constant="15" id="FA9-fz-bSE"/>
-                                    <constraint firstAttribute="trailing" secondItem="c8z-cg-Zse" secondAttribute="trailing" id="ITA-5S-MEk"/>
+                                    <constraint firstAttribute="trailing" secondItem="c8z-cg-Zse" secondAttribute="trailing" constant="15" id="ITA-5S-MEk"/>
                                     <constraint firstItem="nzU-dV-ghU" firstAttribute="leading" secondItem="5Ao-iT-hBY" secondAttribute="leading" constant="15" id="NS5-Ru-WL6"/>
-                                    <constraint firstAttribute="trailing" secondItem="nzU-dV-ghU" secondAttribute="trailing" id="O2x-5x-Wkh"/>
+                                    <constraint firstAttribute="trailing" secondItem="nzU-dV-ghU" secondAttribute="trailing" constant="15" id="O2x-5x-Wkh"/>
                                     <constraint firstItem="A4Z-wV-96q" firstAttribute="top" secondItem="c8z-cg-Zse" secondAttribute="bottom" constant="55" id="O6Q-wh-2qr"/>
                                     <constraint firstItem="c8z-cg-Zse" firstAttribute="leading" secondItem="5Ao-iT-hBY" secondAttribute="leading" constant="15" id="S7n-8C-bXe"/>
                                     <constraint firstItem="nzU-dV-ghU" firstAttribute="top" secondItem="MJz-QJ-S3I" secondAttribute="bottom" constant="8" id="UnJ-0p-azX"/>
@@ -470,7 +470,7 @@
                                         </constraints>
                                         <state key="normal" image="facebook"/>
                                         <connections>
-                                            <action selector="tapTwitter:" destination="sQo-iq-yrr" eventType="touchUpInside" id="hfO-XI-ZWp"/>
+                                            <action selector="tapFacebook:" destination="sQo-iq-yrr" eventType="touchUpInside" id="Erl-cn-Pn6"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XJb-wa-8XK">
@@ -481,7 +481,7 @@
                                         </constraints>
                                         <state key="normal" image="Twitter"/>
                                         <connections>
-                                            <action selector="tapFacebook:" destination="sQo-iq-yrr" eventType="touchUpInside" id="4qF-wl-bij"/>
+                                            <action selector="tapTwitter:" destination="sQo-iq-yrr" eventType="touchUpInside" id="Na9-RJ-Cmz"/>
                                         </connections>
                                     </button>
                                 </subviews>
