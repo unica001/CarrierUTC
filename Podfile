@@ -13,6 +13,6 @@ target 'Carrier UTC' do
   pod 'Firebase/Messaging'
 
 #  pod 'SVProgressHUD', '~> 1.1.3'
-#  pod 'Firebase'
+  pod 'Firebase'
   pod 'FacebookShare'
 end
