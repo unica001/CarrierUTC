@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import FacebookShare
+import FacebookCore
 
-class EventDetailViewC: UIViewController {
+class EventDetailViewC: BaseViewC {
     //MARK: - IBOutlet
     @IBOutlet weak var tblEventDetail: UITableView!
     @IBOutlet weak var btnInterested: UIButton!
@@ -63,8 +65,13 @@ class EventDetailViewC: UIViewController {
         if (eventDetail?.user_interest)! {
             btnInterested.backgroundColor = UIColor.lightGray
             btnInterested.isUserInteractionEnabled = false
+            btnInterested.setImage(UIImage(named: ""), for: .normal)
+            btnInterested.setTitle("INTERESTED", for: .normal)
         } else {
+            btnInterested.backgroundColor = UIColor.clear
             btnInterested.isUserInteractionEnabled = true
+            btnInterested.setImage(UIImage(named: "interested"), for: .normal)
+            btnInterested.setTitle("", for: .normal)
         }
     }
     
@@ -89,6 +96,7 @@ class EventDetailViewC: UIViewController {
         self.viewModel?.setInterestedEvent(eventId: eventId, interestedEventHandler: { (success, msg) in
             if success {
                 print("Success")
+                self.eventDetail?.user_interest = true
             } else {
                 print("Not success")
             }
@@ -99,6 +107,21 @@ class EventDetailViewC: UIViewController {
     }
     
     @IBAction func tapFacebook(_ sender: UIButton) {
+        guard let date = eventDetail?.event_date,
+            let name = eventDetail?.heading,
+            let desc = eventDetail?.event_description else {
+            return
+        }
+        let contentShare = "Event Date : \(date) \n Event Name: \(name) \n \(desc)"
+        let content = LinkShareContent(url: URL(string: (eventDetail?.event_image)!)!, quote: contentShare)
+        
+        let dialog = ShareDialog(content: content)
+        dialog.presentingViewController = self
+        dialog.mode = .automatic
+        dialog.completion = { result in
+
+        }
+        try? dialog.show()
     }
 }
 

@@ -34,7 +34,9 @@
 		1786408A21A542DC006ED91B /* EventListViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1786408921A542DC006ED91B /* EventListViewC.swift */; };
 		1786408E21A5569B006ED91B /* CellEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1786408C21A5569B006ED91B /* CellEvent.swift */; };
 		1786408F21A5569B006ED91B /* CellEvent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1786408D21A5569B006ED91B /* CellEvent.xib */; };
+		178F59A721A9DD36008354D1 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 178F59A621A9DD36008354D1 /* FBSDKShareKit.framework */; };
 		17E1348621A7F999003AD715 /* EventDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E1348521A7F999003AD715 /* EventDetailVM.swift */; };
+		17E1348821A87132003AD715 /* BaseViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E1348721A87132003AD715 /* BaseViewC.swift */; };
 		17F80E6421A576E9003BBC80 /* EventDetailViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F80E6321A576E9003BBC80 /* EventDetailViewC.swift */; };
 		17F80E6721A5770F003BBC80 /* CellEventDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F80E6521A5770F003BBC80 /* CellEventDetail.swift */; };
 		17F80E6821A5770F003BBC80 /* CellEventDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17F80E6621A5770F003BBC80 /* CellEventDetail.xib */; };
@@ -110,7 +112,9 @@
 		1786408921A542DC006ED91B /* EventListViewC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewC.swift; sourceTree = "<group>"; };
 		1786408C21A5569B006ED91B /* CellEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellEvent.swift; sourceTree = "<group>"; };
 		1786408D21A5569B006ED91B /* CellEvent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellEvent.xib; sourceTree = "<group>"; };
+		178F59A621A9DD36008354D1 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17E1348521A7F999003AD715 /* EventDetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailVM.swift; sourceTree = "<group>"; };
+		17E1348721A87132003AD715 /* BaseViewC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewC.swift; sourceTree = "<group>"; };
 		17F80E6321A576E9003BBC80 /* EventDetailViewC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewC.swift; sourceTree = "<group>"; };
 		17F80E6521A5770F003BBC80 /* CellEventDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellEventDetail.swift; sourceTree = "<group>"; };
 		17F80E6621A5770F003BBC80 /* CellEventDetail.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellEventDetail.xib; sourceTree = "<group>"; };
@@ -145,6 +149,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				178F59A721A9DD36008354D1 /* FBSDKShareKit.framework in Frameworks */,
 				9A58C1B821A58B0500A07CB7 /* SDWebImage.framework in Frameworks */,
 				36CD617E268B64F0D5D7565B /* Pods_Carrier_UTC.framework in Frameworks */,
 			);
@@ -223,6 +228,7 @@
 				9A7F1E9021A865BF00A34AD0 /* Carrier UTC.entitlements */,
 				9A58C1B221A589AE00A07CB7 /* Connection Manager */,
 				1786402B21A531D6006ED91B /* AppDelegate.swift */,
+				17E1348721A87132003AD715 /* BaseViewC.swift */,
 				1786407F21A5402F006ED91B /* Module */,
 				1786405A21A531F7006ED91B /* View */,
 				1786405B21A53212006ED91B /* Extension */,
@@ -404,6 +410,7 @@
 		4C5771217ABA754222A9A7F7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				178F59A621A9DD36008354D1 /* FBSDKShareKit.framework */,
 				9A58C1BB21A58C4E00A07CB7 /* SKActivityIndicatorView.framework */,
 				9A58C1B721A58B0500A07CB7 /* SDWebImage.framework */,
 				9A58C1B921A58B0500A07CB7 /* SVProgressHUD.framework */,
@@ -607,6 +614,11 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Carrier UTC/Pods-Carrier UTC-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKShareKit/FBSDKShareKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookShare/FacebookShare.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
@@ -617,6 +629,11 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKShareKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookShare.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
@@ -685,6 +702,7 @@
 				17F80E6421A576E9003BBC80 /* EventDetailViewC.swift in Sources */,
 				1786406121A5335B006ED91B /* Constant.swift in Sources */,
 				9A35315821A687A20065CD49 /* AirQualityModele.swift in Sources */,
+				17E1348821A87132003AD715 /* BaseViewC.swift in Sources */,
 				9A58C1AC21A580E800A07CB7 /* AirQualityDetailController.swift in Sources */,
 				1786406D21A53381006ED91B /* UIButtonAddition.swift in Sources */,
 				9A58C1B621A589C900A07CB7 /* NetworkManager.swift in Sources */,

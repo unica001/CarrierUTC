@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchEventViewC: UIViewController {
+class SearchEventViewC: BaseViewC {
     //MARK: - IBOutlet
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collectionSearchEvent: UICollectionView!

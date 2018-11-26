@@ -180,11 +180,15 @@
             </objects>
             <point key="canvasLocation" x="-2618" y="196"/>
         </scene>
-        <!--d-->
+        <!--Home-->
         <scene sceneID="a1J-ft-BDq">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cYv-AI-U3W" sceneMemberID="viewController">
+<<<<<<< HEAD
                     <tabBarItem key="tabBarItem" title="d" id="O2a-43-P8A"/>
+=======
+                    <tabBarItem key="tabBarItem" title="Home" id="O2a-43-P8A"/>
+>>>>>>> 5c97751a9c9a0e38598354e86319dd1382df4855
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rpR-MR-cpo">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>

@@ -8,9 +8,11 @@
 
 import UIKit
 
-class EventListViewC: UIViewController {
+class EventListViewC: BaseViewC {
 
     //MARK: - IBOutlet
+    @IBOutlet weak var mainView: UIView!
+    @IBOutlet weak var viewHeader: UIView!
     @IBOutlet weak var collectionViewUpcoming: UICollectionView!
     @IBOutlet weak var collectionViewPast: UICollectionView!
     @IBOutlet weak var viewAllUpcoming: UIView!
@@ -38,7 +40,6 @@ class EventListViewC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
     /*
     // MARK: - Navigation
 
