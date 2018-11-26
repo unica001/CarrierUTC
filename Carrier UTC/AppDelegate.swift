@@ -12,7 +12,7 @@ import Firebase
 import UserNotifications
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate, UNUserNotificationCenterDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate, UNUserNotificationCenterDelegate,MessagingDelegate {
 
     var window: UIWindow?
     
@@ -28,6 +28,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate,
         UINavigationBar.appearance().shadowImage = UIImage()
        // UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
         
+        registerForPushNotifications(application: application)
+        Messaging.messaging().delegate = self
+
         FirebaseApp.configure()
         getCurrentLocation()
         
@@ -35,28 +38,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate,
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
-    
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
-       
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
-
     }
 
     func applicationDidBecomeActive(_ application: UIApplication) {
-       
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
         
-    }
-    
-    func registerRemoteNotification() {
-        let settings = UIUserNotificationSettings(types: [.badge, .alert, .sound], categories: nil)
-        UIApplication.shared.registerUserNotificationSettings(settings)
     }
     
     func registerForPushNotifications(application: UIApplication) {
@@ -80,16 +74,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate,
     
     // MARK: - Remote Notification delegate
     
-    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        let token = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
-        print(token)
-        self.deviceToken = token
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
+        print("Firebase registration token: \(fcmToken)")
+        
+        let dataDict:[String: String] = ["token": fcmToken]
+        NotificationCenter.default.post(name: Notification.Name("FCMToken"), object: nil, userInfo: dataDict)
+    }
+    
+    private func application(application: UIApplication,
+                     didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        Messaging.messaging().apnsToken = deviceToken as Data
     }
     
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
-        self.deviceToken = "1234"
         print("fail to get token")
     }
+    
+    
+    
     //MARK: - Location
     func getCurrentLocation(){
         if CLLocationManager.locationServicesEnabled() {            switch(CLLocationManager.authorizationStatus()) {
@@ -139,7 +141,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate,
         lat = currentLocation.coordinate.latitude
         long = currentLocation.coordinate.longitude
         
-        getAddressFromLatLon()
+      //  getAddressFromLatLon()
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
