@@ -65,7 +65,7 @@ class EventDetailViewC: BaseViewC {
         if (eventDetail?.user_interest)! {
             btnInterested.backgroundColor = UIColor.lightGray
             btnInterested.isUserInteractionEnabled = false
-            btnInterested.setImage(UIImage(named: ""), for: .normal)
+            btnInterested.setImage(UIImage( named: ""), for: .normal)
             btnInterested.setTitle("INTERESTED", for: .normal)
         } else {
             btnInterested.backgroundColor = UIColor.clear
@@ -97,6 +97,7 @@ class EventDetailViewC: BaseViewC {
             if success {
                 print("Success")
                 self.eventDetail?.user_interest = true
+                
             } else {
                 print("Not success")
             }
@@ -104,6 +105,7 @@ class EventDetailViewC: BaseViewC {
     }
     
     @IBAction func tapTwitter(_ sender: UIButton) {
+    
     }
     
     @IBAction func tapFacebook(_ sender: UIButton) {
@@ -128,7 +130,7 @@ class EventDetailViewC: BaseViewC {
 extension EventDetailViewC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return (eventDetail == nil) ? 0 : 180
+        return (eventDetail == nil) ? 0 : 220
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

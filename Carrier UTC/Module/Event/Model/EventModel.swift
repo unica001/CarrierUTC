@@ -38,7 +38,7 @@ class EventModel: NSObject, Codable, Mappable {
         longitude <- map["longitude"]
         heading <- map["heading"]
         user_interest <- map["user_interest"]
-        interested_users <- map["interested_users"]
+        interested_users <- map["number_interested_users"]
     }
 
 }

@@ -28,9 +28,8 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i50-f1-6Ao">
                         <rect key="frame" x="20" y="20" width="28" height="31"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="NOV 15" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oEj-JY-Muy">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NOV 15" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oEj-JY-Muy">
                                 <rect key="frame" x="0.0" y="0.0" width="28" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -39,7 +38,11 @@
                         <color key="backgroundColor" red="0.65538801339999997" green="0.40925944409999998" blue="0.37561382580000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="31" id="6gq-70-rS1"/>
+                            <constraint firstAttribute="bottom" secondItem="oEj-JY-Muy" secondAttribute="bottom" id="7p3-nE-Ack"/>
+                            <constraint firstAttribute="trailing" secondItem="oEj-JY-Muy" secondAttribute="trailing" id="JpP-Pl-dXv"/>
+                            <constraint firstItem="oEj-JY-Muy" firstAttribute="top" secondItem="i50-f1-6Ao" secondAttribute="top" id="WFz-1Q-GZC"/>
                             <constraint firstAttribute="width" constant="28" id="et9-ka-Dl0"/>
+                            <constraint firstItem="oEj-JY-Muy" firstAttribute="leading" secondItem="i50-f1-6Ao" secondAttribute="leading" id="uzO-kn-hEf"/>
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Golf Course Road, Gurgaon" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jBL-Bo-Nfc">

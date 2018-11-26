@@ -47,9 +47,19 @@ class CellEvent: UICollectionViewCell {
         let date = dateFormatter.date(from: event.event_date!)
         let eventDate = date?.dateWithString(strFormat: "dd")
         let eventMonth = date?.dateWithString(strFormat: "MMM")
-        print("\(eventDate) \(eventMonth)")
+        let newDate = "\(eventDate!)\n"
         
-        lblEventDate.text = "\(eventDate!) \(eventMonth!)"
+        let dateAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 13),
+                              NSAttributedString.Key.foregroundColor: UIColor.white]
+        let monthAttributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 15),
+                                NSAttributedString.Key.foregroundColor: UIColor.white]
+        
+        let dateMonthStr: NSMutableAttributedString = NSMutableAttributedString()
+        let dateStr = NSAttributedString(string: newDate, attributes: dateAttributes)
+        let monthStr = NSAttributedString(string: eventMonth!, attributes: monthAttributes)
+        dateMonthStr.append(dateStr)
+        dateMonthStr.append(monthStr)
+        lblEventDate.attributedText = dateMonthStr
     }
     
 }

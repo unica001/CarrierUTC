@@ -5,6 +5,7 @@ PODS:
   - Bolts/AppLinks (1.9.0):
     - Bolts/Tasks
   - Bolts/Tasks (1.9.0)
+  - DZNEmptyDataSet (1.8.1)
   - FacebookCore (0.4.0):
     - Bolts (~> 1.9)
     - FBSDKCoreKit (~> 4.36)
@@ -84,6 +85,7 @@ PODS:
   - SDWebImage/Core (4.4.2)
 
 DEPENDENCIES:
+  - DZNEmptyDataSet
   - FacebookShare
   - Firebase
   - Firebase/Core
@@ -94,6 +96,7 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Bolts
+    - DZNEmptyDataSet
     - FacebookCore
     - FacebookShare
     - FBSDKCoreKit
@@ -112,6 +115,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   FacebookCore: 770e57cfe250a4de4458b682191c0ff062dee247
   FacebookShare: ec48492ba748f971c6a13661963f7aae38140111
   FBSDKCoreKit: fe5f3474499a81963e11e3f3a5c753d0a95ca2b4
@@ -128,6 +132,6 @@ SPEC CHECKSUMS:
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
 
-PODFILE CHECKSUM: 43e6a55c5574c814950282eb338c74979dbded53
+PODFILE CHECKSUM: 086829dda62cc90e942ec407d39f4206b16d1406
 
 COCOAPODS: 1.5.3

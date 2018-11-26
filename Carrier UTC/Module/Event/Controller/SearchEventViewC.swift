@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DZNEmptyDataSet
 
 class SearchEventViewC: BaseViewC {
     //MARK: - IBOutlet
@@ -51,6 +52,8 @@ class SearchEventViewC: BaseViewC {
         self.navigationItem.hidesBackButton = true
         self.searchBar.placeholder = strHeaderTitle
         self.lblHeader.text = strHeaderTitle
+        self.collectionSearchEvent.emptyDataSetSource = self
+        self.collectionSearchEvent.emptyDataSetDelegate = self
     }
     
     private func recheckVM() {
@@ -137,6 +140,24 @@ extension SearchEventViewC: UICollectionViewDelegate, UICollectionViewDataSource
     }
 }
 
+extension SearchEventViewC: DZNEmptyDataSetDelegate, DZNEmptyDataSetSource {
+    func title(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
+        let txtAttributes: [NSAttributedString.Key : Any] = [ NSAttributedString.Key.font: UIFont.font(name: .Montserrat, weight: .Regular, size: .size_15), NSAttributedString.Key.foregroundColor: UIColor.black]
+        let placeholderText = NSAttributedString(string: "No Events Found", attributes: txtAttributes)
+        return placeholderText
+    }
+    
+    func buttonTitle(forEmptyDataSet scrollView: UIScrollView!, for state: UIControl.State) -> NSAttributedString! {
+        let attString = NSAttributedString(string: "Refresh", attributes: [ NSAttributedString.Key.font: UIFont.font(name: .Montserrat, weight: .Regular, size: .size_15), NSAttributedString.Key.foregroundColor: UIColor.backgroundColor])
+        return attString
+    }
+    
+    func emptyDataSet(_ scrollView: UIScrollView!, didTap button: UIButton!) {
+        self.pageIndex = 1
+        self.apiCallEventList()
+    }
+}
+
 extension SearchEventViewC: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         pageIndex = 1
@@ -152,7 +173,6 @@ extension SearchEventViewC: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         pageIndex = 1
-        print(searchBar.text ?? "")
         self.view.endEditing(true)
         self.apiCallEventList()
     }

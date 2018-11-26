@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DZNEmptyDataSet
 
 class EventListViewC: BaseViewC {
 
@@ -55,6 +56,8 @@ class EventListViewC: BaseViewC {
         recheckVM()
         registerNib()
         apiCallEvent()
+        self.collectionViewPast.emptyDataSetDelegate = self
+        self.collectionViewPast.emptyDataSetSource = self
     }
     
     private func recheckVM() {
@@ -132,5 +135,23 @@ extension EventListViewC: UICollectionViewDelegate, UICollectionViewDataSource, 
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0) // margin between cells
+    }
+}
+
+
+extension EventListViewC: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
+    func title(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
+        let txtAttributes: [NSAttributedString.Key : Any] = [ NSAttributedString.Key.font: UIFont.font(name: .Montserrat, weight: .Regular, size: .size_15), NSAttributedString.Key.foregroundColor: UIColor.black]
+        let placeholderText = NSAttributedString(string: "No Events Found", attributes: txtAttributes)
+        return placeholderText
+    }
+
+    func buttonTitle(forEmptyDataSet scrollView: UIScrollView!, for state: UIControl.State) -> NSAttributedString! {
+        let attString = NSAttributedString(string: "Refresh", attributes: [ NSAttributedString.Key.font: UIFont.font(name: .Montserrat, weight: .Regular, size: .size_15), NSAttributedString.Key.foregroundColor: UIColor.backgroundColor])
+        return attString
+    }
+    
+    func emptyDataSet(_ scrollView: UIScrollView!, didTap button: UIButton!) {
+        self.apiCallEvent()
     }
 }

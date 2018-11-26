@@ -41,7 +41,18 @@ class CellEventDetail: UITableViewCell {
         let date = dateFormatter.date(from: event.event_date!)
         let eventDate = date?.dateWithString(strFormat: "dd")
         let eventMonth = date?.dateWithString(strFormat: "MMM")
-        lblEventDate.text = "\(eventDate!) \(eventMonth!)"
+      
+        let newMonth = "\(eventMonth!)\n"
+        let dateAttributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 14),
+                              NSAttributedString.Key.foregroundColor: UIColor.black]
+        let monthAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 10),
+                               NSAttributedString.Key.foregroundColor: UIColor.black]
+        
+        let dateMonthStr: NSMutableAttributedString = NSMutableAttributedString()
+        let dateStr = NSAttributedString(string: eventDate!, attributes: dateAttributes)
+        let monthStr = NSAttributedString(string: newMonth, attributes: monthAttributes)
+        dateMonthStr.append(monthStr)
+        dateMonthStr.append(dateStr)
+        lblEventDate.attributedText = dateMonthStr
     }
-    
 }

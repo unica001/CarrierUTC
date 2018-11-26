@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BlogCategoryViewC: UIViewController {
+class BlogCategoryViewC: BaseViewC {
     //MARK: - IBOutlet
     @IBOutlet weak var tblBlogCategory: UITableView!
     

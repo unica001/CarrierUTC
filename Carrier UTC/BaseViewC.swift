@@ -15,8 +15,8 @@ class BaseViewC: UIViewController {
         self.navigationController?.navigationBar.layer.masksToBounds = false
         self.navigationController?.navigationBar.layer.shadowColor = UIColor.lightGray.cgColor
         self.navigationController?.navigationBar.layer.shadowOpacity = 0.8
-        self.navigationController?.navigationBar.layer.shadowOffset = CGSize(width: 0, height: 10.0)
-        self.navigationController?.navigationBar.layer.shadowRadius = 10
+        self.navigationController?.navigationBar.layer.shadowOffset = CGSize(width: 0, height: 5.0)
+        self.navigationController?.navigationBar.layer.shadowRadius = 5
         
         self.tabBarController?.tabBar.layer.masksToBounds = false
         self.tabBarController?.tabBar.layer.shadowColor = UIColor.lightGray.cgColor

@@ -26,6 +26,8 @@ enum FontSize: CGFloat {
 enum FontFamily: String {
     case Montserrat = "Montserrat"
     case ArialMT = "ArialMT"
+    case Helvetica = "Helvetica-Neue"
+
     
     func fontName(wieight: FontWeight)-> String {
         return rawValue + "-" + wieight.rawValue
