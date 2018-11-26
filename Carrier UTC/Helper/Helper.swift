@@ -70,6 +70,12 @@ class Helper {
         return UIViewController()
     }
     
+    class func getIndexPathFor(view: UIView, tableView: UITableView) -> IndexPath? {
+        let point = tableView.convert(view.bounds.origin, from: view)
+        let indexPath = tableView.indexPathForRow(at: point)
+        return indexPath
+    }
+    
     //MARK: - Convert data to json string
     class public func toJsonString(from object: Any) -> String? {
         if let objectData = try? JSONSerialization.data(withJSONObject: object, options: JSONSerialization.WritingOptions(rawValue: 0)) {

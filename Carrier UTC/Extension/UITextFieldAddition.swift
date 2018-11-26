@@ -36,7 +36,7 @@ extension UITextField {
         self.inputAccessoryView = toolbar
     }
     
-    class func setLeftPadding(arrayTxt:NSArray, margin:CGFloat)
+    func setLeftPadding(arrayTxt:NSArray, margin:CGFloat)
     {
         for i in 0..<arrayTxt.count
         {

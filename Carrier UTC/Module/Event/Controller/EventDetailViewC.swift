@@ -10,7 +10,7 @@ import UIKit
 import FacebookShare
 import FacebookCore
 
-class EventDetailViewC: BaseViewC {
+class EventDetailViewC: UIViewController {
     //MARK: - IBOutlet
     @IBOutlet weak var tblEventDetail: UITableView!
     @IBOutlet weak var btnInterested: UIButton!

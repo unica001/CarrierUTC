@@ -9,6 +9,7 @@
 import UIKit
 
 enum FontSize: CGFloat {
+    case size_8   = 8.0
     case size_10  = 10.0
     case size_11  = 11.0
     case size_12  = 12.0
@@ -27,6 +28,7 @@ enum FontFamily: String {
     case Montserrat = "Montserrat"
     case ArialMT = "ArialMT"
     case Helvetica = "Helvetica-Neue"
+    case OpenSans = "OpenSans"
 
     
     func fontName(wieight: FontWeight)-> String {

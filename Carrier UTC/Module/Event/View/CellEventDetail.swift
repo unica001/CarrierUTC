@@ -37,15 +37,15 @@ class CellEventDetail: UITableViewCell {
         let dateFormatter = DateFormatter()
         dateFormatter.timeZone = Calendar.current.timeZone
         dateFormatter.locale = Calendar.current.locale
-        dateFormatter.dateFormat = "yyyy-mm-dd"
+        dateFormatter.dateFormat = "yyyy-MM-dd"
         let date = dateFormatter.date(from: event.event_date!)
         let eventDate = date?.dateWithString(strFormat: "dd")
         let eventMonth = date?.dateWithString(strFormat: "MMM")
-      
         let newMonth = "\(eventMonth!)\n"
-        let dateAttributes = [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 14),
+        
+        let dateAttributes = [NSAttributedString.Key.font: UIFont.font(name: .OpenSans, weight: .Bold, size: .size_14),
                               NSAttributedString.Key.foregroundColor: UIColor.black]
-        let monthAttributes = [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 10),
+        let monthAttributes = [NSAttributedString.Key.font: UIFont.font(name: .OpenSans, weight: .SemiBold, size: .size_8),
                                NSAttributedString.Key.foregroundColor: UIColor.black]
         
         let dateMonthStr: NSMutableAttributedString = NSMutableAttributedString()
