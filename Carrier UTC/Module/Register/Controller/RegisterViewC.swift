@@ -61,6 +61,13 @@ class RegisterViewC: BaseViewC {
         self.view.endEditing(true)
     }
     
+    @objc func tapPrivacy() {
+        if let webViewC = Constant.kStoryboardMain.instantiateViewController(withIdentifier: "WebViewC") as? WebViewC {
+            webViewC.strHeader = "Privacy Policy"
+            self.navigationController?.pushViewController(webViewC, animated: true)
+        }
+    }
+    
     @IBAction func tapBack(_ sender: UIButton) {
         _ = self.navigationController?.popViewController(animated: true)
     }
@@ -82,8 +89,9 @@ extension RegisterViewC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let headerView: RegisterFooterView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "RegisterFooterView" ) as! RegisterFooterView
-        return headerView
+        let footerView: RegisterFooterView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "RegisterFooterView" ) as! RegisterFooterView
+        footerView.btnPrivacy.addTarget(self, action: #selector(self.tapPrivacy), for: .touchUpInside)
+        return footerView
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -97,6 +105,7 @@ extension RegisterViewC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 3 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CellSubmit", for: indexPath) as! CellSubmit
+            cell.setUpData(data: arrInfo[indexPath.row])
             cell.delegate = self
             return cell
         } else {
@@ -114,7 +123,7 @@ extension RegisterViewC: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension RegisterViewC: SubmitDelegate {
-    func tapTerms(sender: UIButton) {
+    func tapTermsAccept(sender: UIButton) {
         let index = Helper.getIndexPathFor(view: sender, tableView: tblRegister)
         var data = self.arrInfo[(index?.row)!]
         if let isTerms = data.isTerms, isTerms == true {
@@ -122,7 +131,8 @@ extension RegisterViewC: SubmitDelegate {
         } else {
             data.isTerms = true
         }
-        
+        self.arrInfo[(index?.row)!] = data
+        self.tblRegister.reloadRows(at: [index!], with: .none)
     }
     
     func tapSubmit(sender: UIButton) {
@@ -133,13 +143,21 @@ extension RegisterViewC: SubmitDelegate {
                 self?.viewModel?.register(param: param, registerHandler: { [weak self] (response, success, message) in
                     guard self != nil else { return }
                     if success {
-                        
+                        Alert.showOkAlert(title: "Success", message: message)
+                        self?.navigationController?.popViewController(animated: true)
                     }
                 })
             } else {
-                Alert.Alert(msg, okButtonTitle: "Ok", target: self)
+                Alert.showOkAlert(title: "Alert!!", message: msg)
             }
         })
+    }
+    
+    func tapTerms(sender: UIButton) {
+        if let webViewC = Constant.kStoryboardMain.instantiateViewController(withIdentifier: "WebViewC") as? WebViewC {
+            webViewC.strHeader = "Terms and Conditions"
+            self.navigationController?.pushViewController(webViewC, animated: true)
+        }
     }
 }
 
@@ -152,20 +170,8 @@ extension RegisterViewC: UITextFieldDelegate {
         
         let cs = NSCharacterSet(charactersIn: ACCEPTABLE_CHARACTERS).inverted
         let filtered = string.components(separatedBy: cs).joined(separator: "")
-        
-        
         if let index = Helper.getIndexPathFor(view: textField, tableView: self.tblRegister) {
-//            switch self.arrInfo[index.row].type {
-//            case .Name? :
-//                if string != filtered {
-//                    return false
-//                }
-//                self.arrInfo[index.row].value = self.arrInfo[index.row].value
-//                break
-//            default:
-                self.arrInfo[index.row].value = str
-//                break
-//            }
+            self.arrInfo[index.row].value = str
         }
         return true
     }

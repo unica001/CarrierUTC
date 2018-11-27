@@ -15,11 +15,11 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Event-->
+        <!--Navigation Controller-->
         <scene sceneID="JaB-py-D9p">
             <objects>
                 <navigationController storyboardIdentifier="eventNav" id="duf-dZ-B87" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Event" id="JPx-uZ-Fh6"/>
+                    <tabBarItem key="tabBarItem" title="" image="Events_grey" selectedImage="Events" id="JPx-uZ-Fh6"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SY9-zg-GC5">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -488,7 +488,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XJb-wa-8XK">
-                                        <rect key="frame" x="241" y="12" width="24" height="24"/>
+                                        <rect key="frame" x="241" y="14" width="24" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="24" id="4ya-NS-8fC"/>
                                             <constraint firstAttribute="height" constant="24" id="bB4-X9-tMI"/>
@@ -509,7 +509,7 @@
                                     <constraint firstAttribute="bottom" secondItem="YtS-iT-4bD" secondAttribute="bottom" constant="13" id="mtA-iC-Gan"/>
                                     <constraint firstItem="ClP-Hb-JaM" firstAttribute="leading" secondItem="nqh-br-tdA" secondAttribute="trailing" constant="15" id="oqo-gn-JL4"/>
                                     <constraint firstItem="nqh-br-tdA" firstAttribute="leading" secondItem="4Rb-i2-8mc" secondAttribute="leading" constant="16" id="ugO-sU-pNc"/>
-                                    <constraint firstItem="XJb-wa-8XK" firstAttribute="top" secondItem="4Rb-i2-8mc" secondAttribute="top" constant="12" id="xeg-IJ-04a"/>
+                                    <constraint firstItem="XJb-wa-8XK" firstAttribute="top" secondItem="4Rb-i2-8mc" secondAttribute="top" constant="14" id="xeg-IJ-04a"/>
                                     <constraint firstItem="XJb-wa-8XK" firstAttribute="leading" secondItem="YtS-iT-4bD" secondAttribute="trailing" constant="10" id="xm9-IC-vog"/>
                                 </constraints>
                             </view>
@@ -562,11 +562,11 @@
             </objects>
             <point key="canvasLocation" x="1240.8" y="41.829085457271368"/>
         </scene>
-        <!--Blog-->
+        <!--Navigation Controller-->
         <scene sceneID="PR3-Ic-RPK">
             <objects>
                 <navigationController storyboardIdentifier="blogNav" id="luG-Bb-2vh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Blog" id="H9g-M8-Ta7"/>
+                    <tabBarItem key="tabBarItem" title="" image="Blog_grey" selectedImage="Blog" id="H9g-M8-Ta7"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VNX-gt-Vfw">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -806,7 +806,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Blog" width="24" height="24"/>
+        <image name="Blog_grey" width="24" height="24"/>
         <image name="CarrierLogo" width="111" height="69"/>
+        <image name="Events" width="24" height="24"/>
+        <image name="Events_grey" width="24" height="24"/>
         <image name="UFALogo" width="251" height="137"/>
         <image name="back" width="24" height="24"/>
         <image name="back_black" width="24" height="24"/>
