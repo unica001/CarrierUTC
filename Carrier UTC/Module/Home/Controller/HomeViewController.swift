@@ -34,6 +34,7 @@ class HomeViewController: BaseViewC {
     
     var appDelegate : AppDelegate!
     
+    //MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -45,16 +46,24 @@ class HomeViewController: BaseViewC {
         circleViewHeight.constant = (self.view.frame.size.width-20)/2
         
         setUp()
-//        UIView.animate(withDuration: 0.5, animations: {
-//            self.polutionArrow.transform = CGAffineTransform(rotationAngle: (CGFloat(Double.pi)))
-//        }) { (isAnimationComplete) in
-//            // Animation completed
-//        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        addressLabel.text = appDelegate.currentAddress
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == kairQualitySegueIdentifier {
+            let airQuality = segue.destination as? AirQualityDetailController
+            let btn = sender as! UIButton
+            airQuality?.strHeader = (btn.tag == 10) ? "PM 2.5 LEVELS" : "PM 10 LEVELS"
+        }
     }
     
     //MARK: - Private Methods
@@ -100,17 +109,16 @@ class HomeViewController: BaseViewC {
     
 
     @IBAction func pm25DetailsAction(_ sender: Any) {
-        self.performSegue(withIdentifier: kairQualitySegueIdentifier, sender: nil)
+        self.performSegue(withIdentifier: kairQualitySegueIdentifier, sender: sender)
     }
+    
     @IBAction func tapRegister(_ sender: UIButton) {
         if let searchEventViewC = Constant.kStoryboardEvent.instantiateViewController(withIdentifier: "RegisterViewC") as? RegisterViewC {
             self.navigationController?.pushViewController(searchEventViewC, animated: true)
         }
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        addressLabel.text = appDelegate.currentAddress
-        }
+    
+   
 }
 
 

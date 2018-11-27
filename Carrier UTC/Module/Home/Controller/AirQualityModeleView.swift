@@ -11,18 +11,18 @@ import ObjectMapper
 
 protocol AirQualityModelling {
     
-    func getAirQualityDetails(userListHandler: @escaping (_ responseData: [AirQualityModele], _ success: Bool, _ message: String)-> Void)
+    func getAirQualityDetails(pmType: String, userListHandler: @escaping (_ responseData: [AirQualityModele], _ success: Bool, _ message: String)-> Void)
     
 }
 
 class AirQualityModeleView : AirQualityModelling {
  
     
-    func getAirQualityDetails(userListHandler: @escaping (_ responseData: [AirQualityModele], _ success: Bool, _ message: String)-> Void){
+    func getAirQualityDetails(pmType: String, userListHandler: @escaping (_ responseData: [AirQualityModele], _ success: Bool, _ message: String)-> Void){
         
         let requestURL = URL(string: String(format: "%@%@",kBaseUrl,kair_quality))!
         
-        let param : NSMutableDictionary = [:]
+        let param : NSMutableDictionary = ["pm_type": pmType]
         
         NetworkManager.sharedInstance.postRequest(requestURL, hude: true, showSystemError: false, loadingText: false, params: param , completionHandler:{(dict) in
             
