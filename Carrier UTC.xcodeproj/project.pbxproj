@@ -64,6 +64,7 @@
 		17F80E7821A58E5D003BBC80 /* BlogCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17F80E7621A58E5D003BBC80 /* BlogCategoryCell.xib */; };
 		17FC9A0321A56A0F007DB7E1 /* SearchEventViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC9A0221A56A0F007DB7E1 /* SearchEventViewC.swift */; };
 		36CD617E268B64F0D5D7565B /* Pods_Carrier_UTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 604636679BE54A1769E1EB88 /* Pods_Carrier_UTC.framework */; };
+		9A1E655421AD5F5700D2721D /* NotificationsViewModelling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A1E655321AD5F5700D2721D /* NotificationsViewModelling.swift */; };
 		9A35315821A687A20065CD49 /* AirQualityModele.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35315721A687A20065CD49 /* AirQualityModele.swift */; };
 		9A58C1A821A55DB700A07CB7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A58C1A721A55DB700A07CB7 /* HomeViewController.swift */; };
 		9A58C1AA21A5701800A07CB7 /* gurugram.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 9A58C1A921A5701800A07CB7 /* gurugram.gpx */; };
@@ -164,6 +165,7 @@
 		17FC9A0221A56A0F007DB7E1 /* SearchEventViewC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEventViewC.swift; sourceTree = "<group>"; };
 		2550596F560512BE1E82FE15 /* Pods_Carrier_UTCUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Carrier_UTCUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		604636679BE54A1769E1EB88 /* Pods_Carrier_UTC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Carrier_UTC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A1E655321AD5F5700D2721D /* NotificationsViewModelling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewModelling.swift; sourceTree = "<group>"; };
 		9A35315721A687A20065CD49 /* AirQualityModele.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityModele.swift; sourceTree = "<group>"; };
 		9A58C1A721A55DB700A07CB7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9A58C1A921A5701800A07CB7 /* gurugram.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = gurugram.gpx; sourceTree = "<group>"; };
@@ -392,6 +394,7 @@
 		1786407F21A5402F006ED91B /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				9A1E655221AD5F2500D2721D /* Notifications */,
 				17E8619621AD134200FC634A /* WebView */,
 				1764132821AD09700002403F /* Register */,
 				1786408021A5402F006ED91B /* Home */,
@@ -544,6 +547,14 @@
 				E17ACDA14855DCF8DFFE1DBA /* Pods-Carrier UTC.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		9A1E655221AD5F2500D2721D /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				9A1E655321AD5F5700D2721D /* NotificationsViewModelling.swift */,
+			);
+			path = Notifications;
 			sourceTree = "<group>";
 		};
 		9A58C1AD21A5818700A07CB7 /* Cell */ = {
@@ -836,6 +847,7 @@
 				1786407021A53381006ED91B /* UIColorAddition.swift in Sources */,
 				1786402C21A531D6006ED91B /* AppDelegate.swift in Sources */,
 				1786406E21A53381006ED91B /* UIImageViewUtility.swift in Sources */,
+				9A1E655421AD5F5700D2721D /* NotificationsViewModelling.swift in Sources */,
 				1786408A21A542DC006ED91B /* EventListViewC.swift in Sources */,
 				9A920A0221AC0CEF0067CD0E /* PMTypeModele.swift in Sources */,
 				175EA05B21A6CF2700E17849 /* SearchEventVM.swift in Sources */,

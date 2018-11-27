@@ -17,6 +17,7 @@ let kmessage = "message"
 //MARK: -  APIs Name
 let kair_quality = "air_quality"
 let kair_pollution = "air_pollution"
+let knotification = "notification"
 let kevents = "events"
 let ksearch_event = "search_event"
 let kevent_detail = "event_detail"

@@ -26,12 +26,92 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Carrier UTC/AppDelegate.swift"
-            timestampString = "565008749.161481"
+            timestampString = "565013530.950395"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "215"
-            endingLineNumber = "215"
+            startingLineNumber = "224"
+            endingLineNumber = "224"
             landmarkName = "messaging(_:didReceiveRegistrationToken:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Carrier UTC/AppDelegate.swift"
+            timestampString = "565013530.950455"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
+            landmarkName = "locationManager(_:didUpdateLocations:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Carrier UTC/Module/Notifications/NotificationsViewModelling.swift"
+            timestampString = "565013530.95052"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "sendDeviceTokenOnServer(lat:lng:deviceToken:handler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Carrier_UTC.notificationsViewModelling.sendDeviceTokenOnServer(lat: Swift.String, lng: Swift.String, deviceToken: Swift.String, handler: (Swift.String, Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "Carrier UTC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rampatid/Documents/Carrier%20UTC/Carrier%20UTC/Module/Notifications/NotificationsViewModelling.swift"
+                  timestampString = "565013264.546201"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "1823">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.NSDictionary) -&gt; () in Carrier_UTC.notificationsViewModelling.sendDeviceTokenOnServer(lat: Swift.String, lng: Swift.String, deviceToken: Swift.String, handler: (Swift.String, Swift.Bool) -&gt; ()) -&gt; ()"
+                  moduleName = "Carrier UTC"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rampatid/Documents/Carrier%20UTC/Carrier%20UTC/Module/Notifications/NotificationsViewModelling.swift"
+                  timestampString = "565013264.547942"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "30">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Carrier UTC/Module/Notifications/NotificationsViewModelling.swift"
+            timestampString = "565013530.950811"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "sendDeviceTokenOnServer(lat:lng:deviceToken:handler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

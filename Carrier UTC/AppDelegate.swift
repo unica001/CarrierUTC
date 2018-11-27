@@ -22,11 +22,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate,
     var currentLocation :CLLocation!
     var currentAddress : String!
     var deviceToken  : String = String()
+    var fcmToken : String!
+    
+    internal var viewModel : NotificationModel!
+
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         
-
+        if self.viewModel == nil {
+            self.viewModel = notificationsViewModelling()
+        }
         UINavigationBar.appearance().shadowImage = UIImage()
 //        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
         FirebaseApp.configure()
@@ -106,6 +113,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate,
         lat = currentLocation.coordinate.latitude
         long = currentLocation.coordinate.longitude
         
+        self.viewModel.sendDeviceTokenOnServer(lat: String(lat), lng: String(long), deviceToken: fcmToken, handler: {(meesage,success)in
+        })
         getAddressFromLatLon()
     }
     
@@ -209,9 +218,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate,
     
     // MARK: - Remote Notification delegate
     
-    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
-        print("Firebase registration token: \(fcmToken)")
-        
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken token: String) {
+        print("Firebase registration token: \(fcmToken ?? "")")
+        fcmToken = token
         let dataDict:[String: String] = ["token": fcmToken]
         NotificationCenter.default.post(name: Notification.Name("FCMToken"), object: nil, userInfo: dataDict)
         // TODO: If necessary send token to application server.
