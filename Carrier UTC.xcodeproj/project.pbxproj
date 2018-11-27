@@ -47,6 +47,15 @@
 		17F80E7821A58E5D003BBC80 /* BlogCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17F80E7621A58E5D003BBC80 /* BlogCategoryCell.xib */; };
 		17FC9A0321A56A0F007DB7E1 /* SearchEventViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC9A0221A56A0F007DB7E1 /* SearchEventViewC.swift */; };
 		36CD617E268B64F0D5D7565B /* Pods_Carrier_UTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 604636679BE54A1769E1EB88 /* Pods_Carrier_UTC.framework */; };
+		9A1E654921AD561100D2721D /* aps_development.cer in Resources */ = {isa = PBXBuildFile; fileRef = 9A1E654021AD561100D2721D /* aps_development.cer */; };
+		9A1E654A21AD561100D2721D /* CertificateSigningRequest.certSigningRequest in Resources */ = {isa = PBXBuildFile; fileRef = 9A1E654121AD561100D2721D /* CertificateSigningRequest.certSigningRequest */; };
+		9A1E654B21AD561100D2721D /* aps.cer in Resources */ = {isa = PBXBuildFile; fileRef = 9A1E654221AD561100D2721D /* aps.cer */; };
+		9A1E654C21AD561100D2721D /* ios_distribution-2.cer in Resources */ = {isa = PBXBuildFile; fileRef = 9A1E654321AD561100D2721D /* ios_distribution-2.cer */; };
+		9A1E654D21AD561100D2721D /* Certificates.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 9A1E654421AD561100D2721D /* Certificates.p12 */; };
+		9A1E654E21AD561100D2721D /* UTC_Production.mobileprovision in Resources */ = {isa = PBXBuildFile; fileRef = 9A1E654521AD561100D2721D /* UTC_Production.mobileprovision */; };
+		9A1E654F21AD561100D2721D /* AuthKey_AHFH7PRF9Z.p8 in Resources */ = {isa = PBXBuildFile; fileRef = 9A1E654621AD561100D2721D /* AuthKey_AHFH7PRF9Z.p8 */; };
+		9A1E655021AD561100D2721D /* UTC_Developement.mobileprovision in Resources */ = {isa = PBXBuildFile; fileRef = 9A1E654721AD561100D2721D /* UTC_Developement.mobileprovision */; };
+		9A1E655121AD561100D2721D /* ios_development.cer in Resources */ = {isa = PBXBuildFile; fileRef = 9A1E654821AD561100D2721D /* ios_development.cer */; };
 		9A35315821A687A20065CD49 /* AirQualityModele.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35315721A687A20065CD49 /* AirQualityModele.swift */; };
 		9A52809321AD082C005603F6 /* RegisterVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A52808621AD082C005603F6 /* RegisterVM.swift */; };
 		9A52809421AD082C005603F6 /* RegisterViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A52808721AD082C005603F6 /* RegisterViewC.swift */; };
@@ -60,6 +69,10 @@
 		9A52809C21AD082C005603F6 /* CellSubmit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A52809121AD082C005603F6 /* CellSubmit.swift */; };
 		9A52809D21AD082C005603F6 /* RegisterHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A52809221AD082C005603F6 /* RegisterHeaderView.xib */; };
 		9A5280A021AD1AF0005603F6 /* WebViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A52809F21AD1AF0005603F6 /* WebViewC.swift */; };
+		9A5280A521AD43E4005603F6 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A5280A221AD43E4005603F6 /* OpenSans-Semibold.ttf */; };
+		9A5280A621AD43E4005603F6 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A5280A321AD43E4005603F6 /* OpenSans-Light.ttf */; };
+		9A5280A721AD43E4005603F6 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A5280A421AD43E4005603F6 /* OpenSans-Bold.ttf */; };
+		9A5280A921AD5082005603F6 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A5280A821AD5082005603F6 /* OpenSans-Regular.ttf */; };
 		9A58C1A821A55DB700A07CB7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A58C1A721A55DB700A07CB7 /* HomeViewController.swift */; };
 		9A58C1AA21A5701800A07CB7 /* gurugram.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 9A58C1A921A5701800A07CB7 /* gurugram.gpx */; };
 		9A58C1AC21A580E800A07CB7 /* AirQualityDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A58C1AB21A580E800A07CB7 /* AirQualityDetailController.swift */; };
@@ -142,6 +155,15 @@
 		17FC9A0221A56A0F007DB7E1 /* SearchEventViewC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEventViewC.swift; sourceTree = "<group>"; };
 		2550596F560512BE1E82FE15 /* Pods_Carrier_UTCUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Carrier_UTCUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		604636679BE54A1769E1EB88 /* Pods_Carrier_UTC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Carrier_UTC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A1E654021AD561100D2721D /* aps_development.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = aps_development.cer; sourceTree = "<group>"; };
+		9A1E654121AD561100D2721D /* CertificateSigningRequest.certSigningRequest */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CertificateSigningRequest.certSigningRequest; sourceTree = "<group>"; };
+		9A1E654221AD561100D2721D /* aps.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = aps.cer; sourceTree = "<group>"; };
+		9A1E654321AD561100D2721D /* ios_distribution-2.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ios_distribution-2.cer"; sourceTree = "<group>"; };
+		9A1E654421AD561100D2721D /* Certificates.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Certificates.p12; sourceTree = "<group>"; };
+		9A1E654521AD561100D2721D /* UTC_Production.mobileprovision */ = {isa = PBXFileReference; lastKnownFileType = file; path = UTC_Production.mobileprovision; sourceTree = "<group>"; };
+		9A1E654621AD561100D2721D /* AuthKey_AHFH7PRF9Z.p8 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AuthKey_AHFH7PRF9Z.p8; sourceTree = "<group>"; };
+		9A1E654721AD561100D2721D /* UTC_Developement.mobileprovision */ = {isa = PBXFileReference; lastKnownFileType = file; path = UTC_Developement.mobileprovision; sourceTree = "<group>"; };
+		9A1E654821AD561100D2721D /* ios_development.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = ios_development.cer; sourceTree = "<group>"; };
 		9A35315721A687A20065CD49 /* AirQualityModele.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityModele.swift; sourceTree = "<group>"; };
 		9A52808621AD082C005603F6 /* RegisterVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterVM.swift; sourceTree = "<group>"; };
 		9A52808721AD082C005603F6 /* RegisterViewC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewC.swift; sourceTree = "<group>"; };
@@ -155,6 +177,10 @@
 		9A52809121AD082C005603F6 /* CellSubmit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellSubmit.swift; sourceTree = "<group>"; };
 		9A52809221AD082C005603F6 /* RegisterHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterHeaderView.xib; sourceTree = "<group>"; };
 		9A52809F21AD1AF0005603F6 /* WebViewC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewC.swift; sourceTree = "<group>"; };
+		9A5280A221AD43E4005603F6 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
+		9A5280A321AD43E4005603F6 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		9A5280A421AD43E4005603F6 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		9A5280A821AD5082005603F6 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		9A58C1A721A55DB700A07CB7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9A58C1A921A5701800A07CB7 /* gurugram.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = gurugram.gpx; sourceTree = "<group>"; };
 		9A58C1AB21A580E800A07CB7 /* AirQualityDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityDetailController.swift; sourceTree = "<group>"; };
@@ -257,6 +283,7 @@
 		1786402A21A531D6006ED91B /* Carrier UTC */ = {
 			isa = PBXGroup;
 			children = (
+				9A1E653F21AD561100D2721D /* certificates */,
 				9A7F1E9021A865BF00A34AD0 /* Carrier UTC.entitlements */,
 				9A58C1B221A589AE00A07CB7 /* Connection Manager */,
 				1786402B21A531D6006ED91B /* AppDelegate.swift */,
@@ -267,6 +294,7 @@
 				1786405C21A53220006ED91B /* Helper */,
 				1786403221A531D6006ED91B /* Assets.xcassets */,
 				1786403721A531D6006ED91B /* Info.plist */,
+				9A5280A121AD43E4005603F6 /* Fonts */,
 				9AC49F5621A6CAC300047D7F /* GoogleService-Info.plist */,
 			);
 			path = "Carrier UTC";
@@ -465,6 +493,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		9A1E653F21AD561100D2721D /* certificates */ = {
+			isa = PBXGroup;
+			children = (
+				9A1E654021AD561100D2721D /* aps_development.cer */,
+				9A1E654121AD561100D2721D /* CertificateSigningRequest.certSigningRequest */,
+				9A1E654221AD561100D2721D /* aps.cer */,
+				9A1E654321AD561100D2721D /* ios_distribution-2.cer */,
+				9A1E654421AD561100D2721D /* Certificates.p12 */,
+				9A1E654521AD561100D2721D /* UTC_Production.mobileprovision */,
+				9A1E654621AD561100D2721D /* AuthKey_AHFH7PRF9Z.p8 */,
+				9A1E654721AD561100D2721D /* UTC_Developement.mobileprovision */,
+				9A1E654821AD561100D2721D /* ios_development.cer */,
+			);
+			path = certificates;
+			sourceTree = "<group>";
+		};
 		9A52808421AD082C005603F6 /* Register */ = {
 			isa = PBXGroup;
 			children = (
@@ -513,6 +557,17 @@
 				9A52809F21AD1AF0005603F6 /* WebViewC.swift */,
 			);
 			path = WebView;
+			sourceTree = "<group>";
+		};
+		9A5280A121AD43E4005603F6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				9A5280A221AD43E4005603F6 /* OpenSans-Semibold.ttf */,
+				9A5280A821AD5082005603F6 /* OpenSans-Regular.ttf */,
+				9A5280A321AD43E4005603F6 /* OpenSans-Light.ttf */,
+				9A5280A421AD43E4005603F6 /* OpenSans-Bold.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		9A58C1AD21A5818700A07CB7 /* Cell */ = {
@@ -674,15 +729,28 @@
 				1786408F21A5569B006ED91B /* CellEvent.xib in Resources */,
 				17F80E6821A5770F003BBC80 /* CellEventDetail.xib in Resources */,
 				1786403621A531D6006ED91B /* LaunchScreen.storyboard in Resources */,
+				9A5280A621AD43E4005603F6 /* OpenSans-Light.ttf in Resources */,
+				9A1E654921AD561100D2721D /* aps_development.cer in Resources */,
+				9A5280A521AD43E4005603F6 /* OpenSans-Semibold.ttf in Resources */,
+				9A1E654D21AD561100D2721D /* Certificates.p12 in Resources */,
+				9A1E654F21AD561100D2721D /* AuthKey_AHFH7PRF9Z.p8 in Resources */,
 				9A58C1AA21A5701800A07CB7 /* gurugram.gpx in Resources */,
 				9A52809B21AD082C005603F6 /* CellSubmit.xib in Resources */,
 				1786408621A541A6006ED91B /* Event.storyboard in Resources */,
+				9A1E655021AD561100D2721D /* UTC_Developement.mobileprovision in Resources */,
 				1786403321A531D6006ED91B /* Assets.xcassets in Resources */,
+				9A5280A921AD5082005603F6 /* OpenSans-Regular.ttf in Resources */,
 				1786403121A531D6006ED91B /* Main.storyboard in Resources */,
+				9A1E655121AD561100D2721D /* ios_development.cer in Resources */,
 				9AC49F5721A6CAC300047D7F /* GoogleService-Info.plist in Resources */,
 				17F80E7021A58225003BBC80 /* EventImageView.xib in Resources */,
 				9A52809821AD082C005603F6 /* CellRegisterFields.xib in Resources */,
+				9A5280A721AD43E4005603F6 /* OpenSans-Bold.ttf in Resources */,
+				9A1E654B21AD561100D2721D /* aps.cer in Resources */,
+				9A1E654E21AD561100D2721D /* UTC_Production.mobileprovision in Resources */,
 				9A52809721AD082C005603F6 /* RegisterFooterView.xib in Resources */,
+				9A1E654C21AD561100D2721D /* ios_distribution-2.cer in Resources */,
+				9A1E654A21AD561100D2721D /* CertificateSigningRequest.certSigningRequest in Resources */,
 				17F80E7821A58E5D003BBC80 /* BlogCategoryCell.xib in Resources */,
 				9A52809D21AD082C005603F6 /* RegisterHeaderView.xib in Resources */,
 			);

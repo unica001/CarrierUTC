@@ -19,7 +19,7 @@ class PMTypeModele: NSObject,Mappable,Codable {
     }
     func mapping(map: Map) {
         self.color <- map["color"]
-         self.quality <- map["quality"]
-         self.value <- map["value"]
+        self.quality <- map["quality"]
+        self.value <- map["value"]
     }
 }

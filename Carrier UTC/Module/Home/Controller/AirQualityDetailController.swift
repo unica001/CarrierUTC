@@ -11,6 +11,7 @@ import UIKit
 class AirQualityDetailController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var headerView: UIView!
     
     internal var viewModel: AirQualityModelling?
     
@@ -33,6 +34,7 @@ class AirQualityDetailController: UIViewController {
     //MARK: - Private Methods
     private func setUp() {
         
+        headerView.addShadowInHeader()
         if self.viewModel == nil {
             self.viewModel = AirQualityModeleView()
         }

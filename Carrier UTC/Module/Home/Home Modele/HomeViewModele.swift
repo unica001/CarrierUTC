@@ -33,7 +33,7 @@ class HomeViewModelling: HomeModelling {
                 if let payload = dict.value(forKey: kpayload) as? [String : Any] {
                     let health_precaution = payload["health_precaution"] as? [[String : Any]]
                      let PM25Type = payload["PM25"] as? [String : Any]
-                    let PM10Type = payload["PM10"] as? [String : Any]
+                     let PM10Type = payload["PM10"] as? [String : Any]
                     
                      let health_precautionMapper = Mapper<HealthPrecaution>().mapArray(JSONArray: health_precaution!)
                     let PM25TypeMapper = Mapper<PMTypeModele>().map(JSON: PM25Type!)
