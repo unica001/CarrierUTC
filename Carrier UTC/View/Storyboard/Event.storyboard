@@ -10,6 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
         <array key="OpenSans-Semibold.ttf">
             <string>OpenSans-Semibold</string>
         </array>
@@ -620,6 +623,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2jc-cJ-yc7">
                                 <rect key="frame" x="0.0" y="109" width="375" height="509"/>
                                 <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="zhj-65-nuj">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="509"/>
+                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coming Soon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k3c-8d-daB">
                                         <rect key="frame" x="133" y="244" width="109" height="21"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -635,13 +641,17 @@
                                         </connections>
                                     </tableView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.93333333330000001" green="0.94509803920000002" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="k3c-8d-daB" firstAttribute="centerX" secondItem="2jc-cJ-yc7" secondAttribute="centerX" id="4Cq-WR-Sfa"/>
                                     <constraint firstItem="2of-Ty-GTJ" firstAttribute="top" secondItem="2jc-cJ-yc7" secondAttribute="top" constant="11" id="4vY-qE-qv1"/>
+                                    <constraint firstItem="zhj-65-nuj" firstAttribute="top" secondItem="2jc-cJ-yc7" secondAttribute="top" id="72r-9U-m5x"/>
                                     <constraint firstItem="2of-Ty-GTJ" firstAttribute="leading" secondItem="2jc-cJ-yc7" secondAttribute="leading" id="81D-sJ-4TV"/>
+                                    <constraint firstItem="zhj-65-nuj" firstAttribute="leading" secondItem="2jc-cJ-yc7" secondAttribute="leading" id="OX2-nN-DIx"/>
+                                    <constraint firstAttribute="trailing" secondItem="zhj-65-nuj" secondAttribute="trailing" id="XTm-1E-BhV"/>
                                     <constraint firstAttribute="bottom" secondItem="2of-Ty-GTJ" secondAttribute="bottom" constant="3" id="eec-UJ-QMB"/>
                                     <constraint firstItem="k3c-8d-daB" firstAttribute="centerY" secondItem="2jc-cJ-yc7" secondAttribute="centerY" id="fGc-Wm-6aL"/>
+                                    <constraint firstAttribute="bottom" secondItem="zhj-65-nuj" secondAttribute="bottom" id="hgm-zF-ReJ"/>
                                     <constraint firstAttribute="trailing" secondItem="2of-Ty-GTJ" secondAttribute="trailing" id="tHn-dX-cg2"/>
                                 </constraints>
                             </view>
@@ -653,7 +663,7 @@
                             <constraint firstItem="2jc-cJ-yc7" firstAttribute="trailing" secondItem="O6s-En-Sdu" secondAttribute="trailing" id="Zat-OM-PyL"/>
                             <constraint firstItem="gx8-Mw-pct" firstAttribute="leading" secondItem="O6s-En-Sdu" secondAttribute="leading" id="dJ7-Vo-Mlz"/>
                             <constraint firstItem="gx8-Mw-pct" firstAttribute="trailing" secondItem="O6s-En-Sdu" secondAttribute="trailing" id="eZN-oJ-nes"/>
-                            <constraint firstAttribute="bottom" secondItem="2jc-cJ-yc7" secondAttribute="bottom" constant="49" id="mq0-58-XRW"/>
+                            <constraint firstItem="2jc-cJ-yc7" firstAttribute="bottom" secondItem="O6s-En-Sdu" secondAttribute="bottom" id="pNz-qx-sjx"/>
                             <constraint firstItem="2jc-cJ-yc7" firstAttribute="leading" secondItem="O6s-En-Sdu" secondAttribute="leading" id="quq-UH-Lh6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O6s-En-Sdu"/>
@@ -664,30 +674,19 @@
                             <rect key="frame" x="8" y="0.0" width="359" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="UFALogo" translatesAutoresizingMaskIntoConstraints="NO" id="Itq-SJ-MtI">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="UFALogo" translatesAutoresizingMaskIntoConstraints="NO" id="Itq-SJ-MtI">
                                     <rect key="frame" x="2" y="0.0" width="60" height="40"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="60" id="0Sa-GR-TVo"/>
-                                        <constraint firstAttribute="height" constant="40" id="LLJ-Og-GbO"/>
-                                    </constraints>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CarrierLogo" translatesAutoresizingMaskIntoConstraints="NO" id="bLJ-Vg-Ltu">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CarrierLogo" translatesAutoresizingMaskIntoConstraints="NO" id="bLJ-Vg-Ltu">
                                     <rect key="frame" x="297" y="0.0" width="60" height="40"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" constant="60" id="fMY-wn-PgH"/>
-                                        <constraint firstAttribute="height" constant="40" id="fOl-27-51i"/>
-                                    </constraints>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </imageView>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <constraints>
-                                <constraint firstAttribute="bottom" secondItem="bLJ-Vg-Ltu" secondAttribute="bottom" constant="4" id="9o0-JD-kPR"/>
-                                <constraint firstAttribute="bottom" secondItem="Itq-SJ-MtI" secondAttribute="bottom" constant="4" id="ele-uf-GID"/>
-                                <constraint firstAttribute="trailing" secondItem="bLJ-Vg-Ltu" secondAttribute="trailing" constant="2" id="m1x-gJ-oWK"/>
-                                <constraint firstItem="Itq-SJ-MtI" firstAttribute="leading" secondItem="flF-EV-FGO" secondAttribute="leading" constant="2" id="vFH-VA-l9w"/>
-                            </constraints>
                         </view>
                     </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tblBlogCategory" destination="2of-Ty-GTJ" id="mhQ-mx-KLp"/>
                     </connections>
