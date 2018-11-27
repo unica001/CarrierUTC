@@ -48,6 +48,17 @@
 		17FC9A0321A56A0F007DB7E1 /* SearchEventViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17FC9A0221A56A0F007DB7E1 /* SearchEventViewC.swift */; };
 		36CD617E268B64F0D5D7565B /* Pods_Carrier_UTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 604636679BE54A1769E1EB88 /* Pods_Carrier_UTC.framework */; };
 		9A35315821A687A20065CD49 /* AirQualityModele.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A35315721A687A20065CD49 /* AirQualityModele.swift */; };
+		9A52809321AD082C005603F6 /* RegisterVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A52808621AD082C005603F6 /* RegisterVM.swift */; };
+		9A52809421AD082C005603F6 /* RegisterViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A52808721AD082C005603F6 /* RegisterViewC.swift */; };
+		9A52809521AD082C005603F6 /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A52808921AD082C005603F6 /* RegisterModel.swift */; };
+		9A52809621AD082C005603F6 /* RegisterFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A52808B21AD082C005603F6 /* RegisterFooterView.swift */; };
+		9A52809721AD082C005603F6 /* RegisterFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A52808C21AD082C005603F6 /* RegisterFooterView.xib */; };
+		9A52809821AD082C005603F6 /* CellRegisterFields.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A52808D21AD082C005603F6 /* CellRegisterFields.xib */; };
+		9A52809921AD082C005603F6 /* CellRegisterFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A52808E21AD082C005603F6 /* CellRegisterFields.swift */; };
+		9A52809A21AD082C005603F6 /* RegisterHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A52808F21AD082C005603F6 /* RegisterHeaderView.swift */; };
+		9A52809B21AD082C005603F6 /* CellSubmit.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A52809021AD082C005603F6 /* CellSubmit.xib */; };
+		9A52809C21AD082C005603F6 /* CellSubmit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A52809121AD082C005603F6 /* CellSubmit.swift */; };
+		9A52809D21AD082C005603F6 /* RegisterHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A52809221AD082C005603F6 /* RegisterHeaderView.xib */; };
 		9A58C1A821A55DB700A07CB7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A58C1A721A55DB700A07CB7 /* HomeViewController.swift */; };
 		9A58C1AA21A5701800A07CB7 /* gurugram.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 9A58C1A921A5701800A07CB7 /* gurugram.gpx */; };
 		9A58C1AC21A580E800A07CB7 /* AirQualityDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A58C1AB21A580E800A07CB7 /* AirQualityDetailController.swift */; };
@@ -131,6 +142,17 @@
 		2550596F560512BE1E82FE15 /* Pods_Carrier_UTCUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Carrier_UTCUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		604636679BE54A1769E1EB88 /* Pods_Carrier_UTC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Carrier_UTC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A35315721A687A20065CD49 /* AirQualityModele.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityModele.swift; sourceTree = "<group>"; };
+		9A52808621AD082C005603F6 /* RegisterVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterVM.swift; sourceTree = "<group>"; };
+		9A52808721AD082C005603F6 /* RegisterViewC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewC.swift; sourceTree = "<group>"; };
+		9A52808921AD082C005603F6 /* RegisterModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
+		9A52808B21AD082C005603F6 /* RegisterFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterFooterView.swift; sourceTree = "<group>"; };
+		9A52808C21AD082C005603F6 /* RegisterFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterFooterView.xib; sourceTree = "<group>"; };
+		9A52808D21AD082C005603F6 /* CellRegisterFields.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellRegisterFields.xib; sourceTree = "<group>"; };
+		9A52808E21AD082C005603F6 /* CellRegisterFields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellRegisterFields.swift; sourceTree = "<group>"; };
+		9A52808F21AD082C005603F6 /* RegisterHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterHeaderView.swift; sourceTree = "<group>"; };
+		9A52809021AD082C005603F6 /* CellSubmit.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellSubmit.xib; sourceTree = "<group>"; };
+		9A52809121AD082C005603F6 /* CellSubmit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellSubmit.swift; sourceTree = "<group>"; };
+		9A52809221AD082C005603F6 /* RegisterHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterHeaderView.xib; sourceTree = "<group>"; };
 		9A58C1A721A55DB700A07CB7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9A58C1A921A5701800A07CB7 /* gurugram.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = gurugram.gpx; sourceTree = "<group>"; };
 		9A58C1AB21A580E800A07CB7 /* AirQualityDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityDetailController.swift; sourceTree = "<group>"; };
@@ -315,6 +337,7 @@
 		1786407F21A5402F006ED91B /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				9A52808421AD082C005603F6 /* Register */,
 				1786408021A5402F006ED91B /* Home */,
 				1786408121A5402F006ED91B /* Tabbar */,
 				1786408221A5402F006ED91B /* Blog */,
@@ -437,6 +460,48 @@
 				E17ACDA14855DCF8DFFE1DBA /* Pods-Carrier UTC.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		9A52808421AD082C005603F6 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				9A52808521AD082C005603F6 /* Controller */,
+				9A52808821AD082C005603F6 /* Model */,
+				9A52808A21AD082C005603F6 /* View */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		9A52808521AD082C005603F6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9A52808621AD082C005603F6 /* RegisterVM.swift */,
+				9A52808721AD082C005603F6 /* RegisterViewC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9A52808821AD082C005603F6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9A52808921AD082C005603F6 /* RegisterModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9A52808A21AD082C005603F6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9A52808B21AD082C005603F6 /* RegisterFooterView.swift */,
+				9A52808C21AD082C005603F6 /* RegisterFooterView.xib */,
+				9A52808D21AD082C005603F6 /* CellRegisterFields.xib */,
+				9A52808E21AD082C005603F6 /* CellRegisterFields.swift */,
+				9A52808F21AD082C005603F6 /* RegisterHeaderView.swift */,
+				9A52809021AD082C005603F6 /* CellSubmit.xib */,
+				9A52809121AD082C005603F6 /* CellSubmit.swift */,
+				9A52809221AD082C005603F6 /* RegisterHeaderView.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		9A58C1AD21A5818700A07CB7 /* Cell */ = {
@@ -599,12 +664,16 @@
 				17F80E6821A5770F003BBC80 /* CellEventDetail.xib in Resources */,
 				1786403621A531D6006ED91B /* LaunchScreen.storyboard in Resources */,
 				9A58C1AA21A5701800A07CB7 /* gurugram.gpx in Resources */,
+				9A52809B21AD082C005603F6 /* CellSubmit.xib in Resources */,
 				1786408621A541A6006ED91B /* Event.storyboard in Resources */,
 				1786403321A531D6006ED91B /* Assets.xcassets in Resources */,
 				1786403121A531D6006ED91B /* Main.storyboard in Resources */,
 				9AC49F5721A6CAC300047D7F /* GoogleService-Info.plist in Resources */,
 				17F80E7021A58225003BBC80 /* EventImageView.xib in Resources */,
+				9A52809821AD082C005603F6 /* CellRegisterFields.xib in Resources */,
+				9A52809721AD082C005603F6 /* RegisterFooterView.xib in Resources */,
 				17F80E7821A58E5D003BBC80 /* BlogCategoryCell.xib in Resources */,
+				9A52809D21AD082C005603F6 /* RegisterHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -699,11 +768,14 @@
 				17F80E7321A58D8D003BBC80 /* BlogCategoryViewC.swift in Sources */,
 				1786407321A53381006ED91B /* UIFontAddition.swift in Sources */,
 				1786407221A53381006ED91B /* UITableViewAddition.swift in Sources */,
+				9A52809321AD082C005603F6 /* RegisterVM.swift in Sources */,
 				1786407421A53381006ED91B /* UIViewAddition.swift in Sources */,
 				9A58C1A821A55DB700A07CB7 /* HomeViewController.swift in Sources */,
 				9AC49F5521A68E3500047D7F /* AirQualityModeleView.swift in Sources */,
 				9A58C1B521A589C900A07CB7 /* ReachabilityHelper.swift in Sources */,
+				9A52809521AD082C005603F6 /* RegisterModel.swift in Sources */,
 				1786407921A534AC006ED91B /* Enumeration.swift in Sources */,
+				9A52809A21AD082C005603F6 /* RegisterHeaderView.swift in Sources */,
 				17F80E7721A58E5D003BBC80 /* BlogCategoryCell.swift in Sources */,
 				1786407721A533EA006ED91B /* Alert.swift in Sources */,
 				9A920A0421AC0E1A0067CD0E /* HomeModele.swift in Sources */,
@@ -721,11 +793,15 @@
 				1786408A21A542DC006ED91B /* EventListViewC.swift in Sources */,
 				9A920A0221AC0CEF0067CD0E /* PMTypeModele.swift in Sources */,
 				175EA05B21A6CF2700E17849 /* SearchEventVM.swift in Sources */,
+				9A52809921AD082C005603F6 /* CellRegisterFields.swift in Sources */,
 				1786407521A53381006ED91B /* DateUtility.swift in Sources */,
+				9A52809621AD082C005603F6 /* RegisterFooterView.swift in Sources */,
 				17E1348621A7F999003AD715 /* EventDetailVM.swift in Sources */,
 				17F80E6421A576E9003BBC80 /* EventDetailViewC.swift in Sources */,
+				9A52809C21AD082C005603F6 /* CellSubmit.swift in Sources */,
 				1786406121A5335B006ED91B /* Constant.swift in Sources */,
 				9A35315821A687A20065CD49 /* AirQualityModele.swift in Sources */,
+				9A52809421AD082C005603F6 /* RegisterViewC.swift in Sources */,
 				9A920A0621AC104B0067CD0E /* HomeViewModele.swift in Sources */,
 				17E1348821A87132003AD715 /* BaseViewC.swift in Sources */,
 				9A58C1AC21A580E800A07CB7 /* AirQualityDetailController.swift in Sources */,

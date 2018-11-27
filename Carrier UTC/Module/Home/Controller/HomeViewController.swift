@@ -53,26 +53,40 @@ class HomeViewController: UIViewController {
     func getHomeViewDetails(){
         
         self.viewModel?.getHomeViewDetails(lat: "28.500", lng: "77.0805", handler:{[weak self] (health_precaution,PM10,PM25, msg, isSuccess) in
-            
             if isSuccess == true{
             print(health_precaution)
             print(PM10)
             print(PM25)
             }
-
-            
         })
     }
+    
     @IBAction func testrButtonAction(_ sender: Any) {
         self.performSegue(withIdentifier: kairQualitySegueIdentifier, sender: nil)
     }
+    
+//    if let searchEventViewC = Constant.kStoryboardEvent.instantiateViewController(withIdentifier: "RegisterViewC") as? RegisterViewC {
+//        self.navigationController?.pushViewController(searchEventViewC, animated: true)
+//    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         addressLabel.text = appDelegate.currentAddress
-
+        
+        let orbit = CAKeyframeAnimation(keyPath: "position")
+        var affineTransform = CGAffineTransform(rotationAngle: 0.0)
+        affineTransform = CGAffineTransform(rotationAngle: CGFloat.pi / 2)
+        let circlePath = UIBezierPath(arcCenter: CGPoint(x: 100 - (100/2),y: 100 - (100/2)), radius:  CGFloat(100), startAngle: CGFloat(0), endAngle:CGFloat(M_PI * 2), clockwise: true)
+        orbit.path = circlePath.cgPath
+        orbit.duration = 4
+        orbit.isAdditive = true
+        orbit.repeatCount = 1
+        orbit.calculationMode = CAAnimationCalculationMode.paced
+        orbit.rotationMode = CAAnimationRotationMode.rotateAuto
+        
+        polutionArrow.layer .add(orbit, forKey: "orbit")
     }
- 
 }
+
 extension UIView {
     
     func startRotation() {
@@ -84,7 +98,6 @@ extension UIView {
         rotation.repeatCount = FLT_MAX
         self.layer.add(rotation, forKey: "rotationAnimation")
     }
-    
     func stopRotation() {
         self.layer.removeAnimation(forKey: "rotationAnimation")
     }
