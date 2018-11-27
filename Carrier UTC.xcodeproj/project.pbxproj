@@ -56,6 +56,10 @@
 		9A58C1B521A589C900A07CB7 /* ReachabilityHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A58C1B321A589C900A07CB7 /* ReachabilityHelper.swift */; };
 		9A58C1B621A589C900A07CB7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A58C1B421A589C900A07CB7 /* NetworkManager.swift */; };
 		9A58C1B821A58B0500A07CB7 /* SDWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A58C1B721A58B0500A07CB7 /* SDWebImage.framework */; };
+		9A920A0021AC0BFE0067CD0E /* HealthPrecaution.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9209FF21AC0BFE0067CD0E /* HealthPrecaution.swift */; };
+		9A920A0221AC0CEF0067CD0E /* PMTypeModele.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A920A0121AC0CEF0067CD0E /* PMTypeModele.swift */; };
+		9A920A0421AC0E1A0067CD0E /* HomeModele.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A920A0321AC0E1A0067CD0E /* HomeModele.swift */; };
+		9A920A0621AC104B0067CD0E /* HomeViewModele.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A920A0521AC104B0067CD0E /* HomeViewModele.swift */; };
 		9AC49F5521A68E3500047D7F /* AirQualityModeleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC49F5421A68E3500047D7F /* AirQualityModeleView.swift */; };
 		9AC49F5721A6CAC300047D7F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9AC49F5621A6CAC300047D7F /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
@@ -138,6 +142,10 @@
 		9A58C1B921A58B0500A07CB7 /* SVProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SVProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A58C1BB21A58C4E00A07CB7 /* SKActivityIndicatorView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SKActivityIndicatorView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A7F1E9021A865BF00A34AD0 /* Carrier UTC.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Carrier UTC.entitlements"; sourceTree = "<group>"; };
+		9A9209FF21AC0BFE0067CD0E /* HealthPrecaution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthPrecaution.swift; sourceTree = "<group>"; };
+		9A920A0121AC0CEF0067CD0E /* PMTypeModele.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMTypeModele.swift; sourceTree = "<group>"; };
+		9A920A0321AC0E1A0067CD0E /* HomeModele.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModele.swift; sourceTree = "<group>"; };
+		9A920A0521AC104B0067CD0E /* HomeViewModele.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModele.swift; sourceTree = "<group>"; };
 		9AC49F5421A68E3500047D7F /* AirQualityModeleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityModeleView.swift; sourceTree = "<group>"; };
 		9AC49F5621A6CAC300047D7F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B179E16F23A5704EF94170D3 /* Pods_Carrier_UTCTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Carrier_UTCTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -319,6 +327,7 @@
 		1786408021A5402F006ED91B /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				9A9209FE21AC0BD00067CD0E /* Home Modele */,
 				9A58C1AD21A5818700A07CB7 /* Cell */,
 				9AE32C5721A5535E00407428 /* Controller */,
 			);
@@ -447,6 +456,17 @@
 			);
 			name = "Connection Manager";
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		9A9209FE21AC0BD00067CD0E /* Home Modele */ = {
+			isa = PBXGroup;
+			children = (
+				9A9209FF21AC0BFE0067CD0E /* HealthPrecaution.swift */,
+				9A920A0121AC0CEF0067CD0E /* PMTypeModele.swift */,
+				9A920A0321AC0E1A0067CD0E /* HomeModele.swift */,
+				9A920A0521AC104B0067CD0E /* HomeViewModele.swift */,
+			);
+			path = "Home Modele";
 			sourceTree = "<group>";
 		};
 		9AE32C5721A5535E00407428 /* Controller */ = {
@@ -686,6 +706,7 @@
 				1786407921A534AC006ED91B /* Enumeration.swift in Sources */,
 				17F80E7721A58E5D003BBC80 /* BlogCategoryCell.swift in Sources */,
 				1786407721A533EA006ED91B /* Alert.swift in Sources */,
+				9A920A0421AC0E1A0067CD0E /* HomeModele.swift in Sources */,
 				17F80E6721A5770F003BBC80 /* CellEventDetail.swift in Sources */,
 				17F80E6E21A58218003BBC80 /* EventImageView.swift in Sources */,
 				1786406221A5335B006ED91B /* ConstantTexts.swift in Sources */,
@@ -698,17 +719,20 @@
 				1786402C21A531D6006ED91B /* AppDelegate.swift in Sources */,
 				1786406E21A53381006ED91B /* UIImageViewUtility.swift in Sources */,
 				1786408A21A542DC006ED91B /* EventListViewC.swift in Sources */,
+				9A920A0221AC0CEF0067CD0E /* PMTypeModele.swift in Sources */,
 				175EA05B21A6CF2700E17849 /* SearchEventVM.swift in Sources */,
 				1786407521A53381006ED91B /* DateUtility.swift in Sources */,
 				17E1348621A7F999003AD715 /* EventDetailVM.swift in Sources */,
 				17F80E6421A576E9003BBC80 /* EventDetailViewC.swift in Sources */,
 				1786406121A5335B006ED91B /* Constant.swift in Sources */,
 				9A35315821A687A20065CD49 /* AirQualityModele.swift in Sources */,
+				9A920A0621AC104B0067CD0E /* HomeViewModele.swift in Sources */,
 				17E1348821A87132003AD715 /* BaseViewC.swift in Sources */,
 				9A58C1AC21A580E800A07CB7 /* AirQualityDetailController.swift in Sources */,
 				1786406D21A53381006ED91B /* UIButtonAddition.swift in Sources */,
 				9A58C1B621A589C900A07CB7 /* NetworkManager.swift in Sources */,
 				175EA05521A6BD7600E17849 /* EventModel.swift in Sources */,
+				9A920A0021AC0BFE0067CD0E /* HealthPrecaution.swift in Sources */,
 				1786406F21A53381006ED91B /* UITextFieldAddition.swift in Sources */,
 				1786408E21A5569B006ED91B /* CellEvent.swift in Sources */,
 			);

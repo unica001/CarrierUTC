@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "52FA6EDFF744EEFB7623A2435E1D4106"
-               BlueprintName = "SDWebImage"
+               BlueprintIdentifier = "284992A50F0B3E64703FA6E94A694797"
+               BlueprintName = "DZNEmptyDataSet"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "SDWebImage.framework">
+               BuildableName = "DZNEmptyDataSet.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

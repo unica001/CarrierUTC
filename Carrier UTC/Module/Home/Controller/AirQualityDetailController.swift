@@ -52,7 +52,6 @@ class AirQualityDetailController: UIViewController {
     func getAirQualityList(){
         
         self.viewModel?.getAirQualityDetails(userListHandler: { [weak self] (response, isSuccess, msg) in
-            
             self?.airQualityList = response
             print(response)
         })
