@@ -101,11 +101,8 @@ class EventListViewC: BaseViewC {
     }
     
     @IBAction func tapViewAll(_ sender: UIButton) {
-//        if let searchEventViewC = Constant.kStoryboardEvent.instantiateViewController(withIdentifier: "SearchEventViewC") as? SearchEventViewC {
-//            searchEventViewC.strHeaderTitle = (sender.tag == 100) ? EventType.Upcoming.rawValue : EventType.Past.rawValue
-//            self.navigationController?.pushViewController(searchEventViewC, animated: true)
-//        }
-        if let searchEventViewC = Constant.kStoryboardEvent.instantiateViewController(withIdentifier: "RegisterViewC") as? RegisterViewC {
+        if let searchEventViewC = Constant.kStoryboardEvent.instantiateViewController(withIdentifier: "SearchEventViewC") as? SearchEventViewC {
+            searchEventViewC.strHeaderTitle = (sender.tag == 100) ? EventType.Upcoming.rawValue : EventType.Past.rawValue
             self.navigationController?.pushViewController(searchEventViewC, animated: true)
         }
     }
