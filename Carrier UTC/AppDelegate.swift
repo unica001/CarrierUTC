@@ -12,7 +12,7 @@ import Firebase
 import UserNotifications
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate, UNUserNotificationCenterDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate, UNUserNotificationCenterDelegate,MessagingDelegate {
 
     var window: UIWindow?
     
@@ -30,6 +30,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate,
         UINavigationBar.appearance().shadowImage = UIImage()
 //        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
         FirebaseApp.configure()
+        Messaging.messaging().delegate = self
+        
         getCurrentLocation()
         registerForPushNotifications(application: application)
         return true
@@ -184,11 +186,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate,
     }
 
     //MARK: - Device token
-    func registerRemoteNotification() {
-        let settings = UIUserNotificationSettings(types: [.badge, .alert, .sound], categories: nil)
-        UIApplication.shared.registerUserNotificationSettings(settings)
-    }
-    
+  
     func registerForPushNotifications(application: UIApplication) {
         
         if #available(iOS 10.0, *)
@@ -210,10 +208,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate,
     
     // MARK: - Remote Notification delegate
     
-    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        let token = deviceToken.map { String(format: "%02.2hhx", $0) }.joined()
-        print(token)
-        self.deviceToken = token
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
+        print("Firebase registration token: \(fcmToken)")
+        
+        let dataDict:[String: String] = ["token": fcmToken]
+        NotificationCenter.default.post(name: Notification.Name("FCMToken"), object: nil, userInfo: dataDict)
+        // TODO: If necessary send token to application server.
+        // Note: This callback is fired at each app startup and whenever a new token is generated.
     }
     
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
