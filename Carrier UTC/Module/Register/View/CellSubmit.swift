@@ -10,6 +10,7 @@ import UIKit
 
 protocol SubmitDelegate: class {
     func tapSubmit(sender: UIButton)
+    func tapTermsAccept(sender: UIButton)
     func tapTerms(sender: UIButton)
 }
 
@@ -31,12 +32,28 @@ class CellSubmit: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    //MARK: - Methods
+    
+    func setUpData(data: RegisterStruct) {
+        if let isTerms = data.isTerms, isTerms == true {
+             btnTerms.isSelected = true
+        } else {
+            btnTerms.isSelected = false
+        }
+    }
+    
+    //MARK: - IBAction
     @IBAction func tapSubmit(_ sender: UIButton) {
         if self.delegate != nil {
             self.delegate.tapSubmit(sender: sender)
         }
     }
     @IBAction func tapTerms(_ sender: UIButton) {
+        if self.delegate != nil {
+            self.delegate.tapTermsAccept(sender: sender)
+        }
+    }
+    @IBAction func tapTermsCondition(_ sender: UIButton) {
         if self.delegate != nil {
             self.delegate.tapTerms(sender: sender)
         }

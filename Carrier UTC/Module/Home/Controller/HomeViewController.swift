@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: BaseViewC {
     
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var milesLabel: UILabel!
@@ -65,6 +65,11 @@ class HomeViewController: UIViewController {
     }
     @IBAction func testrButtonAction(_ sender: Any) {
         self.performSegue(withIdentifier: kairQualitySegueIdentifier, sender: nil)
+    }
+    @IBAction func tapRegister(_ sender: UIButton) {
+        if let searchEventViewC = Constant.kStoryboardEvent.instantiateViewController(withIdentifier: "RegisterViewC") as? RegisterViewC {
+            self.navigationController?.pushViewController(searchEventViewC, animated: true)
+        }
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

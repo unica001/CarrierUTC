@@ -55,7 +55,7 @@ class RegisterVM: RegisterViewModelling {
                 }
                 dictParam["name"] = dataStore[index].value.trimmingCharacters(in: .whitespaces) as AnyObject
             case RegisterType.Phone:
-                if dataStore[index].value.trimmingCharacters(in: .whitespaces) != "" && (dataStore[index].value.trimmingCharacters(in: .whitespaces).count < 10) {
+                if dataStore[index].value.trimmingCharacters(in: .whitespaces) == "" && (dataStore[index].value.trimmingCharacters(in: .whitespaces).count < 10) {
                     validHandler([:], "Please enter phone number", false)
                     return
                 }
@@ -69,9 +69,11 @@ class RegisterVM: RegisterViewModelling {
                     return
                 }
                 dictParam["email"] = dataStore[index].value.trimmingCharacters(in: .whitespaces) as AnyObject
-                break
             case RegisterType.Submit:
-                break
+                if !dataStore[index].isTerms {
+                    validHandler([:], "Please accept terms & conditions", false)
+                    return
+                }
             }
         }
         dictParam["device_id"] = Constant.kAppDelegate.deviceToken as AnyObject

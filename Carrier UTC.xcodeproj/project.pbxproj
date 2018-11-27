@@ -10,6 +10,17 @@
 		175EA05521A6BD7600E17849 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175EA05421A6BD7600E17849 /* EventModel.swift */; };
 		175EA05721A6BFB900E17849 /* EventListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175EA05621A6BFB900E17849 /* EventListVM.swift */; };
 		175EA05B21A6CF2700E17849 /* SearchEventVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175EA05A21A6CF2700E17849 /* SearchEventVM.swift */; };
+		1764133721AD09700002403F /* RegisterVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1764132A21AD09700002403F /* RegisterVM.swift */; };
+		1764133821AD09700002403F /* RegisterViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1764132B21AD09700002403F /* RegisterViewC.swift */; };
+		1764133921AD09700002403F /* RegisterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1764132D21AD09700002403F /* RegisterModel.swift */; };
+		1764133A21AD09700002403F /* RegisterFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1764132F21AD09700002403F /* RegisterFooterView.swift */; };
+		1764133B21AD09700002403F /* RegisterFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1764133021AD09700002403F /* RegisterFooterView.xib */; };
+		1764133C21AD09700002403F /* CellRegisterFields.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1764133121AD09700002403F /* CellRegisterFields.xib */; };
+		1764133D21AD09700002403F /* CellRegisterFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1764133221AD09700002403F /* CellRegisterFields.swift */; };
+		1764133E21AD09700002403F /* RegisterHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1764133321AD09700002403F /* RegisterHeaderView.swift */; };
+		1764133F21AD09700002403F /* CellSubmit.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1764133421AD09700002403F /* CellSubmit.xib */; };
+		1764134021AD09700002403F /* CellSubmit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1764133521AD09700002403F /* CellSubmit.swift */; };
+		1764134121AD09700002403F /* RegisterHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1764133621AD09700002403F /* RegisterHeaderView.xib */; };
 		1786402C21A531D6006ED91B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1786402B21A531D6006ED91B /* AppDelegate.swift */; };
 		1786403121A531D6006ED91B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1786402F21A531D6006ED91B /* Main.storyboard */; };
 		1786403321A531D6006ED91B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1786403221A531D6006ED91B /* Assets.xcassets */; };
@@ -37,6 +48,10 @@
 		178F59A721A9DD36008354D1 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 178F59A621A9DD36008354D1 /* FBSDKShareKit.framework */; };
 		17E1348621A7F999003AD715 /* EventDetailVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E1348521A7F999003AD715 /* EventDetailVM.swift */; };
 		17E1348821A87132003AD715 /* BaseViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E1348721A87132003AD715 /* BaseViewC.swift */; };
+		17E8619321AD0E6D00FC634A /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 17E8619021AD0E6D00FC634A /* OpenSans-Semibold.ttf */; };
+		17E8619421AD0E6D00FC634A /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 17E8619121AD0E6D00FC634A /* OpenSans-Light.ttf */; };
+		17E8619521AD0E6D00FC634A /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 17E8619221AD0E6D00FC634A /* OpenSans-Bold.ttf */; };
+		17E8619821AD135B00FC634A /* WebViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E8619721AD135B00FC634A /* WebViewC.swift */; };
 		17F80E6421A576E9003BBC80 /* EventDetailViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F80E6321A576E9003BBC80 /* EventDetailViewC.swift */; };
 		17F80E6721A5770F003BBC80 /* CellEventDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F80E6521A5770F003BBC80 /* CellEventDetail.swift */; };
 		17F80E6821A5770F003BBC80 /* CellEventDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17F80E6621A5770F003BBC80 /* CellEventDetail.xib */; };
@@ -86,6 +101,17 @@
 		175EA05421A6BD7600E17849 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventModel.swift; path = "Carrier UTC/Module/Event/Model/EventModel.swift"; sourceTree = SOURCE_ROOT; };
 		175EA05621A6BFB900E17849 /* EventListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListVM.swift; sourceTree = "<group>"; };
 		175EA05A21A6CF2700E17849 /* SearchEventVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEventVM.swift; sourceTree = "<group>"; };
+		1764132A21AD09700002403F /* RegisterVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterVM.swift; sourceTree = "<group>"; };
+		1764132B21AD09700002403F /* RegisterViewC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewC.swift; sourceTree = "<group>"; };
+		1764132D21AD09700002403F /* RegisterModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterModel.swift; sourceTree = "<group>"; };
+		1764132F21AD09700002403F /* RegisterFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterFooterView.swift; sourceTree = "<group>"; };
+		1764133021AD09700002403F /* RegisterFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterFooterView.xib; sourceTree = "<group>"; };
+		1764133121AD09700002403F /* CellRegisterFields.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellRegisterFields.xib; sourceTree = "<group>"; };
+		1764133221AD09700002403F /* CellRegisterFields.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellRegisterFields.swift; sourceTree = "<group>"; };
+		1764133321AD09700002403F /* RegisterHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterHeaderView.swift; sourceTree = "<group>"; };
+		1764133421AD09700002403F /* CellSubmit.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellSubmit.xib; sourceTree = "<group>"; };
+		1764133521AD09700002403F /* CellSubmit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellSubmit.swift; sourceTree = "<group>"; };
+		1764133621AD09700002403F /* RegisterHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterHeaderView.xib; sourceTree = "<group>"; };
 		1786402821A531D6006ED91B /* Carrier UTC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Carrier UTC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1786402B21A531D6006ED91B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1786403021A531D6006ED91B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -119,6 +145,10 @@
 		178F59A621A9DD36008354D1 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17E1348521A7F999003AD715 /* EventDetailVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailVM.swift; sourceTree = "<group>"; };
 		17E1348721A87132003AD715 /* BaseViewC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewC.swift; sourceTree = "<group>"; };
+		17E8619021AD0E6D00FC634A /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
+		17E8619121AD0E6D00FC634A /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		17E8619221AD0E6D00FC634A /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		17E8619721AD135B00FC634A /* WebViewC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewC.swift; sourceTree = "<group>"; };
 		17F80E6321A576E9003BBC80 /* EventDetailViewC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewC.swift; sourceTree = "<group>"; };
 		17F80E6521A5770F003BBC80 /* CellEventDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellEventDetail.swift; sourceTree = "<group>"; };
 		17F80E6621A5770F003BBC80 /* CellEventDetail.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellEventDetail.xib; sourceTree = "<group>"; };
@@ -207,6 +237,48 @@
 			name = SearchEvent;
 			sourceTree = "<group>";
 		};
+		1764132821AD09700002403F /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				1764132921AD09700002403F /* Controller */,
+				1764132C21AD09700002403F /* Model */,
+				1764132E21AD09700002403F /* View */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		1764132921AD09700002403F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1764132A21AD09700002403F /* RegisterVM.swift */,
+				1764132B21AD09700002403F /* RegisterViewC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1764132C21AD09700002403F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1764132D21AD09700002403F /* RegisterModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1764132E21AD09700002403F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1764132F21AD09700002403F /* RegisterFooterView.swift */,
+				1764133021AD09700002403F /* RegisterFooterView.xib */,
+				1764133121AD09700002403F /* CellRegisterFields.xib */,
+				1764133221AD09700002403F /* CellRegisterFields.swift */,
+				1764133321AD09700002403F /* RegisterHeaderView.swift */,
+				1764133421AD09700002403F /* CellSubmit.xib */,
+				1764133521AD09700002403F /* CellSubmit.swift */,
+				1764133621AD09700002403F /* RegisterHeaderView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		1786401F21A531D6006ED91B = {
 			isa = PBXGroup;
 			children = (
@@ -234,13 +306,14 @@
 			isa = PBXGroup;
 			children = (
 				9A7F1E9021A865BF00A34AD0 /* Carrier UTC.entitlements */,
-				9A58C1B221A589AE00A07CB7 /* Connection Manager */,
 				1786402B21A531D6006ED91B /* AppDelegate.swift */,
 				17E1348721A87132003AD715 /* BaseViewC.swift */,
 				1786407F21A5402F006ED91B /* Module */,
 				1786405A21A531F7006ED91B /* View */,
 				1786405B21A53212006ED91B /* Extension */,
 				1786405C21A53220006ED91B /* Helper */,
+				9A58C1B221A589AE00A07CB7 /* Connection Manager */,
+				17E8618F21AD0E6D00FC634A /* Fonts */,
 				1786403221A531D6006ED91B /* Assets.xcassets */,
 				1786403721A531D6006ED91B /* Info.plist */,
 				9AC49F5621A6CAC300047D7F /* GoogleService-Info.plist */,
@@ -315,6 +388,8 @@
 		1786407F21A5402F006ED91B /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				17E8619621AD134200FC634A /* WebView */,
+				1764132821AD09700002403F /* Register */,
 				1786408021A5402F006ED91B /* Home */,
 				1786408121A5402F006ED91B /* Tabbar */,
 				1786408221A5402F006ED91B /* Blog */,
@@ -397,6 +472,24 @@
 				17E1348521A7F999003AD715 /* EventDetailVM.swift */,
 			);
 			name = EventDetail;
+			sourceTree = "<group>";
+		};
+		17E8618F21AD0E6D00FC634A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				17E8619021AD0E6D00FC634A /* OpenSans-Semibold.ttf */,
+				17E8619121AD0E6D00FC634A /* OpenSans-Light.ttf */,
+				17E8619221AD0E6D00FC634A /* OpenSans-Bold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		17E8619621AD134200FC634A /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				17E8619721AD135B00FC634A /* WebViewC.swift */,
+			);
+			path = WebView;
 			sourceTree = "<group>";
 		};
 		17F80E7121A58D6D003BBC80 /* Controllers */ = {
@@ -598,13 +691,20 @@
 				1786408F21A5569B006ED91B /* CellEvent.xib in Resources */,
 				17F80E6821A5770F003BBC80 /* CellEventDetail.xib in Resources */,
 				1786403621A531D6006ED91B /* LaunchScreen.storyboard in Resources */,
+				17E8619421AD0E6D00FC634A /* OpenSans-Light.ttf in Resources */,
+				17E8619321AD0E6D00FC634A /* OpenSans-Semibold.ttf in Resources */,
 				9A58C1AA21A5701800A07CB7 /* gurugram.gpx in Resources */,
+				1764133F21AD09700002403F /* CellSubmit.xib in Resources */,
 				1786408621A541A6006ED91B /* Event.storyboard in Resources */,
 				1786403321A531D6006ED91B /* Assets.xcassets in Resources */,
 				1786403121A531D6006ED91B /* Main.storyboard in Resources */,
 				9AC49F5721A6CAC300047D7F /* GoogleService-Info.plist in Resources */,
 				17F80E7021A58225003BBC80 /* EventImageView.xib in Resources */,
+				1764133C21AD09700002403F /* CellRegisterFields.xib in Resources */,
+				17E8619521AD0E6D00FC634A /* OpenSans-Bold.ttf in Resources */,
+				1764133B21AD09700002403F /* RegisterFooterView.xib in Resources */,
 				17F80E7821A58E5D003BBC80 /* BlogCategoryCell.xib in Resources */,
+				1764134121AD09700002403F /* RegisterHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -699,11 +799,14 @@
 				17F80E7321A58D8D003BBC80 /* BlogCategoryViewC.swift in Sources */,
 				1786407321A53381006ED91B /* UIFontAddition.swift in Sources */,
 				1786407221A53381006ED91B /* UITableViewAddition.swift in Sources */,
+				1764133721AD09700002403F /* RegisterVM.swift in Sources */,
 				1786407421A53381006ED91B /* UIViewAddition.swift in Sources */,
 				9A58C1A821A55DB700A07CB7 /* HomeViewController.swift in Sources */,
 				9AC49F5521A68E3500047D7F /* AirQualityModeleView.swift in Sources */,
 				9A58C1B521A589C900A07CB7 /* ReachabilityHelper.swift in Sources */,
+				1764133921AD09700002403F /* RegisterModel.swift in Sources */,
 				1786407921A534AC006ED91B /* Enumeration.swift in Sources */,
+				1764133E21AD09700002403F /* RegisterHeaderView.swift in Sources */,
 				17F80E7721A58E5D003BBC80 /* BlogCategoryCell.swift in Sources */,
 				1786407721A533EA006ED91B /* Alert.swift in Sources */,
 				9A920A0421AC0E1A0067CD0E /* HomeModele.swift in Sources */,
@@ -721,11 +824,16 @@
 				1786408A21A542DC006ED91B /* EventListViewC.swift in Sources */,
 				9A920A0221AC0CEF0067CD0E /* PMTypeModele.swift in Sources */,
 				175EA05B21A6CF2700E17849 /* SearchEventVM.swift in Sources */,
+				1764133D21AD09700002403F /* CellRegisterFields.swift in Sources */,
 				1786407521A53381006ED91B /* DateUtility.swift in Sources */,
+				1764133A21AD09700002403F /* RegisterFooterView.swift in Sources */,
 				17E1348621A7F999003AD715 /* EventDetailVM.swift in Sources */,
+				17E8619821AD135B00FC634A /* WebViewC.swift in Sources */,
 				17F80E6421A576E9003BBC80 /* EventDetailViewC.swift in Sources */,
+				1764134021AD09700002403F /* CellSubmit.swift in Sources */,
 				1786406121A5335B006ED91B /* Constant.swift in Sources */,
 				9A35315821A687A20065CD49 /* AirQualityModele.swift in Sources */,
+				1764133821AD09700002403F /* RegisterViewC.swift in Sources */,
 				9A920A0621AC104B0067CD0E /* HomeViewModele.swift in Sources */,
 				17E1348821A87132003AD715 /* BaseViewC.swift in Sources */,
 				9A58C1AC21A580E800A07CB7 /* AirQualityDetailController.swift in Sources */,

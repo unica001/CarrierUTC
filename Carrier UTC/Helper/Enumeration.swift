@@ -20,3 +20,9 @@ enum RegisterType {
     case Email
     case Submit
 }
+
+enum ContentUrl: String {
+    case Privacy = "http://103.91.90.242:8000/api/privacy-policy"
+    case About = "http://www.google.com"
+    case Terms = "http://www.apple.com"
+}

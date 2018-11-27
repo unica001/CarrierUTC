@@ -15,4 +15,5 @@ struct Constant {
     static let kScreenHeight = UIScreen.main.bounds.size.height
     
     static let kStoryboardEvent = UIStoryboard(name: "Event", bundle: nil)
+    static let kStoryboardMain = UIStoryboard(name: "Main", bundle: nil)
 }
