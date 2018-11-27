@@ -58,6 +58,7 @@ class EventListViewC: BaseViewC {
         apiCallEvent()
         self.collectionViewPast.emptyDataSetDelegate = self
         self.collectionViewPast.emptyDataSetSource = self
+        self.viewHeader.addShadowInHeader()
     }
     
     private func recheckVM() {
@@ -100,8 +101,11 @@ class EventListViewC: BaseViewC {
     }
     
     @IBAction func tapViewAll(_ sender: UIButton) {
-        if let searchEventViewC = Constant.kStoryboardEvent.instantiateViewController(withIdentifier: "SearchEventViewC") as? SearchEventViewC {
-            searchEventViewC.strHeaderTitle = (sender.tag == 100) ? EventType.Upcoming.rawValue : EventType.Past.rawValue
+//        if let searchEventViewC = Constant.kStoryboardEvent.instantiateViewController(withIdentifier: "SearchEventViewC") as? SearchEventViewC {
+//            searchEventViewC.strHeaderTitle = (sender.tag == 100) ? EventType.Upcoming.rawValue : EventType.Past.rawValue
+//            self.navigationController?.pushViewController(searchEventViewC, animated: true)
+//        }
+        if let searchEventViewC = Constant.kStoryboardEvent.instantiateViewController(withIdentifier: "RegisterViewC") as? RegisterViewC {
             self.navigationController?.pushViewController(searchEventViewC, animated: true)
         }
     }

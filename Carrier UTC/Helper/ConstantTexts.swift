@@ -21,6 +21,7 @@ let kevents = "events"
 let ksearch_event = "search_event"
 let kevent_detail = "event_detail"
 let kinterested_event = "interested_event"
+let kregistration = "registration"
 
 //MARK: - Segue Identifier
 let kairQualitySegueIdentifier = "airQualitySegueIdentifier"

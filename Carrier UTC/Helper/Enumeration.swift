@@ -13,3 +13,10 @@ enum EventType: String {
     case Past = "Past Events"//"PAST EVENTS"
     case Search = "Search Events"//"SEARCH EVENTS"
 }
+
+enum RegisterType {
+    case Name
+    case Phone
+    case Email
+    case Submit
+}
