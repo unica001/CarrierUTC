@@ -59,6 +59,7 @@
 		9A52809B21AD082C005603F6 /* CellSubmit.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A52809021AD082C005603F6 /* CellSubmit.xib */; };
 		9A52809C21AD082C005603F6 /* CellSubmit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A52809121AD082C005603F6 /* CellSubmit.swift */; };
 		9A52809D21AD082C005603F6 /* RegisterHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9A52809221AD082C005603F6 /* RegisterHeaderView.xib */; };
+		9A5280A021AD1AF0005603F6 /* WebViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A52809F21AD1AF0005603F6 /* WebViewC.swift */; };
 		9A58C1A821A55DB700A07CB7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A58C1A721A55DB700A07CB7 /* HomeViewController.swift */; };
 		9A58C1AA21A5701800A07CB7 /* gurugram.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 9A58C1A921A5701800A07CB7 /* gurugram.gpx */; };
 		9A58C1AC21A580E800A07CB7 /* AirQualityDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A58C1AB21A580E800A07CB7 /* AirQualityDetailController.swift */; };
@@ -153,6 +154,7 @@
 		9A52809021AD082C005603F6 /* CellSubmit.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellSubmit.xib; sourceTree = "<group>"; };
 		9A52809121AD082C005603F6 /* CellSubmit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellSubmit.swift; sourceTree = "<group>"; };
 		9A52809221AD082C005603F6 /* RegisterHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterHeaderView.xib; sourceTree = "<group>"; };
+		9A52809F21AD1AF0005603F6 /* WebViewC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewC.swift; sourceTree = "<group>"; };
 		9A58C1A721A55DB700A07CB7 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9A58C1A921A5701800A07CB7 /* gurugram.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = gurugram.gpx; sourceTree = "<group>"; };
 		9A58C1AB21A580E800A07CB7 /* AirQualityDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityDetailController.swift; sourceTree = "<group>"; };
@@ -337,6 +339,7 @@
 		1786407F21A5402F006ED91B /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				9A52809E21AD1AF0005603F6 /* WebView */,
 				9A52808421AD082C005603F6 /* Register */,
 				1786408021A5402F006ED91B /* Home */,
 				1786408121A5402F006ED91B /* Tabbar */,
@@ -502,6 +505,14 @@
 				9A52809221AD082C005603F6 /* RegisterHeaderView.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		9A52809E21AD1AF0005603F6 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				9A52809F21AD1AF0005603F6 /* WebViewC.swift */,
+			);
+			path = WebView;
 			sourceTree = "<group>";
 		};
 		9A58C1AD21A5818700A07CB7 /* Cell */ = {
@@ -797,6 +808,7 @@
 				1786407521A53381006ED91B /* DateUtility.swift in Sources */,
 				9A52809621AD082C005603F6 /* RegisterFooterView.swift in Sources */,
 				17E1348621A7F999003AD715 /* EventDetailVM.swift in Sources */,
+				9A5280A021AD1AF0005603F6 /* WebViewC.swift in Sources */,
 				17F80E6421A576E9003BBC80 /* EventDetailViewC.swift in Sources */,
 				9A52809C21AD082C005603F6 /* CellSubmit.swift in Sources */,
 				1786406121A5335B006ED91B /* Constant.swift in Sources */,

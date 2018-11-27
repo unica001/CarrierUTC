@@ -64,18 +64,13 @@ class HomeViewController: BaseViewC {
     @IBAction func testrButtonAction(_ sender: Any) {
         self.performSegue(withIdentifier: kairQualitySegueIdentifier, sender: nil)
     }
-<<<<<<< HEAD
     
-//    if let searchEventViewC = Constant.kStoryboardEvent.instantiateViewController(withIdentifier: "RegisterViewC") as? RegisterViewC {
-//        self.navigationController?.pushViewController(searchEventViewC, animated: true)
-//    }
-=======
+
     @IBAction func tapRegister(_ sender: UIButton) {
         if let searchEventViewC = Constant.kStoryboardEvent.instantiateViewController(withIdentifier: "RegisterViewC") as? RegisterViewC {
             self.navigationController?.pushViewController(searchEventViewC, animated: true)
         }
     }
->>>>>>> cadfd25b53a7984a0dda14672b04af958896d262
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         addressLabel.text = appDelegate.currentAddress
