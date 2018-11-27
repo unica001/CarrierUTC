@@ -12,7 +12,9 @@ class AirQualityDetailController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var headerView: UIView!
+    @IBOutlet weak var lblHeader: UILabel!
     
+    var strHeader = ""
     internal var viewModel: AirQualityModelling?
     
     var  airQualityList = [AirQualityModele]() {
@@ -33,7 +35,7 @@ class AirQualityDetailController: UIViewController {
 
     //MARK: - Private Methods
     private func setUp() {
-        
+        lblHeader.text = strHeader
         headerView.addShadowInHeader()
         if self.viewModel == nil {
             self.viewModel = AirQualityModeleView()
@@ -52,8 +54,8 @@ class AirQualityDetailController: UIViewController {
     }
     
     func getAirQualityList(){
-        
-        self.viewModel?.getAirQualityDetails(userListHandler: { [weak self] (response, isSuccess, msg) in
+        let pmType = (strHeader == "PM 2.5 LEVELS") ? "PM25" : "PM10"
+        self.viewModel?.getAirQualityDetails(pmType: pmType, userListHandler: { [weak self] (response, isSuccess, msg) in
             self?.airQualityList = response
             print(response)
         })
