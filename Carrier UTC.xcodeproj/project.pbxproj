@@ -52,6 +52,8 @@
 		17E8619421AD0E6D00FC634A /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 17E8619121AD0E6D00FC634A /* OpenSans-Light.ttf */; };
 		17E8619521AD0E6D00FC634A /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 17E8619221AD0E6D00FC634A /* OpenSans-Bold.ttf */; };
 		17E8619821AD135B00FC634A /* WebViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E8619721AD135B00FC634A /* WebViewC.swift */; };
+		17E8619A21AD460700FC634A /* BlogCategoryVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E8619921AD460700FC634A /* BlogCategoryVM.swift */; };
+		17E8619D21AD466B00FC634A /* BlogCategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E8619C21AD466B00FC634A /* BlogCategoryModel.swift */; };
 		17F80E6421A576E9003BBC80 /* EventDetailViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F80E6321A576E9003BBC80 /* EventDetailViewC.swift */; };
 		17F80E6721A5770F003BBC80 /* CellEventDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17F80E6521A5770F003BBC80 /* CellEventDetail.swift */; };
 		17F80E6821A5770F003BBC80 /* CellEventDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17F80E6621A5770F003BBC80 /* CellEventDetail.xib */; };
@@ -149,6 +151,8 @@
 		17E8619121AD0E6D00FC634A /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		17E8619221AD0E6D00FC634A /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		17E8619721AD135B00FC634A /* WebViewC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewC.swift; sourceTree = "<group>"; };
+		17E8619921AD460700FC634A /* BlogCategoryVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogCategoryVM.swift; sourceTree = "<group>"; };
+		17E8619C21AD466B00FC634A /* BlogCategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogCategoryModel.swift; sourceTree = "<group>"; };
 		17F80E6321A576E9003BBC80 /* EventDetailViewC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewC.swift; sourceTree = "<group>"; };
 		17F80E6521A5770F003BBC80 /* CellEventDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellEventDetail.swift; sourceTree = "<group>"; };
 		17F80E6621A5770F003BBC80 /* CellEventDetail.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellEventDetail.xib; sourceTree = "<group>"; };
@@ -419,6 +423,7 @@
 		1786408221A5402F006ED91B /* Blog */ = {
 			isa = PBXGroup;
 			children = (
+				17E8619B21AD465600FC634A /* Model */,
 				17F80E7421A58E3B003BBC80 /* View */,
 				17F80E7121A58D6D003BBC80 /* Controllers */,
 			);
@@ -492,10 +497,19 @@
 			path = WebView;
 			sourceTree = "<group>";
 		};
+		17E8619B21AD465600FC634A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				17E8619C21AD466B00FC634A /* BlogCategoryModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		17F80E7121A58D6D003BBC80 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				17F80E7221A58D8D003BBC80 /* BlogCategoryViewC.swift */,
+				17E8619921AD460700FC634A /* BlogCategoryVM.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -800,6 +814,7 @@
 				1786407321A53381006ED91B /* UIFontAddition.swift in Sources */,
 				1786407221A53381006ED91B /* UITableViewAddition.swift in Sources */,
 				1764133721AD09700002403F /* RegisterVM.swift in Sources */,
+				17E8619A21AD460700FC634A /* BlogCategoryVM.swift in Sources */,
 				1786407421A53381006ED91B /* UIViewAddition.swift in Sources */,
 				9A58C1A821A55DB700A07CB7 /* HomeViewController.swift in Sources */,
 				9AC49F5521A68E3500047D7F /* AirQualityModeleView.swift in Sources */,
@@ -839,6 +854,7 @@
 				9A58C1AC21A580E800A07CB7 /* AirQualityDetailController.swift in Sources */,
 				1786406D21A53381006ED91B /* UIButtonAddition.swift in Sources */,
 				9A58C1B621A589C900A07CB7 /* NetworkManager.swift in Sources */,
+				17E8619D21AD466B00FC634A /* BlogCategoryModel.swift in Sources */,
 				175EA05521A6BD7600E17849 /* EventModel.swift in Sources */,
 				9A920A0021AC0BFE0067CD0E /* HealthPrecaution.swift in Sources */,
 				1786406F21A53381006ED91B /* UITextFieldAddition.swift in Sources */,

@@ -10,10 +10,18 @@ import UIKit
 import FacebookShare
 import FacebookCore
 
-class EventDetailViewC: UIViewController {
+class EventDetailViewC: UIViewController, UIDocumentInteractionControllerDelegate {
     //MARK: - IBOutlet
     @IBOutlet weak var tblEventDetail: UITableView!
     @IBOutlet weak var btnInterested: UIButton!
+    
+    private let kInstagramURL = "instagram://"
+    private let kUTI = "com.instagram.exclusivegram"
+    private let kfileNameExtension = "instagram.igo"
+    private let kAlertViewTitle = "Error"
+    private let kAlertViewMessage = "Please install the Instagram application"
+    
+    private let documentInteractionController = UIDocumentInteractionController()
     
     internal var viewModel: EventDetailViewModelling?
     var eventId = 0
@@ -105,7 +113,39 @@ class EventDetailViewC: UIViewController {
     }
     
     @IBAction func tapTwitter(_ sender: UIButton) {
-    
+        let imgURL = URL(string: (eventDetail?.event_image)!)
+        let data = try? Data(contentsOf: imgURL!)
+        let imageInstagram = UIImage(data: data!)
+        
+        guard let date = eventDetail?.event_date,
+            let name = eventDetail?.heading,
+            let desc = eventDetail?.event_description else {
+                return
+        }
+        let contentShare = "Event Date : \(date) \n Event Name: \(name) \n \(desc)"
+        
+        let instagramURL = NSURL(string: kInstagramURL)
+        if UIApplication.shared.canOpenURL(instagramURL! as URL) {
+            
+            let jpgPath = NSTemporaryDirectory().appending(kfileNameExtension)
+            do {
+                if let pngImageData = imageInstagram!.jpegData(compressionQuality: 1.0) {
+                    try pngImageData.write(to: URL(fileURLWithPath: jpgPath), options: .atomic)
+                } } catch { }
+
+            let rect = CGRect.zero
+            let fileURL = NSURL.fileURL(withPath: jpgPath)
+            documentInteractionController.url = fileURL
+            documentInteractionController.delegate = self
+            documentInteractionController.uti = kUTI
+            
+            // adding caption for the image
+            documentInteractionController.annotation = ["InstagramCaption": contentShare]
+            documentInteractionController.presentOpenInMenu(from: rect, in: view, animated: true)
+        }
+        else {
+            Alert.showOkAlert(title: kAlertViewTitle, message: kAlertViewMessage)
+        }
     }
     
     @IBAction func tapFacebook(_ sender: UIButton) {

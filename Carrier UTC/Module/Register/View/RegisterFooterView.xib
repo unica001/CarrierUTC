@@ -28,14 +28,12 @@
                         <constraint firstAttribute="height" constant="0.5" id="pth-WY-Evf"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CU8-DP-N4F">
+                <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CU8-DP-N4F">
                     <rect key="frame" x="107.5" y="52.5" width="160" height="30"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="30" id="VNL-fh-YAt"/>
                         <constraint firstAttribute="width" constant="160" id="spA-rd-GaL"/>
                     </constraints>
-                    <inset key="titleEdgeInsets" minX="-50" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    <inset key="imageEdgeInsets" minX="130" minY="0.0" maxX="0.0" maxY="0.0"/>
                     <state key="normal" title="Privacy Policy" image="green_link_button">
                         <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>

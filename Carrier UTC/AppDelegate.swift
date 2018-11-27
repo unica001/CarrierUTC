@@ -52,7 +52,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate,
     
     //MARK: - Location
     func getCurrentLocation(){
-        if CLLocationManager.locationServicesEnabled() {            switch(CLLocationManager.authorizationStatus()) {
+        if CLLocationManager.locationServicesEnabled() {
+            switch(CLLocationManager.authorizationStatus()) {
         case  .denied:
             
             Alert.showAlertWithAction(title: "", message: "nable location from your device Settings", style: .alert, actionTitles: ["SETTING", "CANCEL"], action: {(action) in
@@ -86,10 +87,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate,
         locationManager = CLLocationManager()
         locationManager.delegate = self
         locationManager.requestAlwaysAuthorization()
-        locationManager.startUpdatingLocation()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.startMonitoringSignificantLocationChanges()
         locationManager!.allowsBackgroundLocationUpdates = true
-        
+        locationManager.startUpdatingLocation()
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
