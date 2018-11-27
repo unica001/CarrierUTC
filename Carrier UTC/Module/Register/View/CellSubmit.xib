@@ -57,13 +57,13 @@
                         </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCa-Fg-uLK">
-                        <rect key="frame" x="102.5" y="61" width="115" height="30"/>
-                        <color key="backgroundColor" red="0.36470588240000001" green="0.6588235294" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <rect key="frame" x="60.5" y="61" width="200" height="40"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="30" id="Tlh-Cn-MSo"/>
-                            <constraint firstAttribute="width" constant="115" id="qOD-g3-W9Q"/>
+                            <constraint firstAttribute="height" constant="40" id="Tlh-Cn-MSo"/>
+                            <constraint firstAttribute="width" constant="200" id="qOD-g3-W9Q"/>
                         </constraints>
-                        <state key="normal" title="SUBMIT">
+                        <state key="normal" title="SUBMIT" backgroundImage="registerheretab">
                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </state>
                         <connections>
@@ -77,7 +77,7 @@
                     <constraint firstItem="fD0-dT-aNE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="8fM-MF-59O"/>
                     <constraint firstItem="2Xy-10-3JD" firstAttribute="centerY" secondItem="fD0-dT-aNE" secondAttribute="centerY" id="EFo-KJ-uHs"/>
                     <constraint firstItem="00T-6e-zfc" firstAttribute="centerY" secondItem="fD0-dT-aNE" secondAttribute="centerY" id="EVv-Li-oyQ"/>
-                    <constraint firstItem="hCa-Fg-uLK" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="O6p-8E-6Lu"/>
+                    <constraint firstItem="hCa-Fg-uLK" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="0.5" id="O6p-8E-6Lu"/>
                     <constraint firstItem="hCa-Fg-uLK" firstAttribute="top" secondItem="00T-6e-zfc" secondAttribute="bottom" constant="24" id="dtl-nV-xaK"/>
                     <constraint firstItem="fD0-dT-aNE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="46" id="jmR-97-cwD"/>
                     <constraint firstItem="2Xy-10-3JD" firstAttribute="leading" secondItem="fD0-dT-aNE" secondAttribute="trailing" constant="8" id="sj7-po-TwP"/>
@@ -92,4 +92,7 @@
             <point key="canvasLocation" x="137.59999999999999" y="170.91454272863569"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="registerheretab" width="225" height="45"/>
+    </resources>
 </document>
