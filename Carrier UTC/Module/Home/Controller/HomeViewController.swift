@@ -107,18 +107,23 @@ class HomeViewController: BaseViewC {
     }
   
     
-
+    //MARK: - IBAction Methods
     @IBAction func pm25DetailsAction(_ sender: Any) {
         self.performSegue(withIdentifier: kairQualitySegueIdentifier, sender: sender)
     }
     
     @IBAction func tapRegister(_ sender: UIButton) {
-        if let searchEventViewC = Constant.kStoryboardEvent.instantiateViewController(withIdentifier: "RegisterViewC") as? RegisterViewC {
-            self.navigationController?.pushViewController(searchEventViewC, animated: true)
+        if let registerViewC = Constant.kStoryboardEvent.instantiateViewController(withIdentifier: "RegisterViewC") as? RegisterViewC {
+            self.navigationController?.pushViewController(registerViewC, animated: true)
         }
     }
     
-   
+    @IBAction func tapHistory(_ sender: UIButton) {
+        if let historyViewC = Constant.kStoryboardMain.instantiateViewController(withIdentifier: "HistoryViewC") as? HistoryViewC {
+            self.navigationController?.pushViewController(historyViewC, animated: true)
+        }
+    }
+    
 }
 
 

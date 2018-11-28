@@ -21,6 +21,19 @@
 		1764133F21AD09700002403F /* CellSubmit.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1764133421AD09700002403F /* CellSubmit.xib */; };
 		1764134021AD09700002403F /* CellSubmit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1764133521AD09700002403F /* CellSubmit.swift */; };
 		1764134121AD09700002403F /* RegisterHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1764133621AD09700002403F /* RegisterHeaderView.xib */; };
+		1783C4B721AE5EF000F87370 /* CellPM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1783C4B521AE5EF000F87370 /* CellPM.swift */; };
+		1783C4B821AE5EF000F87370 /* CellPM.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1783C4B621AE5EF000F87370 /* CellPM.xib */; };
+		1783C4BA21AE607F00F87370 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1783C4B921AE607F00F87370 /* OpenSans-Regular.ttf */; };
+		1783C4BD21AE621E00F87370 /* CellPMScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1783C4BB21AE621E00F87370 /* CellPMScale.swift */; };
+		1783C4BE21AE621E00F87370 /* CellPMScale.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1783C4BC21AE621E00F87370 /* CellPMScale.xib */; };
+		1783C4C121AE66EA00F87370 /* CellHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1783C4BF21AE66EA00F87370 /* CellHistory.swift */; };
+		1783C4C221AE66EA00F87370 /* CellHistory.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1783C4C021AE66EA00F87370 /* CellHistory.xib */; };
+		1783C4C421AE6B8D00F87370 /* HistoryViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1783C4C321AE6B8D00F87370 /* HistoryViewC.swift */; };
+		1783C4C621AE6E7F00F87370 /* HistoryHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1783C4C521AE6E7F00F87370 /* HistoryHeaderView.swift */; };
+		1783C4C821AE6E8A00F87370 /* HistoryHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1783C4C721AE6E8A00F87370 /* HistoryHeaderView.xib */; };
+		1783C4CA21AE81EA00F87370 /* PMScaleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1783C4C921AE81EA00F87370 /* PMScaleModel.swift */; };
+		1783C4CC21AE8F1700F87370 /* PMTowerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1783C4CB21AE8F1700F87370 /* PMTowerModel.swift */; };
+		1783C4CE21AE902F00F87370 /* HistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1783C4CD21AE902F00F87370 /* HistoryModel.swift */; };
 		1786402C21A531D6006ED91B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1786402B21A531D6006ED91B /* AppDelegate.swift */; };
 		1786403121A531D6006ED91B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1786402F21A531D6006ED91B /* Main.storyboard */; };
 		1786403321A531D6006ED91B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1786403221A531D6006ED91B /* Assets.xcassets */; };
@@ -115,6 +128,19 @@
 		1764133421AD09700002403F /* CellSubmit.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CellSubmit.xib; sourceTree = "<group>"; };
 		1764133521AD09700002403F /* CellSubmit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellSubmit.swift; sourceTree = "<group>"; };
 		1764133621AD09700002403F /* RegisterHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterHeaderView.xib; sourceTree = "<group>"; };
+		1783C4B521AE5EF000F87370 /* CellPM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellPM.swift; sourceTree = "<group>"; };
+		1783C4B621AE5EF000F87370 /* CellPM.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellPM.xib; sourceTree = "<group>"; };
+		1783C4B921AE607F00F87370 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Regular.ttf"; path = "../../../../../../../../Volumes/T(Transfer)2/United For Air/App/FONT-open-sans/OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		1783C4BB21AE621E00F87370 /* CellPMScale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellPMScale.swift; sourceTree = "<group>"; };
+		1783C4BC21AE621E00F87370 /* CellPMScale.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellPMScale.xib; sourceTree = "<group>"; };
+		1783C4BF21AE66EA00F87370 /* CellHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellHistory.swift; sourceTree = "<group>"; };
+		1783C4C021AE66EA00F87370 /* CellHistory.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellHistory.xib; sourceTree = "<group>"; };
+		1783C4C321AE6B8D00F87370 /* HistoryViewC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewC.swift; sourceTree = "<group>"; };
+		1783C4C521AE6E7F00F87370 /* HistoryHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryHeaderView.swift; sourceTree = "<group>"; };
+		1783C4C721AE6E8A00F87370 /* HistoryHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryHeaderView.xib; sourceTree = "<group>"; };
+		1783C4C921AE81EA00F87370 /* PMScaleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMScaleModel.swift; sourceTree = "<group>"; };
+		1783C4CB21AE8F1700F87370 /* PMTowerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMTowerModel.swift; sourceTree = "<group>"; };
+		1783C4CD21AE902F00F87370 /* HistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryModel.swift; sourceTree = "<group>"; };
 		1786402821A531D6006ED91B /* Carrier UTC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Carrier UTC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1786402B21A531D6006ED91B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1786403021A531D6006ED91B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -256,8 +282,8 @@
 		1764132921AD09700002403F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				1764132A21AD09700002403F /* RegisterVM.swift */,
 				1764132B21AD09700002403F /* RegisterViewC.swift */,
+				1764132A21AD09700002403F /* RegisterVM.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -298,6 +324,7 @@
 		1783C4B221AE5D7700F87370 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1783C4C321AE6B8D00F87370 /* HistoryViewC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -305,6 +332,14 @@
 		1783C4B321AE5D8000F87370 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1783C4B521AE5EF000F87370 /* CellPM.swift */,
+				1783C4B621AE5EF000F87370 /* CellPM.xib */,
+				1783C4BB21AE621E00F87370 /* CellPMScale.swift */,
+				1783C4BC21AE621E00F87370 /* CellPMScale.xib */,
+				1783C4BF21AE66EA00F87370 /* CellHistory.swift */,
+				1783C4C021AE66EA00F87370 /* CellHistory.xib */,
+				1783C4C521AE6E7F00F87370 /* HistoryHeaderView.swift */,
+				1783C4C721AE6E8A00F87370 /* HistoryHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -312,6 +347,9 @@
 		1783C4B421AE5D8A00F87370 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1783C4C921AE81EA00F87370 /* PMScaleModel.swift */,
+				1783C4CB21AE8F1700F87370 /* PMTowerModel.swift */,
+				1783C4CD21AE902F00F87370 /* HistoryModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -517,6 +555,7 @@
 		17E8618F21AD0E6D00FC634A /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				1783C4B921AE607F00F87370 /* OpenSans-Regular.ttf */,
 				17E8619021AD0E6D00FC634A /* OpenSans-Semibold.ttf */,
 				17E8619121AD0E6D00FC634A /* OpenSans-Light.ttf */,
 				17E8619221AD0E6D00FC634A /* OpenSans-Bold.ttf */,
@@ -745,7 +784,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A58C1B121A581AC00A07CB7 /* AirQualityCell.xib in Resources */,
+				1783C4BE21AE621E00F87370 /* CellPMScale.xib in Resources */,
 				1786408F21A5569B006ED91B /* CellEvent.xib in Resources */,
+				1783C4B821AE5EF000F87370 /* CellPM.xib in Resources */,
+				1783C4C221AE66EA00F87370 /* CellHistory.xib in Resources */,
 				17F80E6821A5770F003BBC80 /* CellEventDetail.xib in Resources */,
 				1786403621A531D6006ED91B /* LaunchScreen.storyboard in Resources */,
 				17E8619421AD0E6D00FC634A /* OpenSans-Light.ttf in Resources */,
@@ -753,6 +795,7 @@
 				9A58C1AA21A5701800A07CB7 /* gurugram.gpx in Resources */,
 				1764133F21AD09700002403F /* CellSubmit.xib in Resources */,
 				1786408621A541A6006ED91B /* Event.storyboard in Resources */,
+				1783C4BA21AE607F00F87370 /* OpenSans-Regular.ttf in Resources */,
 				1786403321A531D6006ED91B /* Assets.xcassets in Resources */,
 				1786403121A531D6006ED91B /* Main.storyboard in Resources */,
 				9AC49F5721A6CAC300047D7F /* GoogleService-Info.plist in Resources */,
@@ -761,6 +804,7 @@
 				17E8619521AD0E6D00FC634A /* OpenSans-Bold.ttf in Resources */,
 				1764133B21AD09700002403F /* RegisterFooterView.xib in Resources */,
 				17F80E7821A58E5D003BBC80 /* BlogCategoryCell.xib in Resources */,
+				1783C4C821AE6E8A00F87370 /* HistoryHeaderView.xib in Resources */,
 				1764134121AD09700002403F /* RegisterHeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -856,8 +900,10 @@
 				17F80E7321A58D8D003BBC80 /* BlogCategoryViewC.swift in Sources */,
 				1786407321A53381006ED91B /* UIFontAddition.swift in Sources */,
 				1786407221A53381006ED91B /* UITableViewAddition.swift in Sources */,
+				1783C4CA21AE81EA00F87370 /* PMScaleModel.swift in Sources */,
 				1764133721AD09700002403F /* RegisterVM.swift in Sources */,
 				17E8619A21AD460700FC634A /* BlogCategoryVM.swift in Sources */,
+				1783C4CC21AE8F1700F87370 /* PMTowerModel.swift in Sources */,
 				1786407421A53381006ED91B /* UIViewAddition.swift in Sources */,
 				9A58C1A821A55DB700A07CB7 /* HomeViewController.swift in Sources */,
 				9AC49F5521A68E3500047D7F /* AirQualityModeleView.swift in Sources */,
@@ -866,8 +912,10 @@
 				1786407921A534AC006ED91B /* Enumeration.swift in Sources */,
 				1764133E21AD09700002403F /* RegisterHeaderView.swift in Sources */,
 				17F80E7721A58E5D003BBC80 /* BlogCategoryCell.swift in Sources */,
+				1783C4BD21AE621E00F87370 /* CellPMScale.swift in Sources */,
 				1786407721A533EA006ED91B /* Alert.swift in Sources */,
 				9A920A0421AC0E1A0067CD0E /* HomeModele.swift in Sources */,
+				1783C4CE21AE902F00F87370 /* HistoryModel.swift in Sources */,
 				17F80E6721A5770F003BBC80 /* CellEventDetail.swift in Sources */,
 				17F80E6E21A58218003BBC80 /* EventImageView.swift in Sources */,
 				1786406221A5335B006ED91B /* ConstantTexts.swift in Sources */,
@@ -881,6 +929,7 @@
 				1786406E21A53381006ED91B /* UIImageViewUtility.swift in Sources */,
 				9A1E655421AD5F5700D2721D /* NotificationsViewModelling.swift in Sources */,
 				1786408A21A542DC006ED91B /* EventListViewC.swift in Sources */,
+				1783C4B721AE5EF000F87370 /* CellPM.swift in Sources */,
 				9A920A0221AC0CEF0067CD0E /* PMTypeModele.swift in Sources */,
 				175EA05B21A6CF2700E17849 /* SearchEventVM.swift in Sources */,
 				1764133D21AD09700002403F /* CellRegisterFields.swift in Sources */,
@@ -898,11 +947,14 @@
 				9A58C1AC21A580E800A07CB7 /* AirQualityDetailController.swift in Sources */,
 				1786406D21A53381006ED91B /* UIButtonAddition.swift in Sources */,
 				9A58C1B621A589C900A07CB7 /* NetworkManager.swift in Sources */,
+				1783C4C621AE6E7F00F87370 /* HistoryHeaderView.swift in Sources */,
+				1783C4C421AE6B8D00F87370 /* HistoryViewC.swift in Sources */,
 				17E8619D21AD466B00FC634A /* BlogCategoryModel.swift in Sources */,
 				175EA05521A6BD7600E17849 /* EventModel.swift in Sources */,
 				9A920A0021AC0BFE0067CD0E /* HealthPrecaution.swift in Sources */,
 				1786406F21A53381006ED91B /* UITextFieldAddition.swift in Sources */,
 				1786408E21A5569B006ED91B /* CellEvent.swift in Sources */,
+				1783C4C121AE66EA00F87370 /* CellHistory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

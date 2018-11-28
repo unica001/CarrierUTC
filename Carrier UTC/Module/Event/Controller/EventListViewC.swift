@@ -129,7 +129,6 @@ extension EventListViewC: UICollectionViewDelegate, UICollectionViewDataSource, 
         }
     }
     
-    // MARK: UICollectionViewDelegateFlowLayout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 280, height: collectionView.frame.size.height) // The size of one cell
     }
