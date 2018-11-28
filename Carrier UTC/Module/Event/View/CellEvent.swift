@@ -39,15 +39,11 @@ class CellEvent: UICollectionViewCell {
         lblEventAddress.text = event.event_address
         imgEvent.setImageWith(strImage: event.event_image)
         //2018-11-18
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.timeZone = Calendar.current.timeZone
-        dateFormatter.locale = Calendar.current.locale
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        let date = dateFormatter.date(from: event.event_date!)
-        let eventDate = date?.dateWithString(strFormat: "dd")
-        let eventMonth = date?.dateWithString(strFormat: "MMM")
-        let newMonth = "\(eventMonth!)\n"
+       
+        let date = Helper.stringToDate(strDate: event.event_date!, format: "yyyy-MM-dd")
+        let eventDate = date.dateWithString(strFormat: "dd")
+        let eventMonth = date.dateWithString(strFormat: "MMM")
+        let newMonth = "\(eventMonth)\n"
         
         let dateAttributes = [NSAttributedString.Key.font: UIFont.font(name: .OpenSans, weight: .Bold, size: .size_15),
                               NSAttributedString.Key.foregroundColor: UIColor.white]
@@ -55,7 +51,7 @@ class CellEvent: UICollectionViewCell {
                                 NSAttributedString.Key.foregroundColor: UIColor.white]
         
         let dateMonthStr: NSMutableAttributedString = NSMutableAttributedString()
-        let dateStr = NSAttributedString(string: eventDate!, attributes: dateAttributes)
+        let dateStr = NSAttributedString(string: eventDate, attributes: dateAttributes)
         let monthStr = NSAttributedString(string: newMonth, attributes: monthAttributes)
         dateMonthStr.append(monthStr)
         dateMonthStr.append(dateStr)

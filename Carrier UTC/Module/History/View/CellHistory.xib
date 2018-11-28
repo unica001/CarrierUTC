@@ -25,25 +25,25 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Min." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D4s-QE-vbl">
-                        <rect key="frame" x="21" y="51" width="27" height="18"/>
+                        <rect key="frame" x="16" y="49" width="27" height="16.5"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="27" id="9mv-nl-Kjv"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="13"/>
+                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Tl-Y2-SZY">
-                        <rect key="frame" x="20" y="77" width="30" height="18"/>
+                        <rect key="frame" x="15" y="73.5" width="30" height="16.5"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="30" id="E7u-gM-MAp"/>
                         </constraints>
-                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="13"/>
+                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="eVT-1h-x5p">
-                        <rect key="frame" x="60" y="10" width="240" height="94.5"/>
+                        <rect key="frame" x="55" y="10" width="245" height="94.5"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="DsK-on-JRJ">
                             <size key="itemSize" width="50" height="50"/>
@@ -58,10 +58,10 @@
                     </collectionView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="D4s-QE-vbl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="21" id="9IJ-PT-f5b"/>
+                    <constraint firstItem="D4s-QE-vbl" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="9IJ-PT-f5b"/>
                     <constraint firstItem="5Tl-Y2-SZY" firstAttribute="top" secondItem="D4s-QE-vbl" secondAttribute="bottom" constant="8" id="C29-eY-k9m"/>
-                    <constraint firstAttribute="bottom" secondItem="5Tl-Y2-SZY" secondAttribute="bottom" constant="19.5" id="CRk-DF-IaE"/>
-                    <constraint firstItem="5Tl-Y2-SZY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="JT2-k7-Lux"/>
+                    <constraint firstAttribute="bottom" secondItem="5Tl-Y2-SZY" secondAttribute="bottom" constant="24.5" id="CRk-DF-IaE"/>
+                    <constraint firstItem="5Tl-Y2-SZY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="JT2-k7-Lux"/>
                     <constraint firstItem="eVT-1h-x5p" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="SRj-Qf-tPT"/>
                     <constraint firstAttribute="bottom" secondItem="eVT-1h-x5p" secondAttribute="bottom" constant="10" id="eBl-m8-Bv2"/>
                     <constraint firstAttribute="trailing" secondItem="eVT-1h-x5p" secondAttribute="trailing" constant="20" id="lJE-Vo-zdC"/>

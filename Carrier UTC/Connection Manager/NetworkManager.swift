@@ -1,5 +1,6 @@
 
 import UIKit
+import SVProgressHUD
 
 class NetworkManager: NSObject {
     
@@ -20,6 +21,7 @@ class NetworkManager: NSObject {
         // show hude
         if hude == true {
            // SKActivityIndicator.show()
+            SVProgressHUD.show()
         }
         
         let urlRequest: NSMutableURLRequest = NSMutableURLRequest(url: url)
@@ -42,6 +44,7 @@ class NetworkManager: NSObject {
             // hide hude
             DispatchQueue.main.sync {
               //  SKActivityIndicator.dismiss()
+                SVProgressHUD.dismiss()
             }
             
             if error != nil {

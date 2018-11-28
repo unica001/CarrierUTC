@@ -76,6 +76,14 @@ class Helper {
         return indexPath
     }
     
+    class func stringToDate(strDate: String, format: String) -> Date {
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = Calendar.current.timeZone
+        dateFormatter.locale = Calendar.current.locale
+        dateFormatter.dateFormat = format
+        return dateFormatter.date(from: strDate)!
+    }
+    
     //MARK: - Convert data to json string
     class public func toJsonString(from object: Any) -> String? {
         if let objectData = try? JSONSerialization.data(withJSONObject: object, options: JSONSerialization.WritingOptions(rawValue: 0)) {

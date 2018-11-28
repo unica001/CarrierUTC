@@ -83,6 +83,7 @@ PODS:
   - SDWebImage (4.4.2):
     - SDWebImage/Core (= 4.4.2)
   - SDWebImage/Core (4.4.2)
+  - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
   - DZNEmptyDataSet
@@ -92,6 +93,7 @@ DEPENDENCIES:
   - Firebase/Messaging
   - ObjectMapper
   - SDWebImage
+  - SVProgressHUD
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -112,6 +114,7 @@ SPEC REPOS:
     - ObjectMapper
     - Protobuf
     - SDWebImage
+    - SVProgressHUD
 
 SPEC CHECKSUMS:
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
@@ -131,7 +134,8 @@ SPEC CHECKSUMS:
   ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 086829dda62cc90e942ec407d39f4206b16d1406
+PODFILE CHECKSUM: 35d2fb4b0a4d8e2dc83de2e012c25c863b7e0ba0
 
 COCOAPODS: 1.5.3

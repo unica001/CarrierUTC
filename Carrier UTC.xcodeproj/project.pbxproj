@@ -33,6 +33,7 @@
 		1783C4CA21AE81EA00F87370 /* PMScaleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1783C4C921AE81EA00F87370 /* PMScaleModel.swift */; };
 		1783C4CC21AE8F1700F87370 /* PMTowerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1783C4CB21AE8F1700F87370 /* PMTowerModel.swift */; };
 		1783C4CE21AE902F00F87370 /* HistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1783C4CD21AE902F00F87370 /* HistoryModel.swift */; };
+		1783C4D021AE90DD00F87370 /* HistoryVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1783C4CF21AE90DD00F87370 /* HistoryVM.swift */; };
 		1786402C21A531D6006ED91B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1786402B21A531D6006ED91B /* AppDelegate.swift */; };
 		1786403121A531D6006ED91B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1786402F21A531D6006ED91B /* Main.storyboard */; };
 		1786403321A531D6006ED91B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1786403221A531D6006ED91B /* Assets.xcassets */; };
@@ -139,6 +140,7 @@
 		1783C4C921AE81EA00F87370 /* PMScaleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMScaleModel.swift; sourceTree = "<group>"; };
 		1783C4CB21AE8F1700F87370 /* PMTowerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMTowerModel.swift; sourceTree = "<group>"; };
 		1783C4CD21AE902F00F87370 /* HistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryModel.swift; sourceTree = "<group>"; };
+		1783C4CF21AE90DD00F87370 /* HistoryVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVM.swift; sourceTree = "<group>"; };
 		1786402821A531D6006ED91B /* Carrier UTC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Carrier UTC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1786402B21A531D6006ED91B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1786403021A531D6006ED91B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -324,6 +326,7 @@
 			isa = PBXGroup;
 			children = (
 				1783C4C321AE6B8D00F87370 /* HistoryViewC.swift */,
+				1783C4CF21AE90DD00F87370 /* HistoryVM.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -843,6 +846,7 @@
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -859,6 +863,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -918,6 +923,7 @@
 				17F80E6E21A58218003BBC80 /* EventImageView.swift in Sources */,
 				1786406221A5335B006ED91B /* ConstantTexts.swift in Sources */,
 				175EA05721A6BFB900E17849 /* EventListVM.swift in Sources */,
+				1783C4D021AE90DD00F87370 /* HistoryVM.swift in Sources */,
 				1786407121A53381006ED91B /* UIImage+Orientation.swift in Sources */,
 				9A58C1B021A581AC00A07CB7 /* AirQualityCell.swift in Sources */,
 				17FC9A0321A56A0F007DB7E1 /* SearchEventViewC.swift in Sources */,
