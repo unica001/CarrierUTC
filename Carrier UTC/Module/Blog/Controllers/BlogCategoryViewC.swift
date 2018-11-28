@@ -11,6 +11,7 @@ import UIKit
 class BlogCategoryViewC: BaseViewC {
     //MARK: - IBOutlet
     @IBOutlet weak var tblBlogCategory: UITableView!
+    @IBOutlet weak var viewHeader: UIView!
     
     //MARK: - View Life cycle
     override func viewDidLoad() {
@@ -33,6 +34,7 @@ class BlogCategoryViewC: BaseViewC {
     //MARK: - Private Methods
     private func setUp() {
         registerNib()
+        viewHeader.addShadowInHeader()
     }
     
     private func registerNib() {

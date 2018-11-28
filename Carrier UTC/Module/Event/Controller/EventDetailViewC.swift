@@ -9,6 +9,7 @@
 import UIKit
 import FacebookShare
 import FacebookCore
+import Social
 
 class EventDetailViewC: UIViewController, UIDocumentInteractionControllerDelegate {
     //MARK: - IBOutlet
@@ -16,7 +17,7 @@ class EventDetailViewC: UIViewController, UIDocumentInteractionControllerDelegat
     @IBOutlet weak var btnInterested: UIButton!
     
     private let kInstagramURL = "instagram://"
-    private let kUTI = "com.instagram.exclusivegram"
+    private let kUTI = "com.instagram.photo"//"com.instagram.exclusivegram"
     private let kfileNameExtension = "instagram.igo"
     private let kAlertViewTitle = "Error"
     private let kAlertViewMessage = "Please install the Instagram application"
@@ -155,6 +156,12 @@ class EventDetailViewC: UIViewController, UIDocumentInteractionControllerDelegat
             return
         }
         let contentShare = "Event Date : \(date) \n Event Name: \(name) \n \(desc)"
+//        if let vc = SLComposeViewController(forServiceType: SLServiceTypeFacebook) {
+//            vc.setInitialText("Look at this great picture!")
+//            vc.add(UIImage(named: "myImage.jpg")!)
+//            vc.add(URL(string: "https://www.hackingwithswift.com"))
+//            present(vc, animated: true)
+//        }
         let content = LinkShareContent(url: URL(string: (eventDetail?.event_image)!)!, quote: contentShare)
         
         let dialog = ShareDialog(content: content)
