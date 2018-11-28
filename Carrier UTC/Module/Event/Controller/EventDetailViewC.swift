@@ -70,7 +70,7 @@ class EventDetailViewC: UIViewController, UIDocumentInteractionControllerDelegat
     }
     
     private func setUpFooter() {
-       /* if (eventDetail?.user_interest)! {
+        if (eventDetail?.user_interest)! {
             btnInterested.backgroundColor = UIColor.lightGray
             btnInterested.isUserInteractionEnabled = false
             btnInterested.setImage(UIImage( named: ""), for: .normal)
@@ -80,7 +80,7 @@ class EventDetailViewC: UIViewController, UIDocumentInteractionControllerDelegat
             btnInterested.isUserInteractionEnabled = true
             btnInterested.setImage(UIImage(named: "interested"), for: .normal)
             btnInterested.setTitle("", for: .normal)
-        }*/
+        }
     }
     
     private func apiCallEventDetail() {
@@ -105,7 +105,7 @@ class EventDetailViewC: UIViewController, UIDocumentInteractionControllerDelegat
             if success {
                 print("Success")
                 self.eventDetail?.user_interest = true
-                
+                self.setUpFooter()
             } else {
                 print("Not success")
             }

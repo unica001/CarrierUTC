@@ -12,8 +12,10 @@ import ObjectMapper
 class PMTowerModel: NSObject, Codable, Mappable {
     
     var date: String?
-    var minimum: String?
-    var maximum: String?
+    var minimum: Double?
+    var maximum: Double?
+    var color_max: String?
+    var color_min: String?
     
     required init?(map: Map) {
         
@@ -23,6 +25,8 @@ class PMTowerModel: NSObject, Codable, Mappable {
         maximum <- map["maximum"]
         minimum <- map["minimum"]
         date <- map["date"]
+        color_min <- map["color_min"]
+        color_max <- map["color_max"]
     }
     
 }

@@ -12,6 +12,11 @@ class HistoryViewC: BaseViewC {
     //MARK: - IBOutlets
     @IBOutlet weak var tblViewHistory: UITableView!
     
+    internal var viewModel: HistoryViewModelling?
+    var tower25Scale = [PMTowerModel]()
+    var tower10Scale = [PMTowerModel]()
+    var pmScale = [PMScaleModel]()
+    
     //MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,11 +39,33 @@ class HistoryViewC: BaseViewC {
     
     private func setUp() {
         registerNib()
+        recheckVM()
+        apiCallHistory()
+    }
+    
+    private func recheckVM() {
+        if self.viewModel == nil {
+            self.viewModel = HistoryVM()
+        }
     }
     
     private func registerNib() {
         self.tblViewHistory.register(UINib(nibName: "CellHistory", bundle: nil), forCellReuseIdentifier: "CellHistory")
         self.tblViewHistory.register(UINib(nibName: "HistoryHeaderView", bundle: nil), forHeaderFooterViewReuseIdentifier: "HistoryHeaderView")
+    }
+    
+    private func apiCallHistory() {
+        self.viewModel?.getHistory(historyHandler: { [weak self] (historyModel, success, msg) in
+            guard self != nil else { return }
+            if success {
+                self?.pmScale = historyModel.pm_scale.reversed()
+                self?.tower10Scale = historyModel.pm10
+                self?.tower25Scale = historyModel.pm25
+                self?.tblViewHistory.reloadData()
+            } else {
+                Alert.showOkAlert(title: "Error!!", message: msg)
+            }
+        })
     }
     
     
@@ -66,6 +93,7 @@ extension HistoryViewC: UITableViewDelegate, UITableViewDataSource {
         headerView.backgroundView = view
         headerView.viewUnderLine.isHidden = (section == 2) ? false : true
         headerView.lblHeader.text = (section == 2) ? "PM SCALE" : (section == 0) ? "PM 2.5" : "PM 10"
+        headerView.lblHeader.font = (section == 2) ? UIFont.font(name: .OpenSans, weight: .SemiBold, size: .size_15) : UIFont.font(name: .OpenSans, weight: .SemiBold, size: .size_22)
         return headerView
     }
     
@@ -74,7 +102,7 @@ extension HistoryViewC: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return (indexPath.section == 2) ? 130 : 115
+        return (indexPath.section == 2) ? 110 : 115
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -86,8 +114,10 @@ extension HistoryViewC: UITableViewDelegate, UITableViewDataSource {
             cell.minWidthCnst.constant = 0
             cell.maxWidthCnst.constant = 0
             cell.collectionScale.register(UINib(nibName: "CellPMScale", bundle: nil), forCellWithReuseIdentifier: "CellPMScale")
+            cell.collectionScale.reloadData()
         } else {
             cell.collectionScale.register(UINib(nibName: "CellPM", bundle: nil), forCellWithReuseIdentifier: "CellPM")
+            cell.collectionScale.reloadData()
         }
         return cell
     }
@@ -96,21 +126,28 @@ extension HistoryViewC: UITableViewDelegate, UITableViewDataSource {
 extension HistoryViewC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return (collectionView.tag == 2) ? 7 : 4
+        return (collectionView.tag == 2) ? (pmScale.count + 1) : (collectionView.tag == 0) ? tower25Scale.count : tower10Scale.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView.tag == 2 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CellPMScale", for: indexPath) as! CellPMScale
+            if indexPath.row == 0 {
+                cell.setUpScaleInfo(scaleInfo: nil, index: indexPath.row)
+            } else {
+                let inputRow = indexPath.row - 1
+                cell.setUpScaleInfo(scaleInfo: pmScale[inputRow], index: indexPath.row)
+            }
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CellPM", for: indexPath) as! CellPM
+            cell.setUpTowerInfo(towerInfo: (collectionView.tag == 0) ? tower25Scale[indexPath.row] : tower10Scale[indexPath.row])
             return cell
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return (collectionView.tag == 2) ? CGSize(width: 110, height: 110) : CGSize(width: 85, height: 95) // The size of one cell
+        return (collectionView.tag == 2) ? CGSize(width: 90, height: 90) : CGSize(width: 85, height: 95) // The size of one cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {

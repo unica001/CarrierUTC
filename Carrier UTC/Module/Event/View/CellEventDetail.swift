@@ -34,14 +34,11 @@ class CellEventDetail: UITableViewCell {
         lblDesc.text = event.event_description
         lblPeople.text = "\(String(describing: event.interested_users!)) people going"
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.timeZone = Calendar.current.timeZone
-        dateFormatter.locale = Calendar.current.locale
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        let date = dateFormatter.date(from: event.event_date!)
-        let eventDate = date?.dateWithString(strFormat: "dd")
-        let eventMonth = date?.dateWithString(strFormat: "MMM")
-        let newMonth = "\(eventMonth!)\n"
+       
+        let date = Helper.stringToDate(strDate: event.event_date!, format: "yyyy-MM-dd")
+        let eventDate = date.dateWithString(strFormat: "dd")
+        let eventMonth = date.dateWithString(strFormat: "MMM")
+        let newMonth = "\(eventMonth)\n"
         
         let dateAttributes = [NSAttributedString.Key.font: UIFont.font(name: .OpenSans, weight: .Bold, size: .size_14),
                               NSAttributedString.Key.foregroundColor: UIColor.black]
@@ -49,7 +46,7 @@ class CellEventDetail: UITableViewCell {
                                NSAttributedString.Key.foregroundColor: UIColor.black]
         
         let dateMonthStr: NSMutableAttributedString = NSMutableAttributedString()
-        let dateStr = NSAttributedString(string: eventDate!, attributes: dateAttributes)
+        let dateStr = NSAttributedString(string: eventDate, attributes: dateAttributes)
         let monthStr = NSAttributedString(string: newMonth, attributes: monthAttributes)
         dateMonthStr.append(monthStr)
         dateMonthStr.append(dateStr)
