@@ -34,7 +34,7 @@
                         <constraint firstAttribute="height" constant="30" id="VNL-fh-YAt"/>
                         <constraint firstAttribute="width" constant="160" id="spA-rd-GaL"/>
                     </constraints>
-                    <state key="normal" title="Privacy Policy" image="green_link_button">
+                    <state key="normal" title="Privacy Policy " image="green_link_button">
                         <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
                 </button>
