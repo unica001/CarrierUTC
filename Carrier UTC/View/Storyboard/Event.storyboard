@@ -463,7 +463,7 @@
                                             <constraint firstAttribute="height" constant="25" id="X6W-ui-jya"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="12"/>
-                                        <state key="normal" image="interested">
+                                        <state key="normal" backgroundImage="interested">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>

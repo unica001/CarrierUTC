@@ -285,6 +285,37 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		1783C4B121AE5D6100F87370 /* History */ = {
+			isa = PBXGroup;
+			children = (
+				1783C4B421AE5D8A00F87370 /* Model */,
+				1783C4B321AE5D8000F87370 /* View */,
+				1783C4B221AE5D7700F87370 /* Controller */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		1783C4B221AE5D7700F87370 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1783C4B321AE5D8000F87370 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1783C4B421AE5D8A00F87370 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		1786401F21A531D6006ED91B = {
 			isa = PBXGroup;
 			children = (
@@ -394,6 +425,7 @@
 		1786407F21A5402F006ED91B /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				1783C4B121AE5D6100F87370 /* History */,
 				9A1E655221AD5F2500D2721D /* Notifications */,
 				17E8619621AD134200FC634A /* WebView */,
 				1764132821AD09700002403F /* Register */,
