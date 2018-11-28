@@ -108,7 +108,7 @@
                                                 <constraint firstAttribute="height" constant="50" id="ovu-kh-oDs"/>
                                             </constraints>
                                         </view>
-                                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OtW-0U-HIn">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OtW-0U-HIn">
                                             <rect key="frame" x="0.0" y="146" width="375" height="180"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SHY-Fa-K2m">
@@ -156,8 +156,8 @@
                                                                 <action selector="pm25DetailsAction:" destination="Vz2-w9-OZs" eventType="touchUpInside" id="Iv7-M0-DBc"/>
                                                             </connections>
                                                         </button>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yaI-SB-pcM">
-                                                            <rect key="frame" x="32" y="18" width="24" height="24"/>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dialindicator" translatesAutoresizingMaskIntoConstraints="NO" id="yaI-SB-pcM">
+                                                            <rect key="frame" x="84" y="152" width="24" height="24"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         </imageView>
                                                     </subviews>
@@ -404,6 +404,7 @@
                         <outlet property="pm10Point" destination="Cdi-Zd-9Cy" id="Xss-JQ-X3a"/>
                         <outlet property="pm10QualityType" destination="aeb-mN-wFM" id="g1i-TB-4vX"/>
                         <outlet property="pm25AirQualityType" destination="kMo-fS-9GR" id="d9T-sP-EcP"/>
+                        <outlet property="pm25CircleView" destination="SHY-Fa-K2m" id="oFy-Q5-Qw9"/>
                         <outlet property="pm25Point" destination="uXJ-xG-V8a" id="3eW-af-tWT"/>
                         <outlet property="polutionArrow" destination="yaI-SB-pcM" id="syE-28-Wft"/>
                         <outlet property="precautionImage1" destination="6k7-PL-PSS" id="a9f-P1-AfP"/>
@@ -996,6 +997,7 @@
         <image name="UFALogo" width="251" height="137"/>
         <image name="back_black" width="24" height="24"/>
         <image name="background" width="1080" height="1980"/>
+        <image name="dialindicator" width="24" height="24"/>
         <image name="green_link_button" width="24" height="24"/>
         <image name="location" width="24" height="24"/>
         <image name="registerheretab" width="225" height="45"/>

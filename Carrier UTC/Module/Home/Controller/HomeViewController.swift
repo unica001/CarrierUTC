@@ -27,6 +27,7 @@ class HomeViewController: BaseViewC {
     @IBOutlet weak var pm10Point: UILabel!
     @IBOutlet weak var pm10QualityType: UILabel!
     
+    @IBOutlet weak var pm25CircleView: UIView!
     @IBOutlet weak var circleView: UIView!
     internal var viewModel : HomeModelling!
     
@@ -46,11 +47,96 @@ class HomeViewController: BaseViewC {
         circleViewHeight.constant = (self.view.frame.size.width-20)/2
         
         setUp()
+        
+//        int angle = 0; // start angle position 0-360 deg
+//        CGPoint center = self.view.center;
+//        CGPoint start = [self setPointToAngle:angle center:center radius:radius]; //point for start moving
+//        CGMutablePathRef path = CGPathCreateMutable();
+//        CGPathMoveToPoint(path, NULL, start.x, start.y);
+//
+//        for(int a =0;a<4;a++) //set path points for 90, 180, 270,360 deg form begining angle
+//        {
+//            angle+=45;
+//            expPoint = [self setPointToAngle:angle center:center radius:expRadius];
+//            angle+=45;
+//            start = [self setPointToAngle:angle center:center radius:radius];
+//            CGPathAddQuadCurveToPoint(path, NULL,expPoint.x, expPoint.y, start.x, start.y);
+//        }
+//
+//        CAKeyframeAnimation *pathAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+//        pathAnimation.removedOnCompletion = NO;
+//        pathAnimation.path = path;
+//        [pathAnimation setCalculationMode:kCAAnimationCubic];
+//        [pathAnimation setFillMode:kCAFillModeForwards];
+//        pathAnimation.duration = 14.0;
+//
+//        [MY_VIEW.layer addAnimation:pathAnimation forKey:nil];
+        
+//        var angel : Int = 0 // start angle position 0-360 deg
+//        let center : CGPoint = pm25CircleView.center
+//        let radious = Double((pm25CircleView.frame.size.width-30)/2)
+//
+//        var startPoint : CGPoint = self.setPointToAngle(angle: angel, centerPoint: center, radius: radious)
+//
+//
+//        let path : CGMutablePath = CGMutablePath()
+//            path.move(to: CGPoint(x: startPoint.x, y:startPoint.y))
+//        var expPoint :CGPoint!
+//        for index in 1...4{
+//
+//            angel = angel + 30
+//            expPoint = self.setPointToAngle(angle: angel, centerPoint: center, radius: radious)
+//            angel = angel + 30
+//
+//            startPoint = self.setPointToAngle(angle: angel, centerPoint: center, radius: radious)
+//
+//            path.addPath(path)
+//            path.addQuadCurve(to: CGPoint(x: expPoint.x, y: expPoint.y), control: CGPoint(x: startPoint.x, y: startPoint.y))
+//        }
+//
+//                    let animation = CAKeyframeAnimation(keyPath: #keyPath(CALayer.position))
+//                    animation.duration = 10
+//                    animation.repeatCount = 1
+//                    animation.path = path
+//                    polutionArrow.layer.add(animation, forKey: nil)
+        
+        
+        let circlePath = UIBezierPath(arcCenter: pm25CircleView.center, radius: (pm25CircleView.frame.size.width-30)/2, startAngle: 0, endAngle: 4, clockwise: true)
+        
+        let animation = CAKeyframeAnimation(keyPath: #keyPath(CALayer.position))
+    animation.duration = 5
+       // animation.repeatCount = 1
+        animation.path = circlePath.cgPath
+        polutionArrow.layer.add(animation, forKey: nil)
+        polutionArrow.transform = polutionArrow.transform.rotated(by: CGFloat(M_PI*8))
+        
+        polutionArrow.frame.origin = CGPoint(x: circlePath.currentPoint.x-10, y: circlePath.currentPoint.y-10)
+        
+        
+//        for index in 1...360{
+//
+//
+//
+//        }
+        
     }
     
+    
+//    func setPointToAngle(angle :Int,centerPoint :CGPoint,radius:Double)-> CGPoint{
+//
+//        let sin : CGFloat = CGFloat(radius*sindeg(degrees:Double(angle)))
+//        let cos : CGFloat = CGFloat(radius*cosdeg(degrees:Double(angle)))
+//        return CGPoint(x: cos + centerPoint.x, y: sin + centerPoint.y)
+//
+//    }
+//    func sindeg(degrees: Double) -> Double {
+//        return sin(degrees / 180.0 * .pi)
+//    }
+//    func cosdeg(degrees: Double) -> Double {
+//        return sin(degrees / 180.0 * .pi)
+//    }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
