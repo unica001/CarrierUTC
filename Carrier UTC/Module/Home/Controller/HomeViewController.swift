@@ -101,15 +101,13 @@ class HomeViewController: BaseViewC {
 //                    polutionArrow.layer.add(animation, forKey: nil)
         
         
-        let circlePath = UIBezierPath(arcCenter: pm25CircleView.center, radius: (pm25CircleView.frame.size.width-30)/2, startAngle: 0, endAngle: 4, clockwise: true)
+        let circlePath = UIBezierPath(arcCenter: pm25CircleView.center, radius: (pm25CircleView.frame.size.width-30)/2, startAngle: 2, endAngle: 8, clockwise: true)
         
-        let animation = CAKeyframeAnimation(keyPath: #keyPath(CALayer.position))
-    animation.duration = 5
-       // animation.repeatCount = 1
+        let animation = CAKeyframeAnimation(keyPath: #keyPath(CALayer.repeatDuration))
+        animation.duration = 5
+        animation.repeatCount = 2
         animation.path = circlePath.cgPath
         polutionArrow.layer.add(animation, forKey: nil)
-        polutionArrow.transform = polutionArrow.transform.rotated(by: CGFloat(M_PI*8))
-        
         polutionArrow.frame.origin = CGPoint(x: circlePath.currentPoint.x-10, y: circlePath.currentPoint.y-10)
         
         
