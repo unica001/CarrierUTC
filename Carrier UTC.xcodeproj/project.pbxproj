@@ -23,7 +23,6 @@
 		1764134121AD09700002403F /* RegisterHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1764133621AD09700002403F /* RegisterHeaderView.xib */; };
 		1783C4B721AE5EF000F87370 /* CellPM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1783C4B521AE5EF000F87370 /* CellPM.swift */; };
 		1783C4B821AE5EF000F87370 /* CellPM.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1783C4B621AE5EF000F87370 /* CellPM.xib */; };
-		1783C4BA21AE607F00F87370 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1783C4B921AE607F00F87370 /* OpenSans-Regular.ttf */; };
 		1783C4BD21AE621E00F87370 /* CellPMScale.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1783C4BB21AE621E00F87370 /* CellPMScale.swift */; };
 		1783C4BE21AE621E00F87370 /* CellPMScale.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1783C4BC21AE621E00F87370 /* CellPMScale.xib */; };
 		1783C4C121AE66EA00F87370 /* CellHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1783C4BF21AE66EA00F87370 /* CellHistory.swift */; };
@@ -131,7 +130,6 @@
 		1764133621AD09700002403F /* RegisterHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterHeaderView.xib; sourceTree = "<group>"; };
 		1783C4B521AE5EF000F87370 /* CellPM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellPM.swift; sourceTree = "<group>"; };
 		1783C4B621AE5EF000F87370 /* CellPM.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellPM.xib; sourceTree = "<group>"; };
-		1783C4B921AE607F00F87370 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Regular.ttf"; path = "../../../../../../../../Volumes/T(Transfer)2/United For Air/App/FONT-open-sans/OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		1783C4BB21AE621E00F87370 /* CellPMScale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellPMScale.swift; sourceTree = "<group>"; };
 		1783C4BC21AE621E00F87370 /* CellPMScale.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellPMScale.xib; sourceTree = "<group>"; };
 		1783C4BF21AE66EA00F87370 /* CellHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellHistory.swift; sourceTree = "<group>"; };
@@ -210,6 +208,7 @@
 		9A920A0121AC0CEF0067CD0E /* PMTypeModele.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PMTypeModele.swift; sourceTree = "<group>"; };
 		9A920A0321AC0E1A0067CD0E /* HomeModele.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModele.swift; sourceTree = "<group>"; };
 		9A920A0521AC104B0067CD0E /* HomeViewModele.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModele.swift; sourceTree = "<group>"; };
+		9AB7EED021AE920D00DF8D5A /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
 		9AC49F5421A68E3500047D7F /* AirQualityModeleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirQualityModeleView.swift; sourceTree = "<group>"; };
 		9AC49F5621A6CAC300047D7F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B179E16F23A5704EF94170D3 /* Pods_Carrier_UTCTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Carrier_UTCTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -558,7 +557,7 @@
 		17E8618F21AD0E6D00FC634A /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				1783C4B921AE607F00F87370 /* OpenSans-Regular.ttf */,
+				9AB7EED021AE920D00DF8D5A /* OpenSans-Regular.ttf */,
 				17E8619021AD0E6D00FC634A /* OpenSans-Semibold.ttf */,
 				17E8619121AD0E6D00FC634A /* OpenSans-Light.ttf */,
 				17E8619221AD0E6D00FC634A /* OpenSans-Bold.ttf */,
@@ -798,7 +797,6 @@
 				9A58C1AA21A5701800A07CB7 /* gurugram.gpx in Resources */,
 				1764133F21AD09700002403F /* CellSubmit.xib in Resources */,
 				1786408621A541A6006ED91B /* Event.storyboard in Resources */,
-				1783C4BA21AE607F00F87370 /* OpenSans-Regular.ttf in Resources */,
 				1786403321A531D6006ED91B /* Assets.xcassets in Resources */,
 				1786403121A531D6006ED91B /* Main.storyboard in Resources */,
 				9AC49F5721A6CAC300047D7F /* GoogleService-Info.plist in Resources */,
