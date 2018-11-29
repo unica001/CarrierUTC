@@ -13,6 +13,7 @@ class BlogCategoryCell: UITableViewCell {
     @IBOutlet weak var lblCategory: UILabel!
     @IBOutlet weak var lblNoOfBlog: UILabel!
     @IBOutlet weak var imgCategory: UIImageView!
+    @IBOutlet weak var viewMain: UIView!
     
     
     override func awakeFromNib() {
@@ -24,6 +25,13 @@ class BlogCategoryCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func setUpBlogCategory(category : BlogCategoryModel) {
+        lblCategory.text = category.name
+        lblNoOfBlog.text = "\(String(describing: category.blog_count!))"
+        imgCategory.setImageWith(strImage: category.image)
+        viewMain.backgroundColor = UIColor.colorWith(hexString: category.color_code!)
     }
     
 }

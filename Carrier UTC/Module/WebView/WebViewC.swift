@@ -10,8 +10,10 @@ import UIKit
 import WebKit
 
 class WebViewC: BaseViewC {
+    
     //MARK:- IBOutlets
     @IBOutlet weak var viewHeader: UIView!
+    @IBOutlet weak var imgBack: UIImageView!
     @IBOutlet weak var lblHeader: UILabel!
     @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var btnBack: UIButton!
@@ -40,18 +42,18 @@ class WebViewC: BaseViewC {
         self.viewHeader.addShadowInHeader()
         self.lblHeader.text = strHeader
         var url : URL!
+        btnBack.isHidden = false
+        imgBack.isHidden = false
         if strHeader == "Terms and Conditions" {
             url = URL(string: ContentUrl.Terms.rawValue)
-            btnBack.isHidden = false
         } else  if strHeader == "Privacy Policy" {
             url = URL(string: ContentUrl.Privacy.rawValue)
-            btnBack.isHidden = false
         } else {
             self.lblHeader.text = "About Us"
             url = URL(string: ContentUrl.About.rawValue)
             btnBack.isHidden = true
+            imgBack.isHidden = true
         }
-        
         let request = URLRequest(url: url!)
         webView.load(request)
     }

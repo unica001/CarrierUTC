@@ -143,8 +143,9 @@ extension RegisterViewC: SubmitDelegate {
                 self?.viewModel?.register(param: param, registerHandler: { [weak self] (response, success, message) in
                     guard self != nil else { return }
                     if success {
-                        Alert.showOkAlert(title: "Success", message: message)
-                        self?.navigationController?.popViewController(animated: true)
+                        Alert.showOkAlertWithCallBack(title: "Alert!!", message: msg, completeion_: { (success) in
+                            self?.navigationController?.popViewController(animated: true)
+                        })
                     }
                 })
             } else {

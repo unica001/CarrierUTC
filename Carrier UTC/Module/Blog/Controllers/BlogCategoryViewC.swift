@@ -13,6 +13,13 @@ class BlogCategoryViewC: BaseViewC {
     @IBOutlet weak var tblBlogCategory: UITableView!
     @IBOutlet weak var viewHeader: UIView!
     
+    var arrBlogCategory = [BlogCategoryModel]() {
+        didSet {
+            self.tblBlogCategory.reloadData()
+        }
+    }
+    internal var viewModel: BlogCategoryViewModelling?
+    
     //MARK: - View Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,11 +41,31 @@ class BlogCategoryViewC: BaseViewC {
     //MARK: - Private Methods
     private func setUp() {
         registerNib()
+        recheckVM()
+        callApiBlogCategory()
         viewHeader.addShadowInHeader()
+    }
+    
+    private func recheckVM() {
+        if self.viewModel == nil {
+            self.viewModel = BlogCategoryVM()
+        }
     }
     
     private func registerNib() {
         self.tblBlogCategory.register(UINib(nibName: "BlogCategoryCell", bundle: nil), forCellReuseIdentifier: "BlogCategoryCell")
+    }
+    
+    private func callApiBlogCategory() {
+        self.viewModel?.getBlogCategory(allEventListHandler: { [weak self] (blogCategory, success, msg) in
+            guard self != nil else { return }
+            if success {
+                self?.arrBlogCategory = blogCategory
+                
+            } else {
+                Alert.Alert(msg, okButtonTitle: "OK", target: self)
+            }
+        })
     }
     
     //MARK: - IBAction Methods
@@ -49,15 +76,16 @@ class BlogCategoryViewC: BaseViewC {
 extension BlogCategoryViewC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return arrBlogCategory.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
+        return 140
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BlogCategoryCell", for: indexPath) as! BlogCategoryCell
+        cell.setUpBlogCategory(category: arrBlogCategory[indexPath.row])
         return cell
     }
 }

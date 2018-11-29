@@ -15,6 +15,7 @@ class BlogCategoryModel: NSObject, Codable,Mappable {
     var name: String?
     var id: Int?
     var blog_count: Int?
+    var color_code: String?
     
     required init?(map: Map) {
         
@@ -25,6 +26,7 @@ class BlogCategoryModel: NSObject, Codable,Mappable {
         blog_count <- map["blog_count"]
         name <- map["name"]
         id <- map["id"]
+        color_code <- map["color_code"]
     }
 
     

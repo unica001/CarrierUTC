@@ -10,9 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="HelveticaNeue.ttc">
-            <string>HelveticaNeue</string>
-        </array>
         <array key="OpenSans-Semibold.ttf">
             <string>OpenSans-Semibold</string>
         </array>
@@ -627,17 +624,17 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="45"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BLOGS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k7w-Vf-JQG">
-                                        <rect key="frame" x="158.5" y="12.5" width="58" height="20"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                        <rect key="frame" x="160" y="11" width="55.5" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PPU-gE-Wwe">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PPU-gE-Wwe">
                                         <rect key="frame" x="327" y="3" width="46" height="39"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="46" id="Zxb-Ng-yxH"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" image="search"/>
                                         <connections>
                                             <action selector="tapSearch:" destination="pHV-Jv-t2i" eventType="touchUpInside" id="RTj-N3-2De"/>
                                         </connections>
@@ -654,36 +651,36 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2jc-cJ-yc7">
-                                <rect key="frame" x="0.0" y="109" width="375" height="509"/>
+                                <rect key="frame" x="0.0" y="126" width="375" height="492"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="zhj-65-nuj">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="509"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="492"/>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coming Soon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k3c-8d-daB">
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coming Soon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k3c-8d-daB">
                                         <rect key="frame" x="133" y="244" width="109" height="21"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2of-Ty-GTJ">
-                                        <rect key="frame" x="0.0" y="11" width="375" height="495"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2of-Ty-GTJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="491"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
-                                            <outlet property="dataSource" destination="pHV-Jv-t2i" id="4VH-Tx-GFc"/>
-                                            <outlet property="delegate" destination="pHV-Jv-t2i" id="9ko-Mb-83V"/>
+                                            <outlet property="dataSource" destination="pHV-Jv-t2i" id="5pB-Rb-EJX"/>
+                                            <outlet property="delegate" destination="pHV-Jv-t2i" id="53J-JR-MZV"/>
                                         </connections>
                                     </tableView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="k3c-8d-daB" firstAttribute="centerX" secondItem="2jc-cJ-yc7" secondAttribute="centerX" id="4Cq-WR-Sfa"/>
-                                    <constraint firstItem="2of-Ty-GTJ" firstAttribute="top" secondItem="2jc-cJ-yc7" secondAttribute="top" constant="11" id="4vY-qE-qv1"/>
+                                    <constraint firstItem="2of-Ty-GTJ" firstAttribute="top" secondItem="2jc-cJ-yc7" secondAttribute="top" id="4vY-qE-qv1"/>
                                     <constraint firstItem="zhj-65-nuj" firstAttribute="top" secondItem="2jc-cJ-yc7" secondAttribute="top" id="72r-9U-m5x"/>
                                     <constraint firstItem="2of-Ty-GTJ" firstAttribute="leading" secondItem="2jc-cJ-yc7" secondAttribute="leading" id="81D-sJ-4TV"/>
                                     <constraint firstItem="zhj-65-nuj" firstAttribute="leading" secondItem="2jc-cJ-yc7" secondAttribute="leading" id="OX2-nN-DIx"/>
                                     <constraint firstAttribute="trailing" secondItem="zhj-65-nuj" secondAttribute="trailing" id="XTm-1E-BhV"/>
-                                    <constraint firstAttribute="bottom" secondItem="2of-Ty-GTJ" secondAttribute="bottom" constant="3" id="eec-UJ-QMB"/>
-                                    <constraint firstItem="k3c-8d-daB" firstAttribute="centerY" secondItem="2jc-cJ-yc7" secondAttribute="centerY" id="fGc-Wm-6aL"/>
+                                    <constraint firstAttribute="bottom" secondItem="2of-Ty-GTJ" secondAttribute="bottom" constant="1" id="eec-UJ-QMB"/>
+                                    <constraint firstItem="k3c-8d-daB" firstAttribute="centerY" secondItem="2jc-cJ-yc7" secondAttribute="centerY" constant="8.5" id="fGc-Wm-6aL"/>
                                     <constraint firstAttribute="bottom" secondItem="zhj-65-nuj" secondAttribute="bottom" id="hgm-zF-ReJ"/>
                                     <constraint firstAttribute="trailing" secondItem="2of-Ty-GTJ" secondAttribute="trailing" id="tHn-dX-cg2"/>
                                 </constraints>
@@ -691,7 +688,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="2jc-cJ-yc7" firstAttribute="top" secondItem="gx8-Mw-pct" secondAttribute="bottom" id="Fw5-7O-9OW"/>
+                            <constraint firstItem="2jc-cJ-yc7" firstAttribute="top" secondItem="gx8-Mw-pct" secondAttribute="bottom" constant="17" id="Fw5-7O-9OW"/>
                             <constraint firstItem="gx8-Mw-pct" firstAttribute="top" secondItem="O6s-En-Sdu" secondAttribute="top" id="OR3-Y8-se1"/>
                             <constraint firstItem="2jc-cJ-yc7" firstAttribute="trailing" secondItem="O6s-En-Sdu" secondAttribute="trailing" id="Zat-OM-PyL"/>
                             <constraint firstItem="gx8-Mw-pct" firstAttribute="leading" secondItem="O6s-En-Sdu" secondAttribute="leading" id="dJ7-Vo-Mlz"/>

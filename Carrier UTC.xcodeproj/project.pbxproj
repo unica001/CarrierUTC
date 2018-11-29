@@ -10,6 +10,9 @@
 		175D419421AFB25C00337938 /* TipsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175D419221AFB25C00337938 /* TipsCell.swift */; };
 		175D419521AFB25C00337938 /* TipsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 175D419321AFB25C00337938 /* TipsCell.xib */; };
 		175D419721AFBE4A00337938 /* AreaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175D419621AFBE4A00337938 /* AreaModel.swift */; };
+		175D419A21B0038600337938 /* CellBlog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175D419821B0038600337938 /* CellBlog.swift */; };
+		175D419B21B0038600337938 /* CellBlog.xib in Resources */ = {isa = PBXBuildFile; fileRef = 175D419921B0038600337938 /* CellBlog.xib */; };
+		175D419D21B0095000337938 /* BlogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175D419C21B0095000337938 /* BlogModel.swift */; };
 		175EA05521A6BD7600E17849 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175EA05421A6BD7600E17849 /* EventModel.swift */; };
 		175EA05721A6BFB900E17849 /* EventListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175EA05621A6BFB900E17849 /* EventListVM.swift */; };
 		175EA05B21A6CF2700E17849 /* SearchEventVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175EA05A21A6CF2700E17849 /* SearchEventVM.swift */; };
@@ -120,6 +123,9 @@
 		175D419221AFB25C00337938 /* TipsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsCell.swift; sourceTree = "<group>"; };
 		175D419321AFB25C00337938 /* TipsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TipsCell.xib; sourceTree = "<group>"; };
 		175D419621AFBE4A00337938 /* AreaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaModel.swift; sourceTree = "<group>"; };
+		175D419821B0038600337938 /* CellBlog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellBlog.swift; sourceTree = "<group>"; };
+		175D419921B0038600337938 /* CellBlog.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CellBlog.xib; sourceTree = "<group>"; };
+		175D419C21B0095000337938 /* BlogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogModel.swift; sourceTree = "<group>"; };
 		175EA05421A6BD7600E17849 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventModel.swift; path = "Carrier UTC/Module/Event/Model/EventModel.swift"; sourceTree = SOURCE_ROOT; };
 		175EA05621A6BFB900E17849 /* EventListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListVM.swift; sourceTree = "<group>"; };
 		175EA05A21A6CF2700E17849 /* SearchEventVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEventVM.swift; sourceTree = "<group>"; };
@@ -583,6 +589,7 @@
 			isa = PBXGroup;
 			children = (
 				17E8619C21AD466B00FC634A /* BlogCategoryModel.swift */,
+				175D419C21B0095000337938 /* BlogModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -601,6 +608,8 @@
 			children = (
 				17F80E7521A58E5D003BBC80 /* BlogCategoryCell.swift */,
 				17F80E7621A58E5D003BBC80 /* BlogCategoryCell.xib */,
+				175D419821B0038600337938 /* CellBlog.swift */,
+				175D419921B0038600337938 /* CellBlog.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -803,6 +812,7 @@
 				17F80E6821A5770F003BBC80 /* CellEventDetail.xib in Resources */,
 				1786403621A531D6006ED91B /* LaunchScreen.storyboard in Resources */,
 				17E8619421AD0E6D00FC634A /* OpenSans-Light.ttf in Resources */,
+				175D419B21B0038600337938 /* CellBlog.xib in Resources */,
 				17E8619321AD0E6D00FC634A /* OpenSans-Semibold.ttf in Resources */,
 				9A58C1AA21A5701800A07CB7 /* gurugram.gpx in Resources */,
 				1764133F21AD09700002403F /* CellSubmit.xib in Resources */,
@@ -913,6 +923,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17F80E7321A58D8D003BBC80 /* BlogCategoryViewC.swift in Sources */,
+				175D419A21B0038600337938 /* CellBlog.swift in Sources */,
 				175D419421AFB25C00337938 /* TipsCell.swift in Sources */,
 				175D419721AFBE4A00337938 /* AreaModel.swift in Sources */,
 				1786407321A53381006ED91B /* UIFontAddition.swift in Sources */,
@@ -948,6 +959,7 @@
 				9A1E655421AD5F5700D2721D /* NotificationsViewModelling.swift in Sources */,
 				1786408A21A542DC006ED91B /* EventListViewC.swift in Sources */,
 				1783C4B721AE5EF000F87370 /* CellPM.swift in Sources */,
+				175D419D21B0095000337938 /* BlogModel.swift in Sources */,
 				9A920A0221AC0CEF0067CD0E /* PMTypeModele.swift in Sources */,
 				175EA05B21A6CF2700E17849 /* SearchEventVM.swift in Sources */,
 				1764133D21AD09700002403F /* CellRegisterFields.swift in Sources */,
