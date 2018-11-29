@@ -10,7 +10,7 @@ import UIKit
 import ObjectMapper
 
 class AreaModel: NSObject, Codable, Mappable {
-    var id: String?
+    var id: Int?
     var name: String?
     
     required init?(map: Map) {

@@ -32,6 +32,7 @@ class HomeViewController: BaseViewC {
     @IBOutlet weak var circleView: UIView!
     
     internal var viewModel : HomeModelling!
+    internal var notificationModel : NotificationModel!
     
     @IBOutlet weak var collectionTip: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
@@ -86,9 +87,12 @@ class HomeViewController: BaseViewC {
         if self.viewModel == nil {
             self.viewModel = HomeViewModelling()
         }
+        if self.notificationModel == nil {
+            self.notificationModel = notificationsViewModelling()
+        }
         self.collectionTip.register(UINib(nibName: "TipsCell", bundle: nil), forCellWithReuseIdentifier: "TipsCell")
        getHomeViewDetails()
-        
+      
     }
     
     func getHomeViewDetails(){
@@ -109,8 +113,12 @@ class HomeViewController: BaseViewC {
             self.startCnstCollection.constant =  xAxis/2
             self.collectionTip.updateConstraints()
         }
-        
-        Constant.kAppDelegate.appLocation = arrArea.first
+        if Constant.kAppDelegate.appLocation == nil {
+            Constant.kAppDelegate.appLocation = arrArea.first
+        }
+        self.notificationModel.sendDeviceTokenOnServer { (msg, success) in
+            
+        }
         addressLabel.text = Constant.kAppDelegate.appLocation.name
         
         self.arrHealth = healthPrecautionList
@@ -239,9 +247,16 @@ class HomeViewController: BaseViewC {
             self.navigationController?.pushViewController(historyViewC, animated: true)
         }
     }
-    @IBAction func tapLocation(_ sender: UIButton) {
-    }
     
+    @IBAction func tapLocation(_ sender: UIButton) {
+        let nameArray = arrArea.map { $0.name }
+        ActionSheetStringPicker.show(withTitle: "Location", rows: nameArray as [Any], initialSelection: 0, doneBlock: { (picker, value, index) in
+            Constant.kAppDelegate.appLocation = self.arrArea[value]
+            self.addressLabel.text = Constant.kAppDelegate.appLocation.name
+            self.getHomeViewDetails()
+        }, cancel: { ActionStringCancelBlock in return }, origin: self.parent?.view)
+    }
+
 }
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

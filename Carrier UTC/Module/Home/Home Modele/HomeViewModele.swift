@@ -25,7 +25,7 @@ class HomeViewModelling: HomeModelling {
         if Constant.kAppDelegate.appLocation != nil {
             param["location"] = Constant.kAppDelegate.appLocation.id
         }
-        
+        print(param)
 //        param["lon"] = lng
         
         NetworkManager.sharedInstance.postRequest(requestURL, hude: true, showSystemError: false, loadingText: false, params: param , completionHandler:{(dict) in

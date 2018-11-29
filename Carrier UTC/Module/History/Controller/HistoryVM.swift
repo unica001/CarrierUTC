@@ -17,8 +17,11 @@ class HistoryVM: HistoryViewModelling {
     func getHistory(historyHandler: @escaping (HistoryModel, Bool, String) -> Void) {
         let requestURL = URL(string: String(format: "%@%@",kBaseUrl,kweek_air_pollution))!
         
-        let param : NSMutableDictionary = ["lat": Constant.kAppDelegate.lat,
-                                           "lon": Constant.kAppDelegate.long]
+        let param : NSMutableDictionary = [:]
+        param["location"] = ""
+        if Constant.kAppDelegate.appLocation != nil {
+            param["location"] = Constant.kAppDelegate.appLocation.id
+        }
         
         NetworkManager.sharedInstance.postRequest(requestURL, hude: true, showSystemError: false, loadingText: false, params: param , completionHandler:{(dict) in
             

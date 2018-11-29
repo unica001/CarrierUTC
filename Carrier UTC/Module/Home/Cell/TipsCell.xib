@@ -31,8 +31,8 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XUC-Ra-bcy">
-                        <rect key="frame" x="20" y="107" width="110" height="51"/>
-                        <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="12"/>
+                        <rect key="frame" x="20" y="106" width="110" height="51"/>
+                        <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="10"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -52,8 +52,8 @@
                 <constraint firstItem="Xh4-fN-DAO" firstAttribute="centerY" secondItem="2Yl-g5-sgW" secondAttribute="centerY" id="QHZ-hg-6To"/>
                 <constraint firstItem="2Yl-g5-sgW" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="9" id="X3x-6K-97U"/>
                 <constraint firstAttribute="trailing" secondItem="Xh4-fN-DAO" secondAttribute="trailing" id="h3r-Qz-unL"/>
-                <constraint firstItem="XUC-Ra-bcy" firstAttribute="top" secondItem="2Yl-g5-sgW" secondAttribute="bottom" constant="8" id="lef-ec-oi3"/>
-                <constraint firstAttribute="bottom" secondItem="XUC-Ra-bcy" secondAttribute="bottom" constant="6" id="qbP-Ab-7F4"/>
+                <constraint firstItem="XUC-Ra-bcy" firstAttribute="top" secondItem="2Yl-g5-sgW" secondAttribute="bottom" constant="7" id="lef-ec-oi3"/>
+                <constraint firstAttribute="bottom" secondItem="XUC-Ra-bcy" secondAttribute="bottom" constant="7" id="qbP-Ab-7F4"/>
                 <constraint firstItem="2Yl-g5-sgW" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="90:150" id="w5l-1m-W1C"/>
                 <constraint firstItem="2Yl-g5-sgW" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="wT5-7Q-wc3"/>
             </constraints>

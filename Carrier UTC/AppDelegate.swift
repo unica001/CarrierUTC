@@ -16,30 +16,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate,
 
     var window: UIWindow?
     
-    var lat : Double = Double()
-    var long : Double = Double()
-    var locationManager : CLLocationManager!
-    var currentLocation :CLLocation!
-    var currentAddress : String!
-    var fcmToken : String!
+//    var lat : Double = Double()
+//    var long : Double = Double()
+//    var locationManager : CLLocationManager!
+//    var currentLocation :CLLocation!
+//    var currentAddress : String!
+    var fcmToken : String! = ""
     var appLocation : AreaModel!
-    
-    internal var viewModel : NotificationModel!
 
-    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         
-        if self.viewModel == nil {
-            self.viewModel = notificationsViewModelling()
-        }
+       
         UINavigationBar.appearance().shadowImage = UIImage()
 //        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
         FirebaseApp.configure()
         Messaging.messaging().delegate = self
         
-        getCurrentLocation()
+//        getCurrentLocation()
         registerForPushNotifications(application: application)
         return true
     }
@@ -64,7 +59,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate,
         
     }
     
-    //MARK: - Location
+  /*    //MARK: - Location
     func getCurrentLocation(){
         if CLLocationManager.locationServicesEnabled() {
             switch(CLLocationManager.authorizationStatus()) {
@@ -91,12 +86,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate,
             }
         }
         
-        self.getLocation()
+//        self.getLocation()
     }
     
     // MARK :- Location Manager
     
-    func getLocation() -> Void {
+  func getLocation() -> Void {
         
         locationManager = CLLocationManager()
         locationManager.delegate = self
@@ -113,8 +108,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate,
         lat = currentLocation.coordinate.latitude
         long = currentLocation.coordinate.longitude
         
-        self.viewModel.sendDeviceTokenOnServer(lat: String(lat), lng: String(long), deviceToken: fcmToken, handler: {(meesage,success)in
-        })
+//        self.viewModel.sendDeviceTokenOnServer(lat: String(lat), lng: String(long), deviceToken: fcmToken, handler: {(meesage,success)in
+//        })
         getAddressFromLatLon()
     }
     
@@ -193,7 +188,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate,
                 }
         })
         
-    }
+    }*/
 
     //MARK: - Device token
   
@@ -223,6 +218,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate,
         fcmToken = token
         let dataDict:[String: String] = ["token": fcmToken]
         NotificationCenter.default.post(name: Notification.Name("FCMToken"), object: nil, userInfo: dataDict)
+        
         // TODO: If necessary send token to application server.
         // Note: This callback is fired at each app startup and whenever a new token is generated.
     }
