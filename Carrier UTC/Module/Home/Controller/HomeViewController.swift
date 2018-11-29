@@ -136,7 +136,14 @@ class HomeViewController: BaseViewC {
     }
   
     func showCircleAnimation(pm25Values : String, pm10Values : String){
-       
+       self.pm25AnimationView.layer.removeAllAnimations()
+        self.pm10AnimationView.layer.removeAllAnimations()
+        
+        self.pm25AnimationView.transform = CGAffineTransform(rotationAngle:CGFloat(0))
+        self.pm10AnimationView.transform = CGAffineTransform(rotationAngle:CGFloat(0))
+
+
+
         // PM2.5 Animation
         var  airPolutionPM25Value : Float = Float(pm25Values)!
         
@@ -162,7 +169,7 @@ class HomeViewController: BaseViewC {
             UIView.animate(withDuration: animationDuration, delay: 0, options: UIView.AnimationOptions.curveEaseIn, animations: { () -> Void in
                 
                 if airPolutionPM25Value > 240 {
-                airPolutionPM25Value = 240
+                airPolutionPM25Value = 239
                 }
                 let point : Float = 360/(airPolutionPM25Value * self.degreeValue)
                 let angle =   CGFloat.pi / CGFloat(point)
@@ -194,7 +201,7 @@ class HomeViewController: BaseViewC {
             UIView.animate(withDuration: animationDuration, delay: 0, options: UIView.AnimationOptions.curveEaseIn, animations: { () -> Void in
                 
                 if airPolutionPM10Value > 500 {
-                    airPolutionPM10Value = 500
+                    airPolutionPM10Value = 480
                 }
                 let point : Float = 500/(airPolutionPM10Value)
                 let angle =   (CGFloat.pi) / CGFloat(point)
