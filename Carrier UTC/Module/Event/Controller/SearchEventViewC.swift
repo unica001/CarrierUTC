@@ -161,13 +161,13 @@ extension SearchEventViewC: DZNEmptyDataSetDelegate, DZNEmptyDataSetSource {
 extension SearchEventViewC: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         pageIndex = 1
-        let str = (searchBar.text as NSString?)?.replacingCharacters(in: range, with: text)
-        let newLength = (searchBar.text?.count)! + text.count - range.length
-        if let text = str {
+//        let str = (searchBar.text as NSString?)?.replacingCharacters(in: range, with: text)
+//        let newLength = (searchBar.text?.count)! + text.count - range.length
+//        if let text = str {
             DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3), execute: {
                 self.apiCallEventList()
             })
-        }
+//        }
         return true
     }
     

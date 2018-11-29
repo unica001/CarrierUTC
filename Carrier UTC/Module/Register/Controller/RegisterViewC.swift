@@ -164,13 +164,13 @@ extension RegisterViewC: SubmitDelegate {
 
 extension RegisterViewC: UITextFieldDelegate {
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let ACCEPTABLE_CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+//        let ACCEPTABLE_CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
         
 //        let newLength = (textField.text?.count)! + string.count - range.length
         let str = (textField.text as NSString?)?.replacingCharacters(in: range, with: string)
         
-        let cs = NSCharacterSet(charactersIn: ACCEPTABLE_CHARACTERS).inverted
-        let filtered = string.components(separatedBy: cs).joined(separator: "")
+//        let cs = NSCharacterSet(charactersIn: ACCEPTABLE_CHARACTERS).inverted
+//        let filtered = string.components(separatedBy: cs).joined(separator: "")
         if let index = Helper.getIndexPathFor(view: textField, tableView: self.tblRegister) {
             self.arrInfo[index.row].value = str
         }
@@ -184,7 +184,7 @@ extension RegisterViewC: UITextFieldDelegate {
         let lastRowIndex = self.tblRegister.numberOfRows(inSection: 0) - 1
         
         if currentIndexPath.row != lastRowIndex {
-            var nextIndexPath = IndexPath(row: currentIndexPath.row + 1, section: 0)
+//            var nextIndexPath = IndexPath(row: currentIndexPath.row + 1, section: 0)
             textField.resignFirstResponder()
         }
         else {

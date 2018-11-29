@@ -129,12 +129,15 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nqr-aH-sHJ">
                                                             <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dialindicator" translatesAutoresizingMaskIntoConstraints="NO" id="5RN-YP-PXF">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dialindicator" translatesAutoresizingMaskIntoConstraints="NO" id="5RN-YP-PXF">
                                                                     <rect key="frame" x="78" y="152" width="24" height="24"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 </imageView>
                                                             </subviews>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstItem="5RN-YP-PXF" firstAttribute="centerX" secondItem="Nqr-aH-sHJ" secondAttribute="centerX" id="UZM-WQ-UP9"/>
+                                                                <constraint firstAttribute="bottom" secondItem="5RN-YP-PXF" secondAttribute="bottom" constant="4" id="XXC-7n-heY"/>
+                                                            </constraints>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="70" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cdi-Zd-9Cy">
                                                             <rect key="frame" x="15" y="50" width="150" height="40"/>
@@ -210,12 +213,15 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p6a-oh-vpz">
                                                             <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dialindicator" translatesAutoresizingMaskIntoConstraints="NO" id="JbJ-Ib-DmO">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dialindicator" translatesAutoresizingMaskIntoConstraints="NO" id="JbJ-Ib-DmO">
                                                                     <rect key="frame" x="78" y="152" width="24" height="24"/>
-                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 </imageView>
                                                             </subviews>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstItem="JbJ-Ib-DmO" firstAttribute="centerX" secondItem="p6a-oh-vpz" secondAttribute="centerX" id="DFB-cF-PN9"/>
+                                                                <constraint firstAttribute="bottom" secondItem="JbJ-Ib-DmO" secondAttribute="bottom" constant="4" id="zA6-2h-URM"/>
+                                                            </constraints>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="92" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXJ-xG-V8a">
                                                             <rect key="frame" x="15" y="50" width="150" height="40"/>
@@ -906,6 +912,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="btnBack" destination="EeM-D0-m1y" id="oIl-jO-pkW"/>
+                        <outlet property="imgBack" destination="HPS-UN-IBD" id="UCh-Ah-emF"/>
                         <outlet property="lblHeader" destination="1Xh-zN-48O" id="uRO-Jo-jhE"/>
                         <outlet property="viewHeader" destination="IzQ-9F-Jai" id="t9r-Xy-wNK"/>
                         <outlet property="webView" destination="VqN-Q8-tKo" id="Wqt-gb-1ge"/>
