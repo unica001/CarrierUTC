@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Carrier UTC/AppDelegate.swift"
-            timestampString = "565167480.545326"
+            timestampString = "565175825.00587"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "224"
@@ -96,6 +96,22 @@
             startingLineNumber = "34"
             endingLineNumber = "34"
             landmarkName = "sendDeviceTokenOnServer(lat:lng:deviceToken:handler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Carrier UTC/Module/Home/Controller/HomeViewController.swift"
+            timestampString = "565175825.0060461"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
+            landmarkName = "showCircleAnimation(pm25Values:pm10Values:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

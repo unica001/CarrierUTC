@@ -17,28 +17,36 @@ class HomeViewController: BaseViewC {
     @IBOutlet weak var viewHeader: UIView!
     @IBOutlet weak var circleViewHeight: NSLayoutConstraint!
 
-    @IBOutlet weak var pm25Point: UILabel!
     @IBOutlet weak var pm25AirQualityType: UILabel!
-    
-    @IBOutlet weak var pm10Point: UILabel!
     @IBOutlet weak var pm10QualityType: UILabel!
+
+    @IBOutlet weak var pm10Point: UILabel!
+    @IBOutlet weak var pm25Point: UILabel!
+
+    @IBOutlet weak var pm10AnimationView: UIView!
+    @IBOutlet weak var pm25AnimationView: UIView!
+
+    @IBOutlet weak var pm10View: UIView!
+    @IBOutlet weak var pm25View: UIView!
     
-    @IBOutlet weak var pm25CircleView: UIView!
     @IBOutlet weak var circleView: UIView!
+    
     internal var viewModel : HomeModelling!
     
     @IBOutlet weak var collectionTip: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var startCnstCollection: NSLayoutConstraint!
-    @IBOutlet weak var animationView1: UIView!
+    
+    let degreeValue : Float = 1.44
+    let animationDuration = TimeInterval(3)
+    
     var arrArea = [AreaModel]()
     var arrHealth = [HealthPrecaution]() {
         didSet {
             self.collectionTip.reloadData()
         }
     }
-    
     
     //MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -51,112 +59,17 @@ class HomeViewController: BaseViewC {
         circleViewHeight.constant = (self.view.frame.size.width-20)/2
         
         setUp()
-        
-//        int angle = 0; // start angle position 0-360 deg
-//        CGPoint center = self.view.center;
-//        CGPoint start = [self setPointToAngle:angle center:center radius:radius]; //point for start moving
-//        CGMutablePathRef path = CGPathCreateMutable();
-//        CGPathMoveToPoint(path, NULL, start.x, start.y);
-//
-//        for(int a =0;a<4;a++) //set path points for 90, 180, 270,360 deg form begining angle
-//        {
-//            angle+=45;
-//            expPoint = [self setPointToAngle:angle center:center radius:expRadius];
-//            angle+=45;
-//            start = [self setPointToAngle:angle center:center radius:radius];
-//            CGPathAddQuadCurveToPoint(path, NULL,expPoint.x, expPoint.y, start.x, start.y);
-//        }
-//
-//        CAKeyframeAnimation *pathAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
-//        pathAnimation.removedOnCompletion = NO;
-//        pathAnimation.path = path;
-//        [pathAnimation setCalculationMode:kCAAnimationCubic];
-//        [pathAnimation setFillMode:kCAFillModeForwards];
-//        pathAnimation.duration = 14.0;
-//
-//        [MY_VIEW.layer addAnimation:pathAnimation forKey:nil];
-        
-//        var angel : Int = 0 // start angle position 0-360 deg
-//        let center : CGPoint = pm25CircleView.center
-//        let radious = Double((pm25CircleView.frame.size.width-30)/2)
-//
-//        var startPoint : CGPoint = self.setPointToAngle(angle: angel, centerPoint: center, radius: radious)
-//
-//
-//        let path : CGMutablePath = CGMutablePath()
-//            path.move(to: CGPoint(x: startPoint.x, y:startPoint.y))
-//        var expPoint :CGPoint!
-//        for index in 1...4{
-//
-//            angel = angel + 30
-//            expPoint = self.setPointToAngle(angle: angel, centerPoint: center, radius: radious)
-//            angel = angel + 30
-//
-//            startPoint = self.setPointToAngle(angle: angel, centerPoint: center, radius: radious)
-//
-//            path.addPath(path)
-//            path.addQuadCurve(to: CGPoint(x: expPoint.x, y: expPoint.y), control: CGPoint(x: startPoint.x, y: startPoint.y))
-//        }
-//
-//                    let animation = CAKeyframeAnimation(keyPath: #keyPath(CALayer.position))
-//                    animation.duration = 10
-//                    animation.repeatCount = 1
-//                    animation.path = path
-//                    polutionArrow.layer.add(animation, forKey: nil)
-        
-        
-        
-        
-     
-//        for index in 1...360{
-//
-//
-//
-//        }
-        
+    
     }
     
-    
-//    func setPointToAngle(angle :Int,centerPoint :CGPoint,radius:Double)-> CGPoint{
-//
-//        let sin : CGFloat = CGFloat(radius*sindeg(degrees:Double(angle)))
-//        let cos : CGFloat = CGFloat(radius*cosdeg(degrees:Double(angle)))
-//        return CGPoint(x: cos + centerPoint.x, y: sin + centerPoint.y)
-//
-//    }
-//    func sindeg(degrees: Double) -> Double {
-//        return sin(degrees / 180.0 * .pi)
-//    }
-//    func cosdeg(degrees: Double) -> Double {
-//        return sin(degrees / 180.0 * .pi)
-//    }
+
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        addressLabel.text = Constant.kAppDelegate.currentAddress
-//
-//        let circlePath = UIBezierPath(arcCenter: pm25CircleView.center, radius: (pm25CircleView.frame.size.width-30)/2, startAngle: 2, endAngle: 8, clockwise: true)
-//
-//        let animation = CAKeyframeAnimation(keyPath: #keyPath(CALayer.position))
-//        animation.duration = 50
-//        animation.repeatCount = 1
-//        animation.path = circlePath.cgPath
-//        polutionArrow.layer.add(animation, forKey: nil)
-//        polutionArrow.frame.origin = CGPoint(x: circlePath.currentPoint.x-10, y: circlePath.currentPoint.y-10)
-        
-        let point  : Float = (180)/180
-
-        print(CGFloat.pi)
-        UIView.animate(withDuration: 5) { () -> Void in
-            self.animationView1.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
-        }
-//        UIView.animate(withDuration: 5, delay: 0, options: UIView.AnimationOptions.curveEaseIn, animations: { () -> Void in
-//            self.animationView1.transform = CGAffineTransform(rotationAngle: CGFloat.pi*2)
-//        }, completion: nil)
-        
+  
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -203,18 +116,112 @@ class HomeViewController: BaseViewC {
         self.arrHealth = healthPrecautionList
         
         let pm10Values = NSString(format: "%.0f",  pm10.value!)
-        pm10Point.text = pm10Values as String
         pm10Point.textColor = UIColor.colorWith(hexString: pm10.color!)
         pm10QualityType.text = pm10.quality
         
         let pm25Values = NSString(format: "%.0f",  pm25.value!)
-        pm25Point.text = pm25Values as String
         pm25Point.textColor = UIColor.colorWith(hexString: pm25.color!)
         pm25AirQualityType.text = pm25.quality
-     
+        showCircleAnimation(pm25Values:pm25Values as String, pm10Values:pm10Values as String)
+        
         tableView.reloadData()
     }
   
+    func showCircleAnimation(pm25Values : String, pm10Values : String){
+       
+        // PM2.5 Animation
+        var  airPolutionPM25Value : Float = Float(pm25Values)!
+        
+        //  check 180 angles or values not more then 125
+        
+        incrementPM25(to: Int(airPolutionPM25Value))
+
+        
+        if airPolutionPM25Value < 125 {
+            UIView.animate(withDuration: animationDuration) { () -> Void in
+                let point : Float = 180/(airPolutionPM25Value * self.degreeValue)
+                let angle =   CGFloat.pi / CGFloat(point)
+                self.pm25AnimationView.transform = CGAffineTransform(rotationAngle:CGFloat(angle))
+            }
+        }
+        else {
+            UIView.animate(withDuration: animationDuration) { () -> Void in
+                let point : Float = 180/(125 * self.degreeValue)
+                let angle =   CGFloat.pi / CGFloat(point)
+                self.pm25AnimationView.transform = CGAffineTransform(rotationAngle:CGFloat(angle))
+            }
+            
+            UIView.animate(withDuration: animationDuration, delay: 0, options: UIView.AnimationOptions.curveEaseIn, animations: { () -> Void in
+                
+                if airPolutionPM25Value > 240 {
+                airPolutionPM25Value = 240
+                }
+                let point : Float = 360/(airPolutionPM25Value * self.degreeValue)
+                let angle =   CGFloat.pi / CGFloat(point)
+                self.pm25AnimationView.transform = CGAffineTransform(rotationAngle: angle*2)
+            }, completion: nil)
+        }
+        
+        
+        // PM10 Animation
+        var  airPolutionPM10Value : Float = Float(pm10Values)!
+        incrementPM10(to: Int(airPolutionPM10Value))
+
+        //  check 180 angles or values not more then 125
+        
+        if airPolutionPM10Value < 250 {
+            UIView.animate(withDuration: animationDuration) { () -> Void in
+                let point : Float = 250/(airPolutionPM10Value )
+                let angle =   CGFloat.pi / CGFloat(point)
+                self.pm10AnimationView.transform = CGAffineTransform(rotationAngle:CGFloat(angle))
+            }
+        }
+        else {
+            UIView.animate(withDuration: animationDuration) { () -> Void in
+                let point : Float = 1
+                let angle =   CGFloat.pi / CGFloat(point)
+                self.pm10AnimationView.transform = CGAffineTransform(rotationAngle:CGFloat(angle))
+            }
+            
+            UIView.animate(withDuration: animationDuration, delay: 0, options: UIView.AnimationOptions.curveEaseIn, animations: { () -> Void in
+                
+                if airPolutionPM10Value > 500 {
+                    airPolutionPM10Value = 500
+                }
+                let point : Float = 500/(airPolutionPM10Value)
+                let angle =   (CGFloat.pi) / CGFloat(point)
+                self.pm10AnimationView.transform = CGAffineTransform(rotationAngle: angle*2)
+            }, completion: nil)
+        }
+    }
+    
+    func incrementPM25(to endValue: Int) {
+        let duration: Double = animationDuration //seconds
+        DispatchQueue.global().async {
+            for i in 0 ..< (endValue + 1) {
+                let sleepTime = UInt32(duration/Double(endValue) * 1000000.0)
+                usleep(sleepTime)
+                DispatchQueue.main.async {
+                    self.pm25Point.text = "\(i)"
+                }
+            }
+        }
+    }
+    
+    func incrementPM10(to endValue: Int) {
+        let duration: Double = animationDuration //seconds
+        DispatchQueue.global().async {
+            for i in 0 ..< (endValue + 1) {
+                let sleepTime = UInt32(duration/Double(endValue) * 1000000.0)
+                usleep(sleepTime)
+                DispatchQueue.main.async {
+                    self.pm10Point.text = "\(i)"
+    
+                }
+            }
+        }
+    }
+    
     
     //MARK: - IBAction Methods
     @IBAction func pm25DetailsAction(_ sender: Any) {
