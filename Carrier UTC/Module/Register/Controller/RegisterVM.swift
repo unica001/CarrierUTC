@@ -76,7 +76,7 @@ class RegisterVM: RegisterViewModelling {
                 }
             }
         }
-        dictParam["device_id"] = Constant.kAppDelegate.deviceToken as AnyObject
+        dictParam["device_id"] = Constant.kAppDelegate.fcmToken as AnyObject
         validHandler(dictParam, "", true)
     }
     

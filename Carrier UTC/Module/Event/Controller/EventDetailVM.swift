@@ -20,7 +20,7 @@ class EventDetailVM: EventDetailViewModelling {
         let requestURL = URL(string: String(format: "%@%@",kBaseUrl,kevent_detail))!
         
         let param : NSMutableDictionary = ["event_id" : eventId,
-                                           "device_id" : Constant.kAppDelegate.deviceToken]
+                                           "device_id" : Constant.kAppDelegate.fcmToken]
         
         
         NetworkManager.sharedInstance.postRequest(requestURL, hude: true, showSystemError: false, loadingText: false, params: param , completionHandler:{(dict) in
@@ -43,7 +43,7 @@ class EventDetailVM: EventDetailViewModelling {
     func setInterestedEvent(eventId: Int, interestedEventHandler: @escaping (_ success : Bool, _ message: String) -> Void) {
         let requestURL = URL(string: String(format: "%@%@",kBaseUrl,kinterested_event))!
         let param : NSMutableDictionary = ["event_id" : eventId,
-                                           "device_id" : Constant.kAppDelegate.deviceToken]
+                                           "device_id" : Constant.kAppDelegate.fcmToken]
         
         NetworkManager.sharedInstance.postRequest(requestURL, hude: true, showSystemError: false, loadingText: false, params: param , completionHandler:{(dict) in
             

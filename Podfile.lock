@@ -1,4 +1,5 @@
 PODS:
+  - ActionSheetPicker-3.0 (2.3.0)
   - Bolts (1.9.0):
     - Bolts/AppLinks (= 1.9.0)
     - Bolts/Tasks (= 1.9.0)
@@ -86,6 +87,7 @@ PODS:
   - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
+  - ActionSheetPicker-3.0
   - DZNEmptyDataSet
   - FacebookShare
   - Firebase
@@ -97,6 +99,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - ActionSheetPicker-3.0
     - Bolts
     - DZNEmptyDataSet
     - FacebookCore
@@ -117,6 +120,7 @@ SPEC REPOS:
     - SVProgressHUD
 
 SPEC CHECKSUMS:
+  ActionSheetPicker-3.0: eef157d75e151f255c5333d26656c7fbfe905a51
   Bolts: ac6567323eac61e203f6a9763667d0f711be34c8
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   FacebookCore: 770e57cfe250a4de4458b682191c0ff062dee247
@@ -136,6 +140,6 @@ SPEC CHECKSUMS:
   SDWebImage: 624d6e296c69b244bcede364c72ae0430ac14681
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 35d2fb4b0a4d8e2dc83de2e012c25c863b7e0ba0
+PODFILE CHECKSUM: 11a30cd160df0cad223792b2d7888fc6069e0d6b
 
 COCOAPODS: 1.5.3

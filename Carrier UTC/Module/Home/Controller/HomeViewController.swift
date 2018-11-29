@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import ActionSheetPicker_3_0
+
 
 class HomeViewController: BaseViewC {
     
@@ -14,11 +16,6 @@ class HomeViewController: BaseViewC {
     @IBOutlet weak var milesLabel: UILabel!
     @IBOutlet weak var viewHeader: UIView!
     @IBOutlet weak var circleViewHeight: NSLayoutConstraint!
-    @IBOutlet weak var precautionImage1: UIImageView!
-    @IBOutlet weak var precautionImage2: UIImageView!
-    
-    @IBOutlet weak var precautionLabel1: UILabel!
-    @IBOutlet weak var precautionLabel2: UILabel!
 
     @IBOutlet weak var pm25Point: UILabel!
     @IBOutlet weak var pm25AirQualityType: UILabel!
@@ -30,10 +27,18 @@ class HomeViewController: BaseViewC {
     @IBOutlet weak var circleView: UIView!
     internal var viewModel : HomeModelling!
     
+    @IBOutlet weak var collectionTip: UICollectionView!
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var startCnstCollection: NSLayoutConstraint!
     @IBOutlet weak var animationView1: UIView!
-    var appDelegate : AppDelegate!
+    var arrArea = [AreaModel]()
+    var arrHealth = [HealthPrecaution]() {
+        didSet {
+            self.collectionTip.reloadData()
+        }
+    }
+    
     
     //MARK: - View Life Cycle
     override func viewDidLoad() {
@@ -43,7 +48,6 @@ class HomeViewController: BaseViewC {
         viewHeader.insertShadow(shadowRadius: 1, width: 3, height: 3, shadowColor: UIColor.lightGray.cgColor)
         viewHeader.layer.masksToBounds = true
         
-        appDelegate = UIApplication.shared.delegate as? AppDelegate
         circleViewHeight.constant = (self.view.frame.size.width-20)/2
         
         setUp()
@@ -132,7 +136,7 @@ class HomeViewController: BaseViewC {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        addressLabel.text = appDelegate.currentAddress
+//        addressLabel.text = Constant.kAppDelegate.currentAddress
 //
 //        let circlePath = UIBezierPath(arcCenter: pm25CircleView.center, radius: (pm25CircleView.frame.size.width-30)/2, startAngle: 2, endAngle: 8, clockwise: true)
 //
@@ -169,26 +173,34 @@ class HomeViewController: BaseViewC {
         if self.viewModel == nil {
             self.viewModel = HomeViewModelling()
         }
+        self.collectionTip.register(UINib(nibName: "TipsCell", bundle: nil), forCellWithReuseIdentifier: "TipsCell")
        getHomeViewDetails()
         
     }
     
     func getHomeViewDetails(){
         
-        self.viewModel?.getHomeViewDetails(lat: "28.500", lng: "77.0805", handler:{[weak self] (health_precaution,PM10,PM25, msg, isSuccess) in
+        self.viewModel?.getHomeViewDetails(handler:{[weak self] (health_precaution,PM10,PM25,areaList, msg, isSuccess) in
             if isSuccess == true{
                 self!.circleView.isHidden = false
-        self!.setData(healthPrecautionList: health_precaution, pm10: PM10, pm25: PM25)
+                self!.arrArea = areaList
+                self!.setData(healthPrecautionList: health_precaution, pm10: PM10, pm25: PM25)
             }
         })
     }
     
     func setData(healthPrecautionList: [HealthPrecaution],pm10 : PMTypeModele,pm25 : PMTypeModele){
+        let cellSizes = CGFloat(115 * healthPrecautionList.count)
+        let xAxis = (Constant.kScreenWidth) - cellSizes
+        if cellSizes < Constant.kScreenWidth {
+            self.startCnstCollection.constant =  xAxis/2
+            self.collectionTip.updateConstraints()
+        }
         
-        precautionImage1.setImageWith(strImage:healthPrecautionList[0].preference_image)
-        precautionLabel1.text = healthPrecautionList[0].preference_text
-        precautionImage2.setImageWith(strImage:healthPrecautionList[1].preference_image)
-        precautionLabel2.text = healthPrecautionList[1].preference_text
+        Constant.kAppDelegate.appLocation = arrArea.first
+        addressLabel.text = Constant.kAppDelegate.appLocation.name
+        
+        self.arrHealth = healthPrecautionList
         
         let pm10Values = NSString(format: "%.0f",  pm10.value!)
         pm10Point.text = pm10Values as String
@@ -220,7 +232,29 @@ class HomeViewController: BaseViewC {
             self.navigationController?.pushViewController(historyViewC, animated: true)
         }
     }
+    @IBAction func tapLocation(_ sender: UIButton) {
+    }
     
 }
 
-
+extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return arrHealth.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TipsCell", for: indexPath) as! TipsCell
+        cell.setUPTips(healthData: arrHealth[indexPath.row], index: indexPath.row, totalCount: arrHealth.count)
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 115, height: 125) // The size of one cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0) // margin between cells
+    }
+}

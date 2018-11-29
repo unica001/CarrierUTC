@@ -21,8 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate,
     var locationManager : CLLocationManager!
     var currentLocation :CLLocation!
     var currentAddress : String!
-    var deviceToken  : String = String()
     var fcmToken : String!
+    var appLocation : AreaModel!
     
     internal var viewModel : NotificationModel!
 
@@ -228,7 +228,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate,CLLocationManagerDelegate,
     }
     
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
-        self.deviceToken = "1234"
         print("fail to get token")
     }
 
