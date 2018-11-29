@@ -17,7 +17,7 @@ class EventDetailViewC: UIViewController, UIDocumentInteractionControllerDelegat
     @IBOutlet weak var btnInterested: UIButton!
     
     private let kInstagramURL = "instagram://"
-    private let kUTI = "com.instagram.photo"//"com.instagram.exclusivegram"
+    private let kUTI = "com.instagram.exclusivegram"
     private let kfileNameExtension = "instagram.igo"
     private let kAlertViewTitle = "Error"
     private let kAlertViewMessage = "Please install the Instagram application"
