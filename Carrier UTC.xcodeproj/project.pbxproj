@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		175D419421AFB25C00337938 /* TipsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175D419221AFB25C00337938 /* TipsCell.swift */; };
+		175D419521AFB25C00337938 /* TipsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 175D419321AFB25C00337938 /* TipsCell.xib */; };
+		175D419721AFBE4A00337938 /* AreaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175D419621AFBE4A00337938 /* AreaModel.swift */; };
 		175EA05521A6BD7600E17849 /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175EA05421A6BD7600E17849 /* EventModel.swift */; };
 		175EA05721A6BFB900E17849 /* EventListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175EA05621A6BFB900E17849 /* EventListVM.swift */; };
 		175EA05B21A6CF2700E17849 /* SearchEventVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175EA05A21A6CF2700E17849 /* SearchEventVM.swift */; };
@@ -114,6 +117,9 @@
 
 /* Begin PBXFileReference section */
 		088C9EC04B5131CEF9DBDBC1 /* Pods-Carrier UTC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carrier UTC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Carrier UTC/Pods-Carrier UTC.debug.xcconfig"; sourceTree = "<group>"; };
+		175D419221AFB25C00337938 /* TipsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsCell.swift; sourceTree = "<group>"; };
+		175D419321AFB25C00337938 /* TipsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TipsCell.xib; sourceTree = "<group>"; };
+		175D419621AFBE4A00337938 /* AreaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaModel.swift; sourceTree = "<group>"; };
 		175EA05421A6BD7600E17849 /* EventModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EventModel.swift; path = "Carrier UTC/Module/Event/Model/EventModel.swift"; sourceTree = SOURCE_ROOT; };
 		175EA05621A6BFB900E17849 /* EventListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListVM.swift; sourceTree = "<group>"; };
 		175EA05A21A6CF2700E17849 /* SearchEventVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchEventVM.swift; sourceTree = "<group>"; };
@@ -635,6 +641,8 @@
 			children = (
 				9A58C1AE21A581AC00A07CB7 /* AirQualityCell.swift */,
 				9A58C1AF21A581AC00A07CB7 /* AirQualityCell.xib */,
+				175D419221AFB25C00337938 /* TipsCell.swift */,
+				175D419321AFB25C00337938 /* TipsCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -656,6 +664,7 @@
 				9A920A0121AC0CEF0067CD0E /* PMTypeModele.swift */,
 				9A920A0321AC0E1A0067CD0E /* HomeModele.swift */,
 				9A920A0521AC104B0067CD0E /* HomeViewModele.swift */,
+				175D419621AFBE4A00337938 /* AreaModel.swift */,
 			);
 			path = "Home Modele";
 			sourceTree = "<group>";
@@ -789,6 +798,7 @@
 				1783C4BE21AE621E00F87370 /* CellPMScale.xib in Resources */,
 				1786408F21A5569B006ED91B /* CellEvent.xib in Resources */,
 				1783C4B821AE5EF000F87370 /* CellPM.xib in Resources */,
+				175D419521AFB25C00337938 /* TipsCell.xib in Resources */,
 				1783C4C221AE66EA00F87370 /* CellHistory.xib in Resources */,
 				17F80E6821A5770F003BBC80 /* CellEventDetail.xib in Resources */,
 				1786403621A531D6006ED91B /* LaunchScreen.storyboard in Resources */,
@@ -836,6 +846,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Carrier UTC/Pods-Carrier UTC-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/ActionSheetPicker-3.0/ActionSheetPicker_3_0.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
@@ -853,6 +864,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ActionSheetPicker_3_0.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
@@ -901,6 +913,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				17F80E7321A58D8D003BBC80 /* BlogCategoryViewC.swift in Sources */,
+				175D419421AFB25C00337938 /* TipsCell.swift in Sources */,
+				175D419721AFBE4A00337938 /* AreaModel.swift in Sources */,
 				1786407321A53381006ED91B /* UIFontAddition.swift in Sources */,
 				1786407221A53381006ED91B /* UITableViewAddition.swift in Sources */,
 				1783C4CA21AE81EA00F87370 /* PMScaleModel.swift in Sources */,

@@ -17,4 +17,5 @@ target 'Carrier UTC' do
   pod 'FacebookShare'
   pod 'DZNEmptyDataSet'
   pod 'SVProgressHUD'
+  pod 'ActionSheetPicker-3.0'
 end
