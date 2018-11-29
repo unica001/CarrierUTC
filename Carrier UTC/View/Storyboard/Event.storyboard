@@ -632,7 +632,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PPU-gE-Wwe">
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PPU-gE-Wwe">
                                         <rect key="frame" x="327" y="3" width="46" height="39"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="46" id="Zxb-Ng-yxH"/>
@@ -643,6 +643,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="PPU-gE-Wwe" secondAttribute="bottom" constant="3" id="8vl-oo-rUU"/>
                                     <constraint firstAttribute="height" constant="45" id="9CE-Pp-xSW"/>
@@ -721,6 +722,7 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tblBlogCategory" destination="2of-Ty-GTJ" id="mhQ-mx-KLp"/>
+                        <outlet property="viewHeader" destination="gx8-Mw-pct" id="Tmt-cU-YFL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="erL-rZ-ncf" userLabel="First Responder" sceneMemberID="firstResponder"/>
