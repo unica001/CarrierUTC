@@ -156,10 +156,6 @@
                                                                 <action selector="pm25DetailsAction:" destination="Vz2-w9-OZs" eventType="touchUpInside" id="Iv7-M0-DBc"/>
                                                             </connections>
                                                         </button>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dialindicator" translatesAutoresizingMaskIntoConstraints="NO" id="yaI-SB-pcM">
-                                                            <rect key="frame" x="84" y="152" width="24" height="24"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
@@ -178,6 +174,19 @@
                                                         <constraint firstAttribute="bottom" secondItem="deL-qd-cxs" secondAttribute="bottom" id="jav-us-ox4"/>
                                                         <constraint firstItem="kMo-fS-9GR" firstAttribute="top" secondItem="uXJ-xG-V8a" secondAttribute="bottom" constant="5" id="nLT-67-DVI"/>
                                                         <constraint firstItem="N4x-oa-1yz" firstAttribute="leading" secondItem="SHY-Fa-K2m" secondAttribute="leading" constant="10" id="v1Z-E0-Sg8"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p6a-oh-vpz">
+                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dialindicator" translatesAutoresizingMaskIntoConstraints="NO" id="JbJ-Ib-DmO">
+                                                            <rect key="frame" x="81" y="152" width="24" height="24"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="JbJ-Ib-DmO" secondAttribute="bottom" constant="4" id="08m-uD-uiQ"/>
+                                                        <constraint firstItem="JbJ-Ib-DmO" firstAttribute="centerX" secondItem="p6a-oh-vpz" secondAttribute="centerX" constant="3" id="qWw-i3-wle"/>
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OXA-BE-WXc">
@@ -250,7 +259,9 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
+                                                <constraint firstItem="p6a-oh-vpz" firstAttribute="trailing" secondItem="SHY-Fa-K2m" secondAttribute="trailing" id="2XS-60-cXx"/>
                                                 <constraint firstItem="OXA-BE-WXc" firstAttribute="leading" secondItem="SHY-Fa-K2m" secondAttribute="trailing" constant="15" id="3DH-f6-1Dk"/>
+                                                <constraint firstItem="p6a-oh-vpz" firstAttribute="leading" secondItem="SHY-Fa-K2m" secondAttribute="leading" id="6Ji-Kg-QqX"/>
                                                 <constraint firstAttribute="trailing" secondItem="OXA-BE-WXc" secondAttribute="trailing" id="9Qm-Ne-MeM"/>
                                                 <constraint firstAttribute="bottom" secondItem="SHY-Fa-K2m" secondAttribute="bottom" id="H5F-gM-TZF"/>
                                                 <constraint firstItem="OXA-BE-WXc" firstAttribute="height" secondItem="SHY-Fa-K2m" secondAttribute="height" id="HIs-Es-cDg"/>
@@ -259,7 +270,9 @@
                                                 <constraint firstItem="SHY-Fa-K2m" firstAttribute="top" secondItem="OtW-0U-HIn" secondAttribute="top" id="csB-H8-bCu"/>
                                                 <constraint firstItem="OXA-BE-WXc" firstAttribute="top" secondItem="OtW-0U-HIn" secondAttribute="top" id="jTC-zE-CPP"/>
                                                 <constraint firstAttribute="bottom" secondItem="OXA-BE-WXc" secondAttribute="bottom" id="nRI-PM-sk4"/>
+                                                <constraint firstItem="p6a-oh-vpz" firstAttribute="top" secondItem="SHY-Fa-K2m" secondAttribute="top" id="o7w-Mo-mOs"/>
                                                 <constraint firstItem="OXA-BE-WXc" firstAttribute="width" secondItem="SHY-Fa-K2m" secondAttribute="width" id="rmQ-2c-laS"/>
+                                                <constraint firstItem="p6a-oh-vpz" firstAttribute="bottom" secondItem="SHY-Fa-K2m" secondAttribute="bottom" id="vrT-F8-nlW"/>
                                             </constraints>
                                         </view>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="whatshouldyoudo" translatesAutoresizingMaskIntoConstraints="NO" id="SGc-DL-D4r">
@@ -398,6 +411,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addressLabel" destination="DYr-iv-R6x" id="4Bk-MC-StG"/>
+                        <outlet property="animationView1" destination="p6a-oh-vpz" id="nIq-gp-sVc"/>
                         <outlet property="circleView" destination="OtW-0U-HIn" id="Ksh-YS-Xsc"/>
                         <outlet property="circleViewHeight" destination="Kt9-0U-zWP" id="BhG-gG-0ja"/>
                         <outlet property="milesLabel" destination="azv-wy-fNt" id="fu2-w9-lDs"/>
@@ -406,7 +420,6 @@
                         <outlet property="pm25AirQualityType" destination="kMo-fS-9GR" id="d9T-sP-EcP"/>
                         <outlet property="pm25CircleView" destination="SHY-Fa-K2m" id="oFy-Q5-Qw9"/>
                         <outlet property="pm25Point" destination="uXJ-xG-V8a" id="3eW-af-tWT"/>
-                        <outlet property="polutionArrow" destination="yaI-SB-pcM" id="syE-28-Wft"/>
                         <outlet property="precautionImage1" destination="6k7-PL-PSS" id="a9f-P1-AfP"/>
                         <outlet property="precautionImage2" destination="izI-sP-5rn" id="Gop-lD-Wzn"/>
                         <outlet property="precautionLabel1" destination="fLT-OS-Jb4" id="kBT-xq-cKF"/>

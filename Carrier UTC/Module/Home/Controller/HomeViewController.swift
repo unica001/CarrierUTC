@@ -14,7 +14,6 @@ class HomeViewController: BaseViewC {
     @IBOutlet weak var milesLabel: UILabel!
     @IBOutlet weak var viewHeader: UIView!
     @IBOutlet weak var circleViewHeight: NSLayoutConstraint!
-    @IBOutlet weak var polutionArrow: UIImageView!
     @IBOutlet weak var precautionImage1: UIImageView!
     @IBOutlet weak var precautionImage2: UIImageView!
     
@@ -33,6 +32,7 @@ class HomeViewController: BaseViewC {
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var animationView1: UIView!
     var appDelegate : AppDelegate!
     
     //MARK: - View Life Cycle
@@ -101,16 +101,9 @@ class HomeViewController: BaseViewC {
 //                    polutionArrow.layer.add(animation, forKey: nil)
         
         
-        let circlePath = UIBezierPath(arcCenter: pm25CircleView.center, radius: (pm25CircleView.frame.size.width-30)/2, startAngle: 2, endAngle: 8, clockwise: true)
-        
-        let animation = CAKeyframeAnimation(keyPath: #keyPath(CALayer.repeatDuration))
-        animation.duration = 5
-        animation.repeatCount = 2
-        animation.path = circlePath.cgPath
-        polutionArrow.layer.add(animation, forKey: nil)
-        polutionArrow.frame.origin = CGPoint(x: circlePath.currentPoint.x-10, y: circlePath.currentPoint.y-10)
         
         
+     
 //        for index in 1...360{
 //
 //
@@ -140,6 +133,26 @@ class HomeViewController: BaseViewC {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         addressLabel.text = appDelegate.currentAddress
+//
+//        let circlePath = UIBezierPath(arcCenter: pm25CircleView.center, radius: (pm25CircleView.frame.size.width-30)/2, startAngle: 2, endAngle: 8, clockwise: true)
+//
+//        let animation = CAKeyframeAnimation(keyPath: #keyPath(CALayer.position))
+//        animation.duration = 50
+//        animation.repeatCount = 1
+//        animation.path = circlePath.cgPath
+//        polutionArrow.layer.add(animation, forKey: nil)
+//        polutionArrow.frame.origin = CGPoint(x: circlePath.currentPoint.x-10, y: circlePath.currentPoint.y-10)
+        
+        let point  : Float = (180)/180
+
+        print(CGFloat.pi)
+        UIView.animate(withDuration: 5) { () -> Void in
+            self.animationView1.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
+        }
+//        UIView.animate(withDuration: 5, delay: 0, options: UIView.AnimationOptions.curveEaseIn, animations: { () -> Void in
+//            self.animationView1.transform = CGAffineTransform(rotationAngle: CGFloat.pi*2)
+//        }, completion: nil)
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
