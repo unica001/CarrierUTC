@@ -12,6 +12,7 @@ import ActionSheetPicker_3_0
 
 class HomeViewController: BaseViewC {
     
+    @IBOutlet weak var lblMonitor: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
     @IBOutlet weak var milesLabel: UILabel!
     @IBOutlet weak var viewHeader: UIView!
@@ -53,9 +54,29 @@ class HomeViewController: BaseViewC {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewHeader.roundCorners(borderWidth: 1, borderColor: UIColor.clear.cgColor, cornerRadius: 5)
-        viewHeader.insertShadow(shadowRadius: 1, width: 3, height: 3, shadowColor: UIColor.lightGray.cgColor)
-        viewHeader.layer.masksToBounds = true
+        lblMonitor.roundCorners(borderWidth: 0.2, borderColor: UIColor(red: 230/255, green: 230/255, blue: 230/255, alpha: 1.0).cgColor, cornerRadius: 5)
+//        let shadowSize : CGFloat = 10.0
+//        let shadowPath = UIBezierPath(rect: CGRect(x: -shadowSize / 2,
+//                                                   y: -shadowSize / 2,
+//                                                   width: self.viewHeader.frame.size.width + shadowSize,
+//                                                   height: self.viewHeader.frame.size.height + shadowSize))
+//        self.viewHeader.layer.masksToBounds = false
+//        self.viewHeader.layer.shadowColor = UIColor.black.cgColor
+//        self.viewHeader.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+//        self.viewHeader.layer.shadowOpacity = 0.5
+//        self.viewHeader.layer.shadowPath = shadowPath.cgPath
+//        self.viewHeader.layer.cornerRadius = 13.0
+        self.viewHeader.layer.shadowColor = UIColor.lightGray.cgColor
+        self.viewHeader.layer.shadowOpacity = 0.5
+        self.viewHeader.layer.shadowRadius = 20.0
+        self.viewHeader.layer.shadowOffset = .zero
+        self.viewHeader.layer.shadowPath = UIBezierPath(rect: self.viewHeader.bounds).cgPath
+//        self.viewHeader.layer.shouldRasterize = true
+//        viewHeader.layer.shadowColor = UIColor.black.cgColor
+//        viewHeader.layer.shadowOpacity = 0.7
+//        viewHeader.layer.shadowOffset = CGSize.zero
+//        viewHeader.layer.shadowRadius = 4
+//        viewHeader.layer.shadowPath = UIBezierPath(rect: viewHeader.bounds).cgPath
         
         circleViewHeight.constant = (self.view.frame.size.width-20)/2
         

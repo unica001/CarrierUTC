@@ -7,22 +7,12 @@
 //
 
 import UIKit
-import FacebookShare
-import FacebookCore
-import Social
+
 
 class EventDetailViewC: UIViewController, UIDocumentInteractionControllerDelegate {
     //MARK: - IBOutlet
     @IBOutlet weak var tblEventDetail: UITableView!
     @IBOutlet weak var btnInterested: UIButton!
-    
-    private let kInstagramURL = "instagram://"
-    private let kUTI = "com.instagram.exclusivegram"
-    private let kfileNameExtension = "instagram.igo"
-    private let kAlertViewTitle = "Error"
-    private let kAlertViewMessage = "Please install the Instagram application"
-    
-    private let documentInteractionController = UIDocumentInteractionController()
     
     internal var viewModel: EventDetailViewModelling?
     var eventId = 0
@@ -56,7 +46,6 @@ class EventDetailViewC: UIViewController, UIDocumentInteractionControllerDelegat
         apiCallEventDetail()
         self.navigationItem.hidesBackButton = true
         self.tblEventDetail.contentInset = UIEdgeInsets(top: -36, left: 0, bottom: 0, right: 0);
-
         btnInterested.roundCorners(borderWidth: 0.0, borderColor: UIColor.clear.cgColor, cornerRadius: btnInterested.frame.size.height/2)
     }
     
@@ -73,17 +62,10 @@ class EventDetailViewC: UIViewController, UIDocumentInteractionControllerDelegat
     }
     
     private func setUpFooter() {
-        if (eventDetail?.user_interest)! {
-            btnInterested.backgroundColor = UIColor.lightGray
-            btnInterested.isUserInteractionEnabled = false
-            btnInterested.setImage(UIImage( named: ""), for: .normal)
-            btnInterested.setTitle("INTERESTED", for: .normal)
-        } else {
-            btnInterested.backgroundColor = UIColor.clear
-            btnInterested.isUserInteractionEnabled = true
-            btnInterested.setImage(UIImage(named: "interested"), for: .normal)
-            btnInterested.setTitle("", for: .normal)
-        }
+        btnInterested.backgroundColor = (eventDetail?.user_interest)! ? UIColor.lightGray : UIColor.clear
+        btnInterested.isUserInteractionEnabled = (eventDetail?.user_interest)! ? false : true
+        btnInterested.setImage(UIImage( named: (eventDetail?.user_interest)! ? "" : "interested"), for: .normal)
+        btnInterested.setTitle((eventDetail?.user_interest)! ? "INTERESTED" : "", for: .normal)
     }
     
     private func apiCallEventDetail() {
@@ -106,11 +88,9 @@ class EventDetailViewC: UIViewController, UIDocumentInteractionControllerDelegat
     @IBAction func tapInterested(_ sender: UIButton) {
         self.viewModel?.setInterestedEvent(eventId: eventId, interestedEventHandler: { (success, msg) in
             if success {
-                print("Success")
                 self.eventDetail?.user_interest = true
                 self.setUpFooter()
             } else {
-                print("Not success")
             }
         })
     }
@@ -127,28 +107,7 @@ class EventDetailViewC: UIViewController, UIDocumentInteractionControllerDelegat
         }
         let contentShare = "Event Date : \(date) \n Event Name: \(name) \n \(desc)"
         
-        let instagramURL = NSURL(string: kInstagramURL)
-        if UIApplication.shared.canOpenURL(instagramURL! as URL) {
-            
-            let jpgPath = NSTemporaryDirectory().appending(kfileNameExtension)
-            do {
-                if let pngImageData = imageInstagram!.jpegData(compressionQuality: 1.0) {
-                    try pngImageData.write(to: URL(fileURLWithPath: jpgPath), options: .atomic)
-                } } catch { }
-
-            let rect = CGRect.zero
-            let fileURL = NSURL.fileURL(withPath: jpgPath)
-            documentInteractionController.url = fileURL
-            documentInteractionController.delegate = self
-            documentInteractionController.uti = kUTI
-            
-            // adding caption for the image
-            documentInteractionController.annotation = ["InstagramCaption": contentShare]
-            documentInteractionController.presentOpenInMenu(from: rect, in: view, animated: true)
-        }
-        else {
-            Alert.showOkAlert(title: kAlertViewTitle, message: kAlertViewMessage)
-        }
+        Helper.shareToInstagram(imageInstagram: imageInstagram!, contentShare: contentShare, view: self.view)
     }
     
     @IBAction func tapFacebook(_ sender: UIButton) {
@@ -158,21 +117,7 @@ class EventDetailViewC: UIViewController, UIDocumentInteractionControllerDelegat
             return
         }
         let contentShare = "Event Date : \(date) \n Event Name: \(name) \n \(desc)"
-//        if let vc = SLComposeViewController(forServiceType: SLServiceTypeFacebook) {
-//            vc.setInitialText("Look at this great picture!")
-//            vc.add(UIImage(named: "myImage.jpg")!)
-//            vc.add(URL(string: "https://www.hackingwithswift.com"))
-//            present(vc, animated: true)
-//        }
-        let content = LinkShareContent(url: URL(string: (eventDetail?.event_image)!)!, quote: contentShare)
-        
-        let dialog = ShareDialog(content: content)
-        dialog.presentingViewController = self
-        dialog.mode = .automatic
-        dialog.completion = { result in
-
-        }
-        try? dialog.show()
+        Helper.shareToFacebook(image: (eventDetail?.event_image)!, content: contentShare)
     }
 }
 

@@ -138,7 +138,9 @@ extension BlogListViewC: BlogDelegate {
     }
     
     func tapFacebook(_ sender: UIButton) {
-        
+        let data = arrBlog[sender.tag]
+        let content = "\(String(describing: data.heading)) \n \(data.desc)"
+        Helper.shareToFacebook(image: data.event_image!, content: content)
     }
     
     func tapInstagram(_ sender: UIButton) {

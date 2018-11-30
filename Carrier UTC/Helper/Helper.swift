@@ -7,8 +7,19 @@
 //
 
 import UIKit
+import FacebookCore
+import FacebookShare
+
+private let kInstagramURL = "instagram://"
+private let kUTI = "com.instagram.exclusivegram"
+private let kfileNameExtension = "instagram.igo"
+private let kAlertViewTitle = "Error"
+private let kAlertViewMessage = "Please install the Instagram application"
+
+private let documentInteractionController = UIDocumentInteractionController()
 
 class Helper {
+    
     
     func getDateFromTimeStamp(timeStamp : Double) -> Date {
         let date = NSDate(timeIntervalSince1970: timeStamp)
@@ -131,21 +142,40 @@ class Helper {
         return documentsDirectory
     }
     
-  /*  func archive(filename :String, dict:NSDictionary){
-        
-        let data = NSKeyedArchiver.archivedData(withRootObject: dict)
-        let fullPath = getDocumentsDirectory().appendingPathComponent(filename)
-        
-        do {
-            try data.write(to: fullPath)
-        } catch {
-            print("Couldn't write file")
+    class func shareToInstagram(imageInstagram: UIImage, contentShare: String, view: UIView) {
+        let instagramURL = NSURL(string: kInstagramURL)
+        if UIApplication.shared.canOpenURL(instagramURL! as URL) {
+            
+            let jpgPath = NSTemporaryDirectory().appending(kfileNameExtension)
+            do {
+                if let pngImageData = imageInstagram.jpegData(compressionQuality: 1.0) {
+                    try pngImageData.write(to: URL(fileURLWithPath: jpgPath), options: .atomic)
+                } } catch { }
+            
+            let rect = CGRect.zero
+            let fileURL = NSURL.fileURL(withPath: jpgPath)
+            documentInteractionController.url = fileURL
+//            documentInteractionController.delegate = self
+            documentInteractionController.uti = kUTI
+            
+            // adding caption for the image
+            documentInteractionController.annotation = ["InstagramCaption": contentShare]
+            documentInteractionController.presentOpenInMenu(from: rect, in: view, animated: true)
+        }
+        else {
+            Alert.showOkAlert(title: kAlertViewTitle, message: kAlertViewMessage)
         }
     }
     
-    func unArchive(fileName :String)-> NSDictionary{
-        let fullPath = getDocumentsDirectory().appendingPathComponent(fileName)
-        let loadedStrings = NSKeyedUnarchiver.unarchiveObject(withFile: fullPath.absoluteString) as? [String]
-        return loadedStrings as Any as! NSDictionary
-    }*/
+    class func shareToFacebook(image: String, content: String) {
+        let content = LinkShareContent(url: URL(string: image)!, quote: content)
+        
+        let dialog = ShareDialog(content: content)
+//        dialog.presentingViewController = self
+        dialog.mode = .automatic
+        dialog.completion = { result in
+            
+        }
+        try? dialog.show()
+    }
 }
