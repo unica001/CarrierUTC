@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1750BE5621B0F738009AF267 /* BlogListViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1750BE5521B0F738009AF267 /* BlogListViewC.swift */; };
+		1750BE5821B0F750009AF267 /* BlogListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1750BE5721B0F750009AF267 /* BlogListVM.swift */; };
 		175D419421AFB25C00337938 /* TipsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175D419221AFB25C00337938 /* TipsCell.swift */; };
 		175D419521AFB25C00337938 /* TipsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 175D419321AFB25C00337938 /* TipsCell.xib */; };
 		175D419721AFBE4A00337938 /* AreaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175D419621AFBE4A00337938 /* AreaModel.swift */; };
@@ -120,6 +122,8 @@
 
 /* Begin PBXFileReference section */
 		088C9EC04B5131CEF9DBDBC1 /* Pods-Carrier UTC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carrier UTC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Carrier UTC/Pods-Carrier UTC.debug.xcconfig"; sourceTree = "<group>"; };
+		1750BE5521B0F738009AF267 /* BlogListViewC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogListViewC.swift; sourceTree = "<group>"; };
+		1750BE5721B0F750009AF267 /* BlogListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogListVM.swift; sourceTree = "<group>"; };
 		175D419221AFB25C00337938 /* TipsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsCell.swift; sourceTree = "<group>"; };
 		175D419321AFB25C00337938 /* TipsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TipsCell.xib; sourceTree = "<group>"; };
 		175D419621AFBE4A00337938 /* AreaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaModel.swift; sourceTree = "<group>"; };
@@ -599,6 +603,8 @@
 			children = (
 				17F80E7221A58D8D003BBC80 /* BlogCategoryViewC.swift */,
 				17E8619921AD460700FC634A /* BlogCategoryVM.swift */,
+				1750BE5521B0F738009AF267 /* BlogListViewC.swift */,
+				1750BE5721B0F750009AF267 /* BlogListVM.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -966,6 +972,7 @@
 				1786407521A53381006ED91B /* DateUtility.swift in Sources */,
 				1764133A21AD09700002403F /* RegisterFooterView.swift in Sources */,
 				17E1348621A7F999003AD715 /* EventDetailVM.swift in Sources */,
+				1750BE5621B0F738009AF267 /* BlogListViewC.swift in Sources */,
 				17E8619821AD135B00FC634A /* WebViewC.swift in Sources */,
 				17F80E6421A576E9003BBC80 /* EventDetailViewC.swift in Sources */,
 				1764134021AD09700002403F /* CellSubmit.swift in Sources */,
@@ -976,6 +983,7 @@
 				17E1348821A87132003AD715 /* BaseViewC.swift in Sources */,
 				9A58C1AC21A580E800A07CB7 /* AirQualityDetailController.swift in Sources */,
 				1786406D21A53381006ED91B /* UIButtonAddition.swift in Sources */,
+				1750BE5821B0F750009AF267 /* BlogListVM.swift in Sources */,
 				9A58C1B621A589C900A07CB7 /* NetworkManager.swift in Sources */,
 				1783C4C621AE6E7F00F87370 /* HistoryHeaderView.swift in Sources */,
 				1783C4C421AE6B8D00F87370 /* HistoryViewC.swift in Sources */,

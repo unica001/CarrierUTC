@@ -25,6 +25,7 @@ let kinterested_event = "interested_event"
 let kregistration = "registration"
 let kblog_categories = "blog_categories"
 let kweek_air_pollution = "week_air_pollution"
+let kblog_list = "blog_list"
 
 //MARK: - Segue Identifier
 let kairQualitySegueIdentifier = "airQualitySegueIdentifier"

@@ -10,6 +10,12 @@ import UIKit
 
 class CellBlog: UITableViewCell {
 
+    @IBOutlet weak var imgBlog: UIImageView!
+    @IBOutlet weak var lblDesc: UILabel!
+    @IBOutlet weak var lblDate: UILabel!
+    @IBOutlet weak var lblHead: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
