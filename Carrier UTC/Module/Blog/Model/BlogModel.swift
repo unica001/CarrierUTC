@@ -30,7 +30,7 @@ class BlogModel: NSObject, Codable,Mappable {
         id <- map["id"]
         heading <- map["heading"]
         event_image <- map["event_image"]
-        desc <- map["desc"]
+        desc <- map["description"]
     }
     
     

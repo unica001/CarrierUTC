@@ -86,6 +86,16 @@ extension BlogCategoryViewC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BlogCategoryCell", for: indexPath) as! BlogCategoryCell
         cell.setUpBlogCategory(category: arrBlogCategory[indexPath.row])
+        cell.selectionStyle = .none
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let blogViewC = Constant.kStoryboardEvent.instantiateViewController(withIdentifier: "BlogListViewC") as? BlogListViewC {
+            let data = arrBlogCategory[indexPath.row]
+            blogViewC.categoryId = data.id!
+            blogViewC.categoryName = data.name!
+            self.navigationController?.pushViewController(blogViewC, animated: true)
+        }
     }
 }

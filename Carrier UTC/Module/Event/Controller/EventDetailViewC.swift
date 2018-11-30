@@ -55,6 +55,8 @@ class EventDetailViewC: UIViewController, UIDocumentInteractionControllerDelegat
         recheckVM()
         apiCallEventDetail()
         self.navigationItem.hidesBackButton = true
+        self.tblEventDetail.contentInset = UIEdgeInsets(top: -36, left: 0, bottom: 0, right: 0);
+
         btnInterested.roundCorners(borderWidth: 0.0, borderColor: UIColor.clear.cgColor, cornerRadius: btnInterested.frame.size.height/2)
     }
     
@@ -197,6 +199,10 @@ extension EventDetailViewC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return 140
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 0.0001
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

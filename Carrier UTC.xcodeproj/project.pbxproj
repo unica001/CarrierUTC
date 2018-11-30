@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1750BE5621B0F738009AF267 /* BlogListViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1750BE5521B0F738009AF267 /* BlogListViewC.swift */; };
 		1750BE5821B0F750009AF267 /* BlogListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1750BE5721B0F750009AF267 /* BlogListVM.swift */; };
+		1750BE5A21B10E46009AF267 /* BlogDetailViewC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1750BE5921B10E46009AF267 /* BlogDetailViewC.swift */; };
 		175D419421AFB25C00337938 /* TipsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175D419221AFB25C00337938 /* TipsCell.swift */; };
 		175D419521AFB25C00337938 /* TipsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 175D419321AFB25C00337938 /* TipsCell.xib */; };
 		175D419721AFBE4A00337938 /* AreaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175D419621AFBE4A00337938 /* AreaModel.swift */; };
@@ -124,6 +125,7 @@
 		088C9EC04B5131CEF9DBDBC1 /* Pods-Carrier UTC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Carrier UTC.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Carrier UTC/Pods-Carrier UTC.debug.xcconfig"; sourceTree = "<group>"; };
 		1750BE5521B0F738009AF267 /* BlogListViewC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogListViewC.swift; sourceTree = "<group>"; };
 		1750BE5721B0F750009AF267 /* BlogListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogListVM.swift; sourceTree = "<group>"; };
+		1750BE5921B10E46009AF267 /* BlogDetailViewC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogDetailViewC.swift; sourceTree = "<group>"; };
 		175D419221AFB25C00337938 /* TipsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipsCell.swift; sourceTree = "<group>"; };
 		175D419321AFB25C00337938 /* TipsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TipsCell.xib; sourceTree = "<group>"; };
 		175D419621AFBE4A00337938 /* AreaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaModel.swift; sourceTree = "<group>"; };
@@ -605,6 +607,7 @@
 				17E8619921AD460700FC634A /* BlogCategoryVM.swift */,
 				1750BE5521B0F738009AF267 /* BlogListViewC.swift */,
 				1750BE5721B0F750009AF267 /* BlogListVM.swift */,
+				1750BE5921B10E46009AF267 /* BlogDetailViewC.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -959,6 +962,7 @@
 				9A58C1B021A581AC00A07CB7 /* AirQualityCell.swift in Sources */,
 				17FC9A0321A56A0F007DB7E1 /* SearchEventViewC.swift in Sources */,
 				1786406321A5335B006ED91B /* Helper.swift in Sources */,
+				1750BE5A21B10E46009AF267 /* BlogDetailViewC.swift in Sources */,
 				1786407021A53381006ED91B /* UIColorAddition.swift in Sources */,
 				1786402C21A531D6006ED91B /* AppDelegate.swift in Sources */,
 				1786406E21A53381006ED91B /* UIImageViewUtility.swift in Sources */,
